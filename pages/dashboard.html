@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vintage Clothing Admin Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="icon" type="image/svg+xml" href="../images/logo-new.svg">
+</head>
+
+<body>
+    <nav class="top-navbar">
+        <div class="nav-left">
+            <button id="sidebar-toggle" class="menu-btn" aria-label="Toggle Sidebar">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="logo">
+                <img src="../images/logo-new.svg" alt="RUST & RELIC" class="nav-logo-img">
+                <span class="brand-name">Rust & Relic</span>
+            </div>
+        </div>
+        <div class="nav-right">
+            <button class="icon-btn" id="rtl-toggle" aria-label="Toggle RTL Mode">RTL</button>
+            <button class="icon-btn" aria-label="Notifications">
+                <i class="fas fa-bell"></i>
+                <span class="badge"></span>
+            </button>
+            <button class="icon-btn profile-btn" aria-label="Profile">
+                <i class="fas fa-user-circle"></i>
+            </button>
+     </div>
+    </nav>
+
+    <div class="main-container">
+
+        <aside class="sidebar" id="sidebar">
+            <ul class="sidebar-menu">
+                <li class="active">
+                    <a href="#" data-target="dashboard"><i class="fas fa-home"></i> <span>Dashboard</span></a>
+                </li>
+                <li>
+                    <a href="#" data-target="products"><i class="fas fa-box"></i> <span>Products</span></a>
+                </li>
+                <li>
+                    <a href="#" data-target="orders"><i class="fas fa-shopping-cart"></i> <span>Orders</span></a>
+                </li>
+                <li>
+                    <a href="#" data-target="customers"><i class="fas fa-users"></i> <span>Customers</span></a>
+                </li>
+                <li>
+                    <a href="#" data-target="analytics"><i class="fas fa-chart-line"></i> <span>Analytics</span></a>
+                </li>
+                <li>
+                    <a href="#" data-target="inventory"><i class="fas fa-warehouse"></i> <span>Inventory</span></a>
+                </li>
+                <li>
+                    <a href="#" data-target="reports"><i class="fas fa-file-alt"></i> <span>Reports</span></a>
+                </li>
+                <li>
+                    <a href="#" data-target="settings"><i class="fas fa-cog"></i> <span>Settings</span></a>
+                </li>
+                <li class="logout">
+                    <a href="../index.html"><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a>
+                </li>
+            </ul>
+        </aside>
+        <main class="content" id="content">
+            <div id="view-dashboard" class="dashboard-view active">
+                <header class="page-header">
+                    <h1>Dashboard Overview</h1>
+                </header>
+                <section class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-box-open"></i></div>
+                        <div class="stat-details">
+                            <p class="stat-title">Total Products</p>
+                            <h3 class="stat-value">350</h3>
+                            <p class="stat-desc">+12 from yesterday</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-shopping-bag"></i></div>
+                        <div class="stat-details">
+                            <p class="stat-title">Total Orders</p>
+                            <h3 class="stat-value">120</h3>
+                            <p class="stat-desc">Completed this month</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-users"></i></div>
+                        <div class="stat-details">
+                            <p class="stat-title">Total Customers</p>
+                            <h3 class="stat-value">95</h3>
+                            <p class="stat-desc">Active recurring users</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon revenue-icon"><i class="fas fa-wallet"></i></div>
+                        <div class="stat-details">
+                            <p class="stat-title">Revenue</p>
+                            <h3 class="stat-value">$4200</h3>
+                            <p class="stat-desc">+8% from last week</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="graph-section">
+                    <div class="card graph-card">
+                        <h2>Sales Analytics</h2>
+                        <div class="chart-container">
+                            <canvas id="salesChart"></canvas>
+                        </div>
+                    </div>
+                </section>
+                <section class="lower-grid">
+                    <div class="card table-card">
+                        <h2>Recent Orders</h2>
+                        <div class="table-responsive">
+                            <table class="orders-table">
+                                <thead>
+                                    <tr>
+                                        <th>Order ID</th>
+                                        <th>Customer Name</th>
+                                        <th>Product</th>
+                                        <th>Price</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#1001</td>
+                                        <td>Prasanth</td>
+                                        <td>Suit</td>
+                                        <td>$80</td>
+                                        <td><span class="status status-delivered">Delivered</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#1002</td>
+                                        <td>Manikanta</td>
+                                        <td>Cap</td>
+                                        <td>$45</td>
+                                        <td><span class="status status-pending">Pending</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#1003</td>
+                                        <td>SAI</td>
+                                        <td>T-shirt</td>
+                                        <td>$120</td>
+                                        <td><span class="status status-shipped">Shipped</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#1004</td>
+                                        <td>Ganesh</td>
+                                        <td>Jacket</td>
+                                        <td>$70</td>
+                                        <td><span class="status status-delivered">Delivered</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="card gallery-card">
+                        <h2>Featured Vintage Items</h2>
+                        <div class="product-grid">
+                            <div class="product-item">
+                                <img src="../images/ser4.webp" alt="Suit" loading="lazy">
+                                <div class="product-overlay"><span>Suit</span></div>
+                            </div>
+                            <div class="product-item">
+                                <img src="../images/blog cap.jpeg" alt="cap" loading="lazy">
+                                <div class="product-overlay"><span>cap</span></div>
+                            </div>
+                            <div class="product-item">
+                                <img src="../images/ab tshirt.jpeg" alt="t-shirt" loading="lazy">
+                                <div class="product-overlay"><span>T-Shirt</span></div>
+                            </div>
+                            <div class="product-item">
+                                <img src="../images/aviator jacket.jpeg" alt="aviator jacket" loading="lazy">
+                                <div class="product-overlay"><span>Jacket</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            
+            <div id="view-products" class="dashboard-view">
+                <header class="page-header">
+                    <h1>Product Catalog</h1>
+                    <p class="subtitle">Manage and organize your vintage collection.</p>
+                </header>
+                <div class="card table-card">
+                    <div class="table-responsive">
+                        <table class="orders-table">
+                            <thead>
+                                <tr>
+                                    <th>Image</th>
+                                    <th>Product Name</th>
+                                    <th>Category</th>
+                                    <th>Price</th>
+                                    <th>Stock</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><img src="../images/ser4.webp" style="width: 40px; height: 40px; border-radius: 4px; object-fit: cover;"></td>
+                                    <td>Vintage Wool Suit</td>
+                                    <td>Formal Wear</td>
+                                    <td>$280</td>
+                                    <td>12 Units</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="../images/blog cap.jpeg" style="width: 40px; height: 40px; border-radius: 4px; object-fit: cover;"></td>
+                                    <td>Heritage Leather Cap</td>
+                                    <td>Accessories</td>
+                                    <td>$45</td>
+                                    <td>Out of Stock</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="../images/ab tshirt.jpeg" style="width: 40px; height: 40px; border-radius: 4px; object-fit: cover;"></td>
+                                    <td>Restored Graphic Tee</td>
+                                    <td>Casual</td>
+                                    <td>$65</td>
+                                    <td>45 Units</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="../images/aviator jacket.jpeg" style="width: 40px; height: 40px; border-radius: 4px; object-fit: cover;"></td>
+                                    <td>Aviator 1970 Jacket</td>
+                                    <td>Outerwear</td>
+                                    <td>$120</td>
+                                    <td>8 Units</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div id="view-orders" class="dashboard-view">
+                <header class="page-header">
+                    <h1>Active Orders</h1>
+                    <p class="subtitle">Track and fulfill recent vintage acquisitions.</p>
+                </header>
+                <div class="card table-card">
+                    <div class="table-responsive">
+                        <table class="orders-table">
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Customer</th>
+                                    <th>Items</th>
+                                    <th>Total</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#RR-2244</td>
+                                    <td>Sophia Ardent</td>
+                                    <td>3 Items</td>
+                                    <td>$450</td>
+                                    <td><span class="status status-delivered">Delivered</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#RR-2245</td>
+                                    <td>Julian West</td>
+                                    <td>1 Item</td>
+                                    <td>$85</td>
+                                    <td><span class="status status-pending">Pending</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#RR-2246</td>
+                                    <td>Elena Rust</td>
+                                    <td>2 Items</td>
+                                    <td>$190</td>
+                                    <td><span class="status status-shipped">Shipped</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#RR-2247</td>
+                                    <td>Leo Archive</td>
+                                    <td>5 Items</td>
+                                    <td>$1,200</td>
+                                    <td><span class="status status-pending">Processing</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div id="view-customers" class="dashboard-view">
+                <header class="page-header">
+                    <h1>Collector Registry</h1>
+                    <p class="subtitle">Manage your community of vintage lovers.</p>
+                </header>
+                <div class="card table-card">
+                    <div class="table-responsive">
+                        <table class="orders-table">
+                            <thead>
+                                <tr>
+                                    <th>Customer</th>
+                                    <th>Email</th>
+                                    <th>Loyalty Tier</th>
+                                    <th>Total Spent</th>
+                                    <th>Activity</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Marcus Stone</strong></td>
+                                    <td>marcus@example.com</td>
+                                    <td><span style="color: #b05e3f; font-weight: 700;">Gold Collector</span></td>
+                                    <td>$3,450</td>
+                                    <td>Active</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Ivy Relic</strong></td>
+                                    <td>ivy@archive.org</td>
+                                    <td>Silver</td>
+                                    <td>$1,200</td>
+                                    <td>Active</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Oliver Rust</strong></td>
+                                    <td>oliver@vintage.net</td>
+                                    <td>Bronze</td>
+                                    <td>$450</td>
+                                    <td>Inactive</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div id="view-analytics" class="dashboard-view">
+                <header class="page-header">
+                    <h1>Market Analytics</h1>
+                    <p class="subtitle">Detailed insights into vintage trends and sales.</p>
+                </header>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-eye"></i></div>
+                        <div class="stat-details">
+                            <p class="stat-title">Page Views</p>
+                            <h3 class="stat-value">12.5k</h3>
+                            <p class="stat-desc">+22% monthly growth</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-search"></i></div>
+                        <div class="stat-details">
+                            <p class="stat-title">Search Volume</p>
+                            <h3 class="stat-value">850</h3>
+                            <p class="stat-desc">Top: "1970s Jackets"</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h2>Category Performance</h2>
+                    <p style="margin-bottom: 1rem;">Formal wear continues to dominate our revenue stream this quarter.</p>
+                    <div style="height: 10px; background: #eee; border-radius: 5px; overflow: hidden; display: flex;">
+                        <div style="width: 60%; background: #6b7a42;"></div>
+                        <div style="width: 25%; background: #b05e3f;"></div>
+                        <div style="width: 15%; background: #d4a574;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="view-inventory" class="dashboard-view">
+                <header class="page-header">
+                    <h1>Stock & Inventory</h1>
+                    <p class="subtitle">Real-time tracking of warehouse items.</p>
+                </header>
+                <div class="card table-card">
+                    <div class="table-responsive">
+                        <table class="orders-table">
+                            <thead>
+                                <tr>
+                                    <th>SKU</th>
+                                    <th>Warehouse Location</th>
+                                    <th>Condition</th>
+                                    <th>Last Inspected</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#RR-W001</td>
+                                    <td>Vault A-12</td>
+                                    <td>Mint</td>
+                                    <td>Mar 24, 2026</td>
+                                    <td>In Stock</td>
+                                </tr>
+                                <tr>
+                                    <td>#RR-W002</td>
+                                    <td>Main Hall B</td>
+                                    <td>Excellent</td>
+                                    <td>Mar 22, 2026</td>
+                                    <td><span style="color: #b05e3f;">Low Stock</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div id="view-reports" class="dashboard-view">
+                <header class="page-header">
+                    <h1>Business Reports</h1>
+                </header>
+                <div class="card" style="display: flex; flex-direction: column; gap: 1rem;">
+                    <button class="btn btn-primary" style="width: 100%; max-width: 250px;">Export Q1 Revenue (PDF)</button>
+                    <button class="btn btn-outline" style="width: 100%; max-width: 250px; border: 1px solid #ddd; padding: 0.5rem;">Inventory Full Audit (XLSX)</button>
+                    <button class="btn btn-outline" style="width: 100%; max-width: 250px; border: 1px solid #ddd; padding: 0.5rem;">Customer Engagement Report</button>
+                </div>
+            </div>
+
+            <div id="view-settings" class="dashboard-view">
+                <header class="page-header">
+                    <h1>Dashboard Settings</h1>
+                </header>
+                <div class="card" style="display: grid; gap: 1.5rem;">
+                    <div style="padding-bottom: 1rem; border-bottom: 1px solid #eee;">
+                        <h3 style="margin-bottom: 0.5rem;">Email Notifications</h3>
+                        <p style="color: #666; font-size: 0.9rem;">Configure when you want to receive alerts for new orders. [Enabled]</p>
+                    </div>
+                    <div style="padding-bottom: 1rem; border-bottom: 1px solid #eee;">
+                        <h3 style="margin-bottom: 0.5rem;">Display Theme</h3>
+                        <p style="color: #666; font-size: 0.9rem;">Toggle between light and dark dashboard modes. [Automatic]</p>
+                    </div>
+                    <div style="padding-bottom: 1rem;">
+                        <h3 style="margin-bottom: 0.5rem;">Two-Factor Authentication</h3>
+                        <p style="color: #666; font-size: 0.9rem;">Enhance account security. [Enabled]</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2026 Rust & Relic. All Rights Reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+@media (max-width: 1200px) {
+    .desktop-nav {
+        display: flex !important;
+        position: static !important;
+        flex-direction: row !important;
+        background: transparent !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        border: none !important;
+        gap: 15px !important;
+        width: auto !important;
+        animation: none !important;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .hamburger-btn {
+        display: none !important;
+    }
+    
+    .nav-link {
+        font-size: 0.75rem !important;
+        padding: 5px;
+    }
+
+    .nav-item.dropdown {
+        flex-shrink: 0;
+    }
+
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 150px;
+    }
+}

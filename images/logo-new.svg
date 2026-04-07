@@ -1,0 +1,10 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Outer Circle -->
+    <circle cx="20" cy="20" r="18" stroke="#6B7D3E" stroke-width="2" />
+    <!-- Vintage Hanger Symbol -->
+    <path d="M12 28C12 28 15 24 20 24C25 24 28 28 28 28" stroke="#6B7D3E" stroke-width="2" stroke-linecap="round" />
+    <path d="M20 24V18" stroke="#6B7D3E" stroke-width="2" stroke-linecap="round" />
+    <path d="M20 18C20 16 22 15 22 14C22 12.8954 21.1046 12 20 12C18.8954 12 18 12.8954 18 14" stroke="#6B7D3E" stroke-width="2" stroke-linecap="round" />
+    <!-- RR Text -->
+    <text x="50%" y="60%" text-anchor="middle" font-family="'Playfair Display', serif" font-size="12px" font-weight="bold" fill="#6B7D3E">RR</text>
+</svg>

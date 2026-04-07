@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rust & Relic - Vintage Clothing & Thrift Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="icon" type="image/svg+xml" href="images/logo-new.svg">
+</head>
+
+<body class="home-isolated">
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <img src="images/logo-new.svg" alt="Rust & Relic" class="nav-logo-img">
+                <span class="brand-name">Rust & Relic</span>
+            </a>
+
+            <nav class="desktop-nav">
+                <div class="nav-item dropdown">
+                    <a href="index.html" class="nav-link active">HOME <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"></path></svg></a>
+                    <div class="dropdown-menu">
+                        <a href="./pages/home2.html" class="dropdown-item">Home 2</a>
+                    </div>
+                </div>
+                <a href="./pages/about.html" class="nav-link">ABOUT US</a>
+                <a href="./pages/services.html" class="nav-link">SERVICES</a>
+                <a href="./pages/blogs.html" class="nav-link">BLOGS</a>
+                <a href="./pages/contact.html" class="nav-link">CONTACT</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="icon-btn theme-toggle" aria-label="Toggle Dark Mode" id="theme-toggle">
+                    <svg class="moon-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
+                        <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+                    <svg class="sun-icon" style="display:none;" width="20" height="20" fill="none" stroke="currentColor"
+                        stroke-width="2" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <path
+                            d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42">
+                        </path>
+                    </svg>
+                </button>
+                <button class="rtl-toggle" id="rtl-toggle" aria-label="Toggle RTL layout">RTL</button>
+                <a href="./pages/signup.html" class="icon-btn" aria-label="Account">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>   
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </a>
+                <a href="./pages/dashboard.html" class="button" aria-label="Dashboard">
+                    DASHBOARD
+                </a>
+                <button class="hamburger-btn touch-target" aria-label="Menu" id="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        
+        <div class="nav-drawer" id="mobile-drawer">
+            <div class="drawer-header">
+                <button class="drawer-close" id="drawer-close-btn" aria-label="Close Menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            
+            <nav class="drawer-nav">
+                <div class="drawer-section">
+                    <a href="index.html" class="drawer-link active">Home 1</a>
+                    <a href="./pages/home2.html" class="drawer-link">Home 2</a>
+                    <a href="./pages/about.html" class="drawer-link">About Page</a>
+                    <a href="./pages/services.html" class="drawer-link">Services Page</a>
+                    <a href="./pages/blogs.html" class="drawer-link">Blogs Page</a>
+                    <a href="./pages/contact.html" class="drawer-link">Contact Page</a>
+                </div>
+
+                <div class="drawer-separator"></div>
+
+                <div class="drawer-section">
+                    <a href="./pages/signup.html" class="drawer-link drawer-auth">Signup</a>
+                    <a href="./pages/dashboard.html" class="drawer-link drawer-auth">Dashboard</a>
+                </div>
+            </nav>
+        </div>
+        <div class="drawer-overlay" id="drawer-overlay"></div>
+    </header>
+
+    <main>
+        <section class="hero-section" style="background-image: url('./images/1960s\ floral.jpeg');">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                    <h1 class="hero-title">Timeless Style<br>Resurrected</h1>
+                <p class="hero-subtitle">Curated vintage and rare fashion pieces for the conscious collector. Discover
+                    the beauty of the past, tailored for your future.</p>
+                <div class="hero-buttons">
+                    <a href="./pages/home2.html" class="btn btn-primary">Shop Now</a>
+                    <a href="./pages/services.html" class="btn btn-secondary">Explore Collection</a>
+                </div>
+
+                <div class="featured-drop">
+                    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+                        </path>
+                    </svg>
+                    <span>Featured Rare Drop: 1970s Leather Trench Coat</span>
+                </div>
+                <button class="btn btn-secondary btn-sm mt-1" id="subscribe-alerts-btn"
+                    style="margin-top: 1rem; width: auto; min-width: 160px; height: 48px;">Subscribe for Alerts</button>
+            </div>
+            </div>
+        </section>
+
+        <section class="featured-pieces container section-padding">
+            <div class="section-header text-center">
+                <h2 class="section-title">Featured Rare Pieces</h2>
+                <p class="section-desc">One-of-a-kind discoveries that won't wait for anyone.</p>
+            </div>
+
+            <div class="grid cards-grid">
+
+                <article class="product-card">
+                    <div class="card-image-wrapper">
+                        <img src="./images/1960s floral.jpeg" alt="1960s Floral Silk Gown" class="card-img">
+                        <span class="size-badge">Size: M</span>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">1960s Floral Silk Gown</h3>
+                        <p class="card-price">$180.00</p>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="card-image-wrapper">
+                        <img src="./images/aviator jacket.jpeg" alt="Distressed Aviator Jacket" class="card-img">
+                        <span class="size-badge">Size: L</span>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Distressed Aviator Jacket</h3>
+                        <p class="card-price">$240.00</p>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="card-image-wrapper">
+                        <img src="./images/original denim.webp" alt="Original Selvedge Denim" class="card-img">
+                        <span class="size-badge">Size: 32</span>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Original Selvedge Denim</h3>
+                        <p class="card-price">$150.00</p>
+                    </div>
+                </article>
+            </div>
+            <div style="margin-top: 3.5rem; display: flex; justify-content: center;">
+                <a href="./pages/home2.html" class="btn btn-secondary">View All Products</a>
+            </div>
+        </section>
+
+        <section class="collections-section container section-padding">
+            <div class="section-header text-center">
+                <h2 class="section-title">Curated Collections & Bundles</h2>
+                <p class="section-desc">Themed pairings for the complete aesthetic.</p>
+            </div>
+
+            <div class="grid cards-grid">
+                <article class="collection-card">
+                    <img src="./images/mid night silk.jpeg" alt="Midnight Silk" class="collection-img">
+                    <div class="collection-overlay">
+                        <h3 class="collection-title">MidNight Silk</h3>
+                        <p class="collection-price">Bundle: $210 <span class="original-price">$265</span></p>
+                        <div class="collection-actions">
+                            <a href="" class="btn btn-primary btn-sm">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="collection-card">
+                    <img src="./images/urban archmist.webp" alt="Urban Archivist" class="collection-img">
+                    <div class="collection-overlay">
+                        <h3 class="collection-title">Urban Archivist</h3>
+                        <p class="collection-price">Bundle: $180 <span class="original-price">$220</span></p>
+                        <div class="collection-actions">
+                            <a href="#" class="btn btn-primary btn-sm">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="collection-card">
+                    <img src="./images/90s minmalist.webp" alt="The 90s Minimalist" class="collection-img">
+                    <div class="collection-overlay">
+                        <h3 class="collection-title">The 90s Minimalist</h3>
+                        <p class="collection-price">Bundle: $145 <span class="original-price">$190</span></p>
+                        <div class="collection-actions">
+                            <a href="#" class="btn btn-primary btn-sm">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="layaway-section container section-padding">
+            <div class="section-header text-center">
+                <h2 class="section-title">Ownership on Your Terms</h2>
+                <p class="section-desc">Secure your rare find today, pay over time with our Layaway Plan.</p>
+            </div>
+
+            <div class="grid layaway-steps">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <h3 class="step-title">Select & Secure</h3>
+                    <p class="step-desc">Choose your one-of-a-kind piece and select 'Layaway' at checkout.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <h3 class="step-title">Flexible Deposit</h3>
+                    <p class="step-desc">Pay a small 20% deposit to take the item off the market immediately.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <h3 class="step-title">Easy Installments</h3>
+                    <p class="step-desc">Manage your remaining balance over 3 months via your dashboard.</p>
+                </div>
+            </div>
+
+            <div class="pricing-example">
+                <div class="pricing-header">
+                    <span class="label">PRICING EXAMPLE</span>
+                </div>
+                <div class="pricing-row">
+                    <span>Vintage Trench ($300)</span>
+                    <span class="deposit-amount">$60 Deposit</span>
+                </div>
+                <div class="pricing-footer" style="margin-bottom: 2rem;">
+                    Then 3 monthly payments of $80. No interest, just style.
+                </div>
+                <button class="btn btn-primary layaway-btn" id="start-layaway-btn">Start Layaway Plan</button>
+            </div>
+        </section>
+
+        <section class="newsletter-section bg-secondary">
+            <div class="container newsletter-inner">
+                <div class="newsletter-content">
+                    <h2 class="section-title">Never Miss a Rare Drop</h2>
+                    <p class="section-desc">Join our inner circle for weekly archive highlights and personalized alerts
+                        based on your preferences.</p>
+
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email address" class="form-input full-width"
+                            required>
+
+                        <div class="form-row grid-2">
+                            <div class="form-group">
+                                <label class="form-label">Preferred Size</label>
+                                <select class="form-select">
+                                    <option>All Sizes</option>
+                                    <option>Small (S)</option>
+                                    <option>Medium (M)</option>
+                                    <option>Large (L)</option>
+                                    <option>Extra Large (XL)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Alert Frequency</label>
+                                <select class="form-select">
+                                    <option>Instant (Rare Drops)</option>
+                                    <option>Weekly Digest</option>
+                                    <option>Monthly Highlights</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary full-width">Subscribe for Alerts</button>
+                        <p class="privacy-note">We value your privacy. Unsubscribe at any time. Read our <a
+                                href="#">Privacy Policy</a></p>
+                    </form>
+                    <div class="brand-signature mt-auto">Rusty Relic</div>
+                </div>
+                <div class="newsletter-image">
+                    <img src="./images/store interior.webp" alt="Store Interior">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h2 class="footer-title">Rust & Relic</h2>
+                <p class="footer-desc">Curating timeless vintage pieces for the modern soul. Sustainability meets style
+                    in every thread we rescue and relic.</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon" aria-label="Instagram">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+                            <path d="M6.5 6.5h.01"></path>
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Pinterest">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.951-7.252 4.182 0 7.436 2.981 7.436 6.953 0 4.156-2.617 7.502-6.255 7.502-1.221 0-2.373-.635-2.768-1.385l-.756 2.879c-.274 1.043-1.015 2.345-1.515 3.141 1.196.371 2.457.572 3.766.572 6.627 0 11.989-5.365 11.989-11.986C24 5.367 18.644 0 12.017 0z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Facebook">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h3 class="footer-heading">EXPLORE</h3>
+                <ul>
+                    <li><a href="./pages/home2.html">Shop All</a></li>
+                    <li><a href="./pages/home2.html">New Arrivals</a></li>
+                    <li><a href="./pages/home2.html">Outfit Bundles</a></li>
+                    <li><a href="./pages/home2.html">Rare Pieces</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h3 class="footer-heading">COMPANY</h3>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./pages/about.html">Our Story</a></li>
+                    <li><a href="./pages/services.html">Services</a></li>
+                    <li><a href="./pages/blogs.html">Blogs</a></li>
+                    <li><a href="./pages/contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3 class="footer-heading">SERVICES</h3>
+                <ul>
+                    <li><a href="./pages/services.html">T-Shirts restoration</a></li>
+                    <li><a href="./pages/services.html">Custom Vintage Design</a></li>
+                    <li><a href="./pages/services.html">Denim Repair</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3 class="footer-heading">Additional Information</h3>
+                <ul>
+                    <li><a href="./pages/pricing.html">Pricing Plans</a></li>
+                    <li><a href="./pages/404.html">404 Page</a></li>
+                    <li><a href="./pages/coming-soon.html">Coming Soon</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3 class="footer-heading">JOIN THE ARCHIVE</h3>
+                <p>Get notified about rare drops and private collection releases.</p>
+                <form class="simple-subscribe">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" aria-label="Subscribe">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path d="M5 12h14M12 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>&copy; 2026 Rust & Relic. All Rights Reserved.</p>
+            <div class="footer-badges"> 
+                <span>ETHICALLY SOURCED</span>
+                <span>GLOBAL SHIPPING</span>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

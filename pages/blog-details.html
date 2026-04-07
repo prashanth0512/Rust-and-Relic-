@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Details - Rust & Relic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/blog-details.css">
+    <link rel="icon" type="image/svg+xml" href="../images/logo-new.svg">
+</head>
+
+<body class="light-mode">
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="../index.html" class="logo">
+                <img src="../images/logo-new.svg" alt="Rust & Relic" class="nav-logo-img">
+                <span class="brand-name">Rust & Relic</span>
+            </a>
+
+            <nav class="desktop-nav">
+                <div class="nav-item dropdown">
+                    <a href="../index.html" class="nav-link">HOME <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"></path></svg></a>
+                    <div class="dropdown-menu">
+                        <a href="home2.html" class="dropdown-item">Home 2</a>
+                    </div>
+                </div>
+                <a href="about.html" class="nav-link">ABOUT US</a>
+                <a href="services.html" class="nav-link">SERVICES</a>
+                <a href="blogs.html" class="nav-link">BLOGS</a>
+                <a href="contact.html" class="nav-link">CONTACT</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="icon-btn theme-toggle" aria-label="Toggle Dark Mode" id="theme-toggle">
+                    <svg class="moon-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
+                        <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+                    <svg class="sun-icon" style="display:none;" width="20" height="20" fill="none" stroke="currentColor"
+                        stroke-width="2" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <path
+                            d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42">
+                        </path>
+                    </svg>
+                </button>
+                <button class="rtl-toggle" id="rtl-toggle" aria-label="Toggle RTL layout">RTL</button>
+                <a href="dashboard.html" class="button hide-on-mobile" aria-label="Dashboard">DASHBOARD</a>
+                <a href="signup.html" class="icon-btn" aria-label="Account">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </a>
+                <button class="hamburger-btn" aria-label="Menu" id="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    
+    <div class="nav-drawer" id="mobile-drawer">
+        <button class="drawer-close" id="drawer-close-btn">&times;</button>
+        <nav class="drawer-nav">
+            <a href="../index.html" class="drawer-link">Home 1</a>
+            <a href="home2.html" class="drawer-link">Home 2</a>
+            <a href="about.html" class="drawer-link">About</a>
+            <a href="services.html" class="drawer-link">Services</a>
+            <a href="blogs.html" class="drawer-link active">Blogs</a>
+            <a href="contact.html" class="drawer-link">Contact</a>
+            <a href="signup.html" class="drawer-link">Signup</a>
+            <a href="dashboard.html" class="drawer-link">Dashboard</a>
+        </nav>
+    </div>
+    <div class="drawer-overlay" id="drawer-overlay"></div>
+
+    <main class="bd-main-container">
+        <article class="bd-article">
+            <div class="bd-hero">
+                <img id="bd-featured-image" src="../images/blog1.jpg" alt="Featured Image">
+            </div>
+
+            <div class="bd-header">
+                <h1 id="bd-title" class="bd-title">Loading...</h1>
+                <div class="bd-meta">
+                    <span id="bd-author">By Rust & Relic</span>
+                    <span class="bd-divider">|</span>
+                    <span id="bd-date">Date</span>
+                </div>
+            </div>
+
+            <div class="bd-content-wrapper">
+                <section class="bd-section">
+                    <h2 class="bd-section-heading">Introduction</h2>
+                    <p id="bd-intro" class="bd-paragraph">Loading introduction...</p>
+                </section>
+                <section class="bd-section">
+                    <h2 class="bd-section-heading">The Core Concept</h2>
+                    <div id="bd-main-content" class="bd-paragraph">
+                        Loading main content...
+                    </div>
+                </section>
+                <section class="bd-section bd-tips-section">
+                    <h2 class="bd-section-heading">Essential Tips</h2>
+                    <ul id="bd-tips-list" class="bd-bullet-list">
+                    </ul>
+                </section>
+                <section class="bd-section">
+                    <h2 class="bd-section-heading">Visual Inspiration</h2>
+                    <div id="bd-image-grid" class="bd-image-grid">
+                    </div>
+                </section>
+                <section class="bd-section">
+                    <h2 class="bd-section-heading">Conclusion</h2>
+                    <p id="bd-conclusion" class="bd-paragraph">Loading conclusion...</p>
+                </section>
+
+                <div class="bd-back-wrapper">
+                    <a href="blogs.html" class="bd-btn">&larr; Back to Blogs</a>
+                </div>
+
+            </div>
+        </article>
+    </main>
+
+            <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h2 class="footer-title">Rust & Relic</h2>
+                <p class="footer-desc">Curating timeless vintage pieces for the modern soul. Sustainability meets style
+                    in every thread we rescue and relic.</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon" aria-label="Instagram">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+                            <path d="M6.5 6.5h.01"></path>
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Pinterest">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.951-7.252 4.182 0 7.436 2.981 7.436 6.953 0 4.156-2.617 7.502-6.255 7.502-1.221 0-2.373-.635-2.768-1.385l-.756 2.879c-.274 1.043-1.015 2.345-1.515 3.141 1.196.371 2.457.572 3.766.572 6.627 0 11.989-5.365 11.989-11.986C24 5.367 18.644 0 12.017 0z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Facebook">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3 class="footer-heading">EXPLORE</h3>
+                <ul>
+                    <li><a href="./home2.html">Shop All</a></li>
+                    <li><a href="./home2.html">New Arrivals</a></li>
+                    <li><a href="./home2.html">Outfit Bundles</a></li>
+                    <li><a href="./home2.html">Rare Pieces</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3 class="footer-heading">COMPANY</h3>
+                <ul>
+                    <li><a href="../index.html" class="touch-target">Home</a></li>
+                    <li><a href="./about.html" class="touch-target">Our Story</a></li>
+                    <li><a href="./services.html" class="touch-target">Services</a></li>
+                    <li><a href="./blogs.html" class="touch-target">Blogs</a></li>
+                    <li><a href="./contact.html" class="touch-target">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3 class="footer-heading">SERVICES</h3>
+                <ul>
+                    <li><a href="./services.html" class="touch-target">T-shirt Restoration</a></li>
+                    <li><a href="./services.html" class="touch-target">Vintage design</a></li>
+                    <li><a href="./services.html" class="touch-target">Denim Repair</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3 class="footer-heading">Addition Information</h3>
+                <ul>
+                    <li><a href="./pricing.html" class="touch-target">Pricing Plans</a></li>
+                    <li><a href="./404.html" class="touch-target">404 Page</a></li>
+                    <li><a href="./coming-soon.html" class="touch-target">Coming Soon</a></li>
+                </ul>
+            </div>  
+            <div class="footer-newsletter">
+                <h3 class="footer-heading">JOIN THE ARCHIVE</h3>
+                <p>Get notified about rare drops and private collection releases.</p>
+                <form class="simple-subscribe">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" aria-label="Subscribe">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path d="M5 12h14M12 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>&copy; 2026 Rust & Relic. All Rights Reserved.</p>
+            <div class="footer-badges">
+                <span>ETHICALLY SOURCED</span>
+                <span>GLOBAL SHIPPING</span>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/main.js"></script>
+    <script src="../js/blog-details.js"></script>
+</body>
+
+</html>

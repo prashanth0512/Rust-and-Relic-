@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home2 - Rust & Relic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/home2.css">
+    <link rel="icon" type="image/svg+xml" href="../images/logo-new.svg">
+</head>
+
+<body class="home2-isolated">
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="../index.html" class="logo">
+                <img src="../images/logo-new.svg" alt="Rust & Relic" class="nav-logo-img">
+                <span class="brand-name">Rust & Relic</span>
+            </a>
+
+            <nav class="desktop-nav">
+                <div class="nav-item dropdown">
+                    <a href="../index.html" class="nav-link">HOME <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"></path></svg></a>
+                    <div class="dropdown-menu">
+                        <a href="./home2.html" class="dropdown-item">Home 2</a>
+                    </div>
+                </div>
+                <a href="./about.html" class="nav-link">ABOUT US</a>
+                <a href="./services.html" class="nav-link">SERVICES</a>
+                <a href="./blogs.html" class="nav-link">BLOGS</a>
+                <a href="./contact.html" class="nav-link">CONTACT</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="icon-btn theme-toggle" aria-label="Toggle Dark Mode" id="theme-toggle">
+                    <svg class="moon-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
+                        <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+                    <svg class="sun-icon" style="display:none;" width="20" height="20" fill="none" stroke="currentColor"
+                        stroke-width="2" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <path
+                            d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42">
+                        </path>
+                    </svg>
+                </button>
+                <button class="rtl-toggle" id="rtl-toggle" aria-label="Toggle RTL layout">RTL</button>
+                <a href="./signup.html" class="icon-btn" aria-label="Account">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>   
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </a>
+                <a href="dashboard.html" class="button" aria-label="Dashboard">DASHBOARD</a>
+                <button class="hamburger-btn touch-target" aria-label="Menu" id="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        
+        
+        <div class="nav-drawer" id="mobile-drawer">
+            <div class="drawer-header">
+                <button class="drawer-close" id="drawer-close-btn" aria-label="Close Menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            
+            <nav class="drawer-nav">
+                <div class="drawer-section">
+                    <a href="../index.html" class="drawer-link">Home 1</a>
+                    <a href="./home2.html" class="drawer-link active">Home 2</a>
+                    <a href="./about.html" class="drawer-link">About Page</a>
+                    <a href="./services.html" class="drawer-link">Services Page</a>
+                    <a href="./blogs.html" class="drawer-link">Blogs Page</a>
+                    <a href="./contact.html" class="drawer-link">Contact Page</a>
+                </div>
+
+                <div class="drawer-separator"></div>
+
+                <div class="drawer-section">
+                    <a href="./signup.html" class="drawer-link drawer-auth">Signup</a>
+                    <a href="./dashboard.html" class="drawer-link drawer-auth">Dashboard</a>
+                </div>
+            </nav>
+        </div>
+        <div class="drawer-overlay" id="drawer-overlay"></div>
+    </header>
+
+    <main>
+        <section class="shop-hero">
+            <div class="shop-hero-image">
+                <img src="../images/shop bg.webp"
+                    alt="Vintage Leather Detail">
+            </div>
+            <div class="shop-hero-content">
+                <span class="sub-heading">Curated Thrift & Rare Finds</span>
+                <h1 class="shop-hero-title">Timeless Style,<br>Newly Discovered</h1>
+                <p class="shop-hero-desc">Discover unique vintage pieces hand-picked for their character and quality.
+                    From rare 70s denim to 90s luxury streetwear, your next favorite relic is waiting.</p>
+
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">Shop Now</button>
+                </div>
+
+                <div class="new-arrival-banner">
+                    <span class="badge">NEW ARRIVAL</span>
+                    <span>120+ rare pieces added this morning.</span>
+                </div>
+            </div>
+        </section>
+        <section class="shop-interface container section-padding">
+            <div class="shop-layout grid">
+                <aside class="shop-sidebar">
+                    <h2 class="sidebar-title">Refine By</h2>
+
+                    <div class="filter-group">
+                        <h3 class="filter-heading">Category</h3>
+                        <label class="checkbox-label">
+                            <input type="checkbox"> Outerwear
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox"> Dresses
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox"> shirt
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox"> Accessories
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox">jacket
+                        </label>
+                    </div>
+
+                    <div class="filter-group">
+                        <h3 class="filter-heading">Price Range</h3>
+                        <div class="range-slider">
+                            <input type="range" min="0" max="500" value="250" class="slider">
+                            <div class="range-labels">
+                                <span>$0</span>
+                                <span>$500+</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h3 class="filter-heading">New Arrivals</h3>
+                        <label class="toggle-label">
+                            <input type="checkbox" class="toggle-input">
+                            <span class="toggle-slider"></span>
+                            <span class="toggle-text">Last 24 Hours</span>
+                        </label>
+                    </div>
+                </aside>
+                <div class="shop-main">
+                    <div class="shop-top-bar">
+                        <span class="item-count"></span>
+                        <div class="shop-controls">
+                            <button class="btn btn-secondary btn-sm filter-toggle-btn">
+                                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                    <path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"></path>
+                                </svg>
+                                Filters
+                            </button>
+                            <select class="sort-select">
+                                <option>Newest First</option>
+                                <option>Price: Low to High</option>
+                                <option>Price: High to Low</option>
+                            </select>
+                            <div class="view-toggles">
+                                <button class="view-btn active" aria-label="Grid View">
+                                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M4 4h4v4H4V4zm6 0h4v4h-4V4zm6 0h4v4h-4V4zM4 10h4v4H4v-4zm6 0h4v4h-4v-4zm6 0h4v4h-4v-4zM4 16h4v4H4v-4zm6 0h4v4h-4v-4zm6 0h4v4h-4v-4z">
+                                        </path>
+                                    </svg>
+                                </button>
+                                <button class="view-btn" aria-label="List View">
+                                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-grid">
+                        <article class="product-card">
+                            <div class="card-image-wrapper">
+                                <span class="badge position-absolute bg-accent">Rare Find</span>
+                                <img src="../images/1960s floral.jpeg"
+                                    alt="1970s Meadow Floral Dress" class="card-img">
+                            </div>
+                            <div class="card-info shop-card-info">
+                                <div class="card-meta">
+                                    <span class="category">Dresses</span>
+                                    <span class="size">Size: M</span>
+                                </div>
+                                <h3 class="card-title">1970s Meadow Floral Dress</h3>
+                                <div class="card-footer">
+                                    <span class="price">$124.00</span>
+                                    <button class="btn btn-primary btn-sm">Add to Cart</button>
+                             </div>
+                            </div>
+                        </article>
+
+                         <article class="product-card">
+                            <div class="card-image-wrapper">
+                                <span class="badge position-absolute bg-accent">Rare Find</span>
+                                <img src="../images/urban archmist.webp"
+                                    alt="1970s Meadow Floral Dress" class="card-img">
+                            </div>
+                            <div class="card-info shop-card-info">
+                                <div class="card-meta">
+                                    <span class="category">Dresses  </span>
+                                    <span class="size">Size: M</span>
+                                </div>
+                                <h3 class="card-title">Urban Archivist</h3>
+                                <div class="card-footer">
+                                    <span class="price">$180.00</span>
+                                    <br>
+                                    <button class="btn btn-primary btn-sm">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+
+                         <article class="product-card">
+                            <div class="card-image-wrapper">
+                                <span class="badge position-absolute bg-accent">Rare Find</span>
+                                <img src="../images/aviator jacket.jpeg"
+                                    alt="1970s Meadow Floral Dress" class="card-img">
+                            </div>
+                            <div class="card-info shop-card-info">
+                                <div class="card-meta">
+                                    <span class="category">Jacket</span>
+                                    <span class="size">Size: M</span>
+                                </div>
+                                <h3 class="card-title">Distressed Aviator Jacket</h3>
+                                <div class="card-footer">
+                                    <span class="price">$240.00</span>
+                                    <button class="btn btn-primary btn-sm">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="product-card">
+                            <div class="card-image-wrapper">
+                                <span class="badge position-absolute bg-rust">Bundle Deal</span>
+                                <img src="../images/disrested.webp"
+                                    alt="Distressed Heritage Denim" class="card-img">
+
+                                <div class="hover-actions">
+                                    <button class="icon-btn" aria-label="View Details"><svg width="20" height="20"
+                                            fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                            <circle cx="12" cy="12" r="3"></circle>
+                                        </svg></button>
+                                    <button class="icon-btn wishlist-btn" aria-label="Add to Wishlist"><svg width="20"
+                                            height="20" fill="none" stroke="currentColor" stroke-width="2"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78v0z">
+                                            </path>
+                                        </svg></button>
+                                </div>
+                            </div>
+                            <div class="card-info shop-card-info">
+                                <div class="card-meta">
+                                    <span class="category">Outerwear</span>
+                                    <span class="size">Size: L</span>
+                                </div>
+                                <h3 class="card-title">Distressed Heritage Denim</h3>
+                                <div class="card-footer">
+                                    <span class="price">$89.00</span>
+                                    <button class="btn btn-primary btn-sm">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+
+                      <article class="product-card">
+                            <div class="card-image-wrapper">
+                                <span class="badge position-absolute bg-accent">Rare Find</span>
+                                <img src="../images/pexels-cmrcn-17146799.jpg"
+                                    alt="1970s Meadow Floral Dress" class="card-img">
+                            </div>
+                            <div class="card-info shop-card-info">
+                                <div class="card-meta">
+                                    <span class="category">shirt</span>
+                                    <span class="size">Size: M</span>
+                                </div>
+                                <h3 class="card-title">Retro Suspender Formal Look</h3>
+                                <div class="card-footer">
+                                    <span class="price">$75.00</span>
+                                    <br>
+                                    <button class="btn btn-primary btn-sm">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="product-card">
+                            <div class="card-image-wrapper">
+                                <span class="badge position-absolute bg-accent">Rare Find</span>
+                                <img src="../images/pexels-farzin-12282638.jpg"
+                                    alt="1970s Meadow Floral Dress" class="card-img">
+                            </div>
+                            <div class="card-info shop-card-info">
+                                <div class="card-meta">
+                                    <span class="category">Dresses</span>
+                                    <span class="size">Size: XL</span>
+                                </div>
+                                <h3 class="card-title">Retro Polka Dot Dress</h3>
+                                <div class="card-footer">
+                                    <span class="price">$95.00</span>
+                                    <br>
+                                    <button class="btn btn-primary btn-sm">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="product-card">
+                            <div class="card-image-wrapper">
+                                <span class="badge position-absolute bg-accent">Rare Find</span>
+                                <img src="../images/ser3.jpeg"
+                                    alt="1970s Meadow Floral Dress" class="card-img">
+                            </div>
+                            <div class="card-info shop-card-info">
+                                <div class="card-meta">
+                                    <span class="category">Dresses</span>
+                                    <span class="size">Size: L</span>
+                                </div>
+                                <h3 class="card-title">Vintage Boutique Dress</h3>
+                                <div class="card-footer">
+                                    <span class="price">$120.00</span>
+                                    <br>
+                                    <button class="btn btn-primary btn-sm">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+
+                    <article class="product-card">
+                            <div class="card-image-wrapper">
+                                <span class="badge position-absolute bg-accent">Rare Find</span>
+                                <img src="../images/pexels-pixabay-51396.jpg"
+                                    alt="1970s Meadow Floral Dress" class="card-img">
+                            </div>
+                            <div class="card-info shop-card-info">
+                                <div class="card-meta">
+                                    <span class="category">Accessories</span>
+                                    <span class="size">Size: All</span>
+                                </div>
+                                <h3 class="card-title">Vintage Pocket Watch Necklace</h3>
+                                <div class="card-footer">
+                                    <span class="price">$35.00</span>
+                                    <br>
+                                    <button class="btn btn-primary btn-sm">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+
+
+                        <article class="product-card">
+                            <div class="card-image-wrapper">
+                                <span class="badge position-absolute bg-accent">Rare Find</span>
+                                <img src="../images/pexels-kaderdygnn-9303515.jpg"
+                                    alt="1970s Meadow Floral Dress" class="card-img">
+                            </div>
+                            <div class="card-info shop-card-info">
+                                <div class="card-meta">
+                                    <span class="category">Accessories</span>
+                                    <span class="size">Size: M</span>
+                                </div>
+                                <h3 class="card-title">Vintage Retro Hat</h3>
+                                <div class="card-footer">
+                                    <span class="price">$75.00</span>
+                                    <br>
+                                    <button class="btn btn-primary btn-sm">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+
+
+                        <article class="product-card">
+                            <div class="card-image-wrapper">
+                                <span class="badge position-absolute bg-accent">Rare Find</span>
+                                <img src="../images/pexels-nor-llorca-1258006-2494607.jpg"
+                                    alt="1970s Meadow Floral Dress" class="card-img">
+                            </div>
+                            <div class="card-info shop-card-info">
+                                <div class="card-meta">
+                                    <span class="category">Accessories</span>
+                                    <span class="size">Size: M</span>
+                                </div>
+                                <h3 class="card-title">Vintage Gentleman Essentials</h3>
+                                <div class="card-footer">
+                                    <span class="price">$110.00</span>
+                                    <br>
+                                    <button class="btn btn-primary btn-sm">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+
+                    
+                        </article>
+                         <article class="product-card">
+                            <div class="card-image-wrapper">
+                                <span class="badge position-absolute bg-accent">Rare Find</span>
+                                <img src="../images/vintage-shirt.png"
+                                    alt="1992 Retro Pattern Shirt" class="card-img">
+                            </div>
+                            <div class="card-info shop-card-info">
+                                <div class="card-meta">
+                                    <span class="category">Shirt</span>
+                                    <span class="size">Size: L</span>
+                                </div>
+                                <h3 class="card-title">1992 Retro Pattern Shirt</h3>
+                                <div class="card-footer">
+                                    <span class="price">$110.00</span>
+                                    <button class="btn btn-primary btn-sm">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="card-image-wrapper">
+                                <span class="badge position-absolute bg-accent">New Arrival</span>
+                                <img src="../images/vintage-jacket.png"
+                                    alt="Raw Leather 80s Bomber" class="card-img">
+                            </div>
+                            <div class="card-info shop-card-info">
+                                <div class="card-meta">
+                                    <span class="category">Jacket</span>
+                                    <span class="size">Size: XL</span>
+                                </div>
+                                <h3 class="card-title">Raw Leather 80s Bomber</h3>
+                                <div class="card-footer">
+                                    <span class="price">$225.00</span>
+                                    <button class="btn btn-primary btn-sm">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+        </section>
+        <section class="outfits-section container section-padding">
+            <div class="section-header text-center">
+                <h2 class="section-title">Curated Outfit Bundles</h2>
+                <p class="section-desc">Save up to 20% when you shop the complete look.</p>
+            </div>
+
+            <div class="grid cards-grid">
+                <article class="bundle-card">
+                    <div class="split-image-container">
+                        <img src="../images/gs1.webp" alt="Flannel"
+                            class="split-img left">
+                        <img src="../images/gs2.jpeg" alt="Denim"
+                            class="split-img right">
+                    </div>
+                    <div class="bundle-info">
+                        <h3 class="bundle-title">The '92 Grunge Set</h3>
+                        <p class="bundle-items">Oversized flannel + Distressed denim</p>
+                        <div class="bundle-pricing">
+                            <span class="original-price">$145.00</span>
+                            <span class="sale-price">$115.00</span>
+                        </div>
+                        <button class="btn btn-primary full-width">Add Bundle to Cart</button>
+                    </div>
+                </article>
+                <article class="bundle-card">
+                    <div class="split-image-container">
+                        <img src="../images/velvet1.webp" alt="Evening Gown"
+                            class="split-img left">
+                        <img src="../images/velvet2.jpeg" alt="Silk Wrap"
+                            class="split-img right">
+                    </div>
+                    <div class="bundle-info">
+                        <h3 class="bundle-title">The Velvet Night</h3>
+                        <p class="bundle-items">Evening gown + Silk wrap</p>
+                        <div class="bundle-pricing">
+                            <span class="original-price">$210.00</span>
+                            <span class="sale-price">$168.00</span>
+                        </div>
+                        <button class="btn btn-primary full-width">Add Bundle to Cart</button>
+                    </div>
+                </article>
+
+                <article class="bundle-card">
+                    <div class="split-image-container">
+                        <img src="../images/kit1.webp" alt="Trench Coat"
+                            class="split-img left">
+                        <img src="../images/kit2.jpeg" alt="Leather Crossbody"
+                            class="split-img right">
+                    </div>
+                    <div class="bundle-info">
+                        <h3 class="bundle-title">City Sourcing Kit</h3>
+                        <p class="bundle-items">Trench coat + Leather crossbody</p>
+                        <div class="bundle-pricing">
+                            <span class="original-price">$180.00</span>
+                            <span class="sale-price">$144.00</span>
+                        </div>
+                        <button class="btn btn-primary full-width">Add Bundle to Cart</button>
+                    </div>
+                </article>
+            </div>
+
+            <div class="text-center mt-auto" style="margin-top:2rem">
+                <span style="font-style:italic;color:var(--clr-text-light)">Scroll down to discover more
+                    relics...</span>
+            </div>
+        </section>
+
+        <section class="container section-padding">
+            <div class="rare-piece-banner">
+                <div class="banner-icon-bg">
+                    <div class="bell-icon-wrapper">
+                        <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9zm-4.27 13a2 2 0 01-3.46 0"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="banner-content">
+                    <h2 class="banner-title">Never Miss a Rare Piece</h2>
+                    <p class="banner-desc">Our most exclusive relics sell out in minutes. Subscribe for personalized
+                        alerts by size and be the first to know when the vault opens.</p>
+
+                    <form class="inline-alert-form">
+                        <input type="email" placeholder="Enter your email" class="form-input outline-input" required>
+                        <select class="form-select outline-input">
+                            <option>Your Size</option>
+                            <option>XS</option>
+                            <option>S</option>
+                            <option>M</option>
+                            <option>L</option>
+                            <option>XL</option>
+                        </select>
+                        <button type="submit" class="btn btn-secondary border-btn">Notify Me</button>
+                    </form>
+
+                    <div class="banner-footer">
+                        <p>Interested in our <a href="#" class="layaway-link">Layaway Plan?</a></p>
+                        <p>Pay in installments for pieces over $200.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h2 class="footer-title">Rust & Relic</h2>
+                <p class="footer-desc">Curating timeless vintage pieces for the modern soul. Sustainability meets style
+                    in every thread we rescue and relic.</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon" aria-label="Instagram">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+                            <path d="M6.5 6.5h.01"></path>
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Pinterest">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.951-7.252 4.182 0 7.436 2.981 7.436 6.953 0 4.156-2.617 7.502-6.255 7.502-1.221 0-2.373-.635-2.768-1.385l-.756 2.879c-.274 1.043-1.015 2.345-1.515 3.141 1.196.371 2.457.572 3.766.572 6.627 0 11.989-5.365 11.989-11.986C24 5.367 18.644 0 12.017 0z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Facebook">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h3 class="footer-heading">EXPLORE</h3>
+                <ul>
+                    <li><a href="./home2.html">Shop All</a></li>
+                    <li><a href="./home2.html">New Arrivals</a></li>
+                    <li><a href="./home2.html">Outfit Bundles</a></li>
+                    <li><a href="./home2.html">Rare Pieces</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h3 class="footer-heading">COMPANY</h3>
+                <ul>
+                    <li><a href="../index.html" class="touch-target">Home</a></li>
+                    <li><a href="./about.html" class="touch-target">Our Story</a></li>
+                    <li><a href="./services.html" class="touch-target">Services</a></li>
+                    <li><a href="./blogs.html" class="touch-target">Blogs</a></li>
+                    <li><a href="./contact.html" class="touch-target">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h3 class="footer-heading">SERVICES</h3>
+                <ul>
+                    <li><a href="./services.html" class="touch-target">T-shirt Restoration</a></li>
+                    <li><a href="./services.html" class="touch-target">Vintage design</a></li>
+                    <li><a href="./services.html" class="touch-target">Denim Repair</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h3 class="footer-heading">Additional Information</h3>
+                <ul>
+                    <li><a href="./pricing.html" class="touch-target">Pricing Page</a></li>
+                    <li><a href="./404.html" class="touch-target">404 Page</a></li>
+                    <li><a href="./coming-soon.html" class="touch-target">Coming Soon</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-newsletter">
+                <h3 class="footer-heading">JOIN THE ARCHIVE</h3>
+                <p>Get notified about rare drops and private collection releases.</p>
+                <form class="simple-subscribe">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" aria-label="Subscribe">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path d="M5 12h14M12 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>&copy; 2026 Rust & Relic. All Rights Reserved.</p>
+            <div class="footer-badges">
+                <span>ETHICALLY SOURCED</span>
+                <span>GLOBAL SHIPPING</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/home2.js"></script>
+</body>
+
+</html>

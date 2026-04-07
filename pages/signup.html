@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Rust & Relic</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="../images/logo-new.svg">
+</head>
+<body>
+    <div class="signup-container1">
+        <div class="theme-toggle-wrapper">
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+                <i class="fas fa-moon moon-icon"></i>
+                <i class="fas fa-sun sun-icon"></i>
+            </button>
+        </div>
+        <div class="auth-wrapper">
+            <div class="left-side">
+                <div class="brand-overlay">
+                    <h1 class="brand-text">RUST & RELIC</h1>
+                    <p class="brand-tagline">Since 1974</p>
+                </div>
+            </div>
+            <div class="right-side">
+                <a href="../index.html" class="logo auth-logo" style="margin-bottom: 1rem; display: flex; justify-content: center;">
+                    <img src="../images/logo-new.svg" alt="Rust & Relic" class="nav-logo-img" style="height: 35px; width: auto;">
+                </a>
+                
+                <h1 class="hero-title">Create Account</h1>
+                <p class="subtitle">Join our curated community of vintage collectors.</p>
+                
+                <form id="signupForm" class="auth-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Full Name" required class="signup-form-input">
+                        <div class="error-message">Name is required</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" placeholder="Email Address" required class="signup-form-input">
+                        <div class="error-message">Invalid email address</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="password" placeholder="Password" required class="signup-form-input">
+                        <div class="error-message">Password is too weak</div>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="password" placeholder="Confirm Password" required class="signup-form-input">
+                        <div class="error-message">Passwords do not match</div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary full-width-btn" style="margin-top: 1rem;">Sign Up</button>
+                </form>
+
+                <div class="social-login">
+                    <p class="divider"><span>Or continue with</span></p>
+                    <div class="social-icons">
+                        <a href="https://accounts.google.com/" class="social-btn google" aria-label="Sign up with Google">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="https://appleid.apple.com/" class="social-btn apple" aria-label="Sign up with Apple">
+                            <i class="fab fa-apple"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="auth-footer">
+                    <p>Already have an account? <a href="login.html">Login</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/main.js"></script>
+    <script>
+        document.getElementById('signupForm').onsubmit = function(e) {
+            e.preventDefault();
+            window.location.href = "../index.html";
+        }
+    </script>
+</body>
+</html>

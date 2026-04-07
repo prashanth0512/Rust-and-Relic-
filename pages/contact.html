@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Rust & Relic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="icon" type="image/svg+xml" href="../images/logo-new.svg">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="../index.html" class="logo">
+                <img src="../images/logo-new.svg" alt="Rust & Relic" class="nav-logo-img">
+                <span class="brand-name">Rust & Relic</span>
+            </a>
+            <nav class="desktop-nav">
+                <div class="nav-item dropdown">
+                    <a href="../index.html" class="nav-link">HOME <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"></path></svg></a>
+                    <div class="dropdown-menu">
+                        <a href="home2.html" class="dropdown-item">Home 2</a>
+                    </div>
+                </div>
+                <a href="about.html" class="nav-link">ABOUT US</a>
+                <a href="services.html" class="nav-link">SERVICES</a>
+                <a href="blogs.html" class="nav-link">BLOGS</a>
+                <a href="contact.html" class="nav-link active">CONTACT</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="icon-btn theme-toggle" aria-label="Toggle Dark Mode" id="theme-toggle">
+                    <svg class="moon-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
+                        <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+                    <svg class="sun-icon" style="display:none;" width="20" height="20" fill="none" stroke="currentColor"
+                        stroke-width="2" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <path
+                            d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42">
+                        </path>
+                    </svg>
+                </button>
+                <button class="rtl-toggle" id="rtl-toggle" aria-label="Toggle RTL layout">RTL</button>
+                <a href="./signup.html" class="icon-btn" aria-label="Account">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>   
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </a>
+                <a href="./pages/dashboard.html" class="button hide-on-mobile" aria-label="Dashboard">
+                    DASHBOARD
+                </a>
+                <button class="hamburger-btn touch-target" aria-label="Menu" id="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    
+    <div class="nav-drawer" id="mobile-drawer">
+        <button class="drawer-close" id="drawer-close-btn">&times;</button>
+        <nav class="drawer-nav">
+            <a href="../index.html" class="drawer-link">Home 1</a>
+            <a href="home2.html" class="drawer-link">Home 2</a>
+            <a href="about.html" class="drawer-link">About</a>
+            <a href="services.html" class="drawer-link">Services</a>
+            <a href="blogs.html" class="drawer-link">Blogs</a>
+            <a href="contact.html" class="drawer-link active">Contact</a>
+            <a href="signup.html" class="drawer-link">Signup</a>
+            <a href="dashboard.html" class="drawer-link">Dashboard</a>
+        </nav>
+    </div>
+    <div class="drawer-overlay" id="drawer-overlay"></div>
+
+    <main>
+        <section class="contact-hero">
+            <div class="contact-hero-bg">
+                <img src="../images/contactpage 1.webp" alt="Vintage Sewing Machine Background">
+                <div class="contact-hero-overlay"></div>
+            </div>
+            <div class="container contact-hero-content">
+                <h1 class="contact-title">Get in Touch with<br>Rust & Relic</h1>
+                <p class="contact-desc">Whether you're hunting for a rare vintage gem, inquiring about our layaway
+                    plans, or need personal styling advice, our curators are here to help you preserve fashion history.
+                </p>
+                <div class="contact-hero-actions">
+                    <button class="btn btn-primary touch-target">Send a Message</button>
+                    <div class="contact-hours">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        <span>MON-SAT: 10AM - 7PM</span>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-hero-shape"></div>
+        </section>
+        <section class="container section-padding form-section contact-inquiry-section">
+            <div class="section-header text-center">
+                <h2 class="section-title">Send Us a Curated Inquiry</h2>
+                <p class="section-desc">Our team typically responds within 24 business hours. Please provide as much
+                    detail as possible regarding rare item requests or order status.</p>
+            </div>
+
+            <form class="contact-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" placeholder="Elias Thorne" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="emailAddr">Email Address</label>
+                        <input type="email" id="emailAddr" placeholder="elias@vintage.com" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <div class="custom-select-wrapper">
+                        <select id="subject" class="touch-target">
+                            <option value="">Select an inquiry type</option>
+                            <option value="rare_item">Rare Item Request</option>
+                            <option value="order_status">Order Status</option>
+                            <option value="layaway">Layaway Plans</option>
+                            <option value="styling">Personal Styling</option>
+                        </select>
+                        <svg class="select-icon" width="20" height="20" fill="none" stroke="currentColor"
+                            stroke-width="2" viewBox="0 0 24 24">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" rows="5"
+                        placeholder="Tell us about the piece you're looking for or your specific question..."
+                        required></textarea>
+                </div>
+                <div class="form-footer">
+                    <p class="form-disclosure">By submitting this form, you agree to our privacy policy and terms of
+                        service.</p>
+                    <button type="submit" class="btn contact-dispatch-btn touch-target">Dispatch Message</button>
+                </div>
+            </form>
+        </section>
+        <section class="container section-padding direct-channels-section">
+            <div class="direct-channels-grid">
+                <a href="https://maps.google.com/?q=42+Heritage+Lane,+Old+Town+District,+NY+10012"
+                    target="_blank" rel="noopener noreferrer" class="channels-image-wrapper channels-map-link"
+                    style="display: block; text-decoration: none; cursor: pointer;">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.9503398796587!2d-73.99891648459418!3d40.72557397933185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2598a7a461f1b%3A0x6b0ada3762b1e0e4!2sSoHo%2C%20New%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1709697600000!5m2!1sen!2sus"
+                        width="100%" height="100%"
+                        style="border:0; pointer-events: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                        allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Rust & Relic Store Location - 42 Heritage Lane, Old Town District, NY 10012">
+                    </iframe>
+
+                    <div class="visit-archive-card">
+                        <div class="archive-header">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <h3>Visit the Archive</h3>
+                        </div>
+                        <p>42 Heritage Lane, Old Town District, NY 10012</p>
+                        <span class="btn archive-map-btn touch-target"
+                            style="display: inline-block; text-align: center;">Open in Google
+                            Maps</span>
+                    </div>
+                </a>
+
+                <div class="channels-info-wrapper">
+                    <h2 class="section-title">Direct Channels</h2>
+                    <p class="section-desc">Prefer a direct conversation? Reach out through our established lines of
+                        communication.</p>
+
+                    <div class="channel-list">
+                        <div class="channel-item">
+                            <div class="channel-icon">
+                                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                    </path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </div>
+                            <div class="channel-text">
+                                <span class="channel-label">CURATOR EMAIL</span>
+                                <a href="rust&relic26@gmail.com"
+                                    class="channel-value touch-target">rust&relic26@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="channel-item">
+                            <div class="channel-icon">
+                                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="channel-text">
+                                <span class="channel-label">STORE PHONE</span>
+                                <a href="tel:+12125550192" class="channel-value touch-target">+91 9876543210</a>
+                            </div>
+                        </div>
+                        <div class="channel-item">
+                            <div class="channel-icon">
+                                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                            </div>
+                            <div class="channel-text">
+                                <span class="channel-label">ARCHIVE HOURS</span>
+                                <span class="channel-value">Mon-Sat: 10:00 - 19:00</span>
+                                <span class="channel-sub-value">Sun: Appointment Only</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container section-padding faq-section">
+            <div class="section-header text-center">
+                <h2 class="section-title">Common Inquiries</h2>
+                <p class="section-desc">Find quick answers to our most frequent questions about the Rust & Relic
+                    experience.</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question touch-target">
+                        <span>How do your layaway plans work?</span>
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our layaway plans allow you to reserve any item for up to 90 days. Simply pay a 20% deposit
+                            upfront, and we'll hold your piece while you complete monthly payments. No interest or
+                            hidden fees — just flexible, collector-friendly terms. Once fully paid, we ship your item
+                            within 2 business days.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question touch-target">
+                        <span>Can I request a specific rare piece?</span>
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely! Use our Rare Item Request form or email us directly with details about the piece
+                            you're looking for — brand, era, size, and condition preference. Our sourcing team actively
+                            hunts through estate sales, auctions, and private collections worldwide. We'll notify you as
+                            soon as we find a match.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question touch-target">
+                        <span>What is your typical response time?</span>
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We typically respond to all inquiries within 24 business hours. For rare item requests and
+                            personal styling consultations, our curators may take up to 48 hours to provide a detailed,
+                            personalized response. Urgent order-related queries are prioritized and usually answered
+                            within a few hours.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question touch-target">
+                        <span>Do you offer international shipping?</span>
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, we ship worldwide! Standard international shipping takes 7–14 business days depending on
+                            destination. We offer tracked shipping on all international orders and provide
+                            customs-friendly packaging. Express shipping options are also available at checkout for
+                            select countries.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container section-padding customer-voices-section">
+            <div class="section-header text-center">
+                <h2 class="section-title">Customer Voices</h2>
+                <p class="section-desc text-italic">Stories of successful sourcing and seamless support from our
+                    community.</p>
+            </div>
+
+            <div class="grid contact-reviews-grid">
+                <div class="contact-review-card">
+                    <div class="star-rating">
+                        ★★★★★
+                    </div>
+                    <p class="review-quote">"The layaway plan was a lifesaver for securing an 80s leather trench I'd
+                        been hunting for years. The team kept me updated every step of the way."</p>
+                    <div class="review-author-info">
+                        <span class="author-name">Sarah Jenkins</span>
+                        <span class="author-title">Verified Collector</span>
+                    </div>
+                </div>
+                <div class="contact-review-card">
+                    <div class="star-rating">
+                        ★★★★★
+                    </div>
+                    <p class="review-quote">"Requested a specific vintage watch through their rare item alert. Two
+                        months later, they found it in pristine condition. Incredible service!"</p>
+                    <div class="review-author-info">
+                        <span class="author-name">Marcus Thorne</span>
+                        <span class="author-title">Rare Item Client</span>
+                    </div>
+                </div>
+                <div class="contact-review-card">
+                    <div class="star-rating">
+                        ★★★★★
+                    </div>
+                    <p class="review-quote">"I had a question about sizing for a 1950s dress. The curator sent me a
+                        video showing exactly how it measured. That's real care."</p>
+                    <div class="review-author-info">
+                        <span class="author-name">Elena Rossi</span>
+                        <span class="author-title">Loyal Customer</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h2 class="footer-title">Rest & Relic</h2>
+                <p class="footer-desc">Curating timeless vintage pieces for the modern soul. Sustainability meets style
+                    in every thread we rescue and relic.</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon touch-target" aria-label="Instagram">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+                            <path d="M6.5 6.5h.01"></path>
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon touch-target" aria-label="Pinterest">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.951-7.252 4.182 0 7.436 2.981 7.436 6.953 0 4.156-2.617 7.502-6.255 7.502-1.221 0-2.373-.635-2.768-1.385l-.756 2.879c-.274 1.043-1.015 2.345-1.515 3.141 1.196.371 2.457.572 3.766.572 6.627 0 11.989-5.365 11.989-11.986C24 5.367 18.644 0 12.017 0z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon touch-target" aria-label="Facebook">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h3 class="footer-heading">EXPLORE</h3>
+                <ul>
+                    <li><a href="./home2.html" class="touch-target">Shop All</a></li>
+                    <li><a href="./home2.html" class="touch-target">New Arrivals</a></li>
+                    <li><a href="./home2.html" class="touch-target">Outfit Bundles</a></li>
+                    <li><a href="./home2.html" class="touch-target">Rare Pieces</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h3 class="footer-heading">COMPANY</h3>
+                <ul>
+                    <li><a href="../index.html" class="touch-target">Home</a></li>
+                    <li><a href="./about.html" class="touch-target">Our Story</a></li>
+                    <li><a href="./services.html" class="touch-target">Services</a></li>
+                    <li><a href="./blogs.html" class="touch-target">Blogs</a></li>
+                    <li><a href="./contact.html" class="touch-target">Contact Us</a></li>
+                </ul>
+            </div> 
+
+            <div class="footer-links">
+                <h3 class="footer-heading">SERVICES</h3>
+                <ul>
+                    <li><a href="./services.html" class="touch-target">T-shirt Restoration</a></li>
+                    <li><a href="./services.html" class="touch-target">Vintage design</a></li>
+                    <li><a href="./services.html" class="touch-target">Denim Repair</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h3 class="footer-heading">Additional Information</h3>
+                <ul>
+                    <li><a href="./pricing.html" class="touch-target">Pricing Plans</a></li>
+                    <li><a href="./404.html" class="touch-target">404 Page</a></li>
+                    <li><a href="./coming-soon.html" class="touch-target">Coming Soon Page</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-newsletter">
+                <h3 class="footer-heading">JOIN THE ARCHIVE</h3>
+                <p>Get notified about rare drops and private collection releases.</p>
+                <form class="simple-subscribe">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" aria-label="Subscribe" class="touch-target">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path d="M5 12h14M12 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>&copy; 2026 Rust & Relic. All Rights Reserved.</p>
+            <div class="footer-badges">
+                <span>ETHICALLY SOURCED</span>
+                <span>GLOBAL SHIPPING</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

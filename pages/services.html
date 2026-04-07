@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Rust & Relic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/services.css">
+    <link rel="icon" type="image/svg+xml" href="../images/logo-new.svg">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="../index.html" class="logo">
+                <img src="../images/logo-new.svg" alt="Rust & Relic" class="nav-logo-img">
+                <span class="brand-name">Rust & Relic</span>
+            </a>
+
+            <nav class="desktop-nav">
+                <div class="nav-item dropdown">
+                    <a href="../index.html" class="nav-link">HOME <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"></path></svg></a>
+                    <div class="dropdown-menu">
+                        <a href="home2.html" class="dropdown-item">Home 2</a>
+                    </div>
+                </div>
+                <a href="about.html" class="nav-link">ABOUT US</a>
+               <a href="services.html" class="nav-link active">SERVICES</a>
+                <a href="blogs.html" class="nav-link">BLOGS</a>
+                <a href="contact.html" class="nav-link">CONTACT</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="icon-btn theme-toggle" aria-label="Toggle Dark Mode" id="theme-toggle">
+                    <svg class="moon-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
+                        <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+                    <svg class="sun-icon" style="display:none;" width="20" height="20" fill="none" stroke="currentColor"
+                        stroke-width="2" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <path
+                            d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42">
+                        </path>
+                    </svg>
+                </button>
+                <button class="rtl-toggle" id="rtl-toggle" aria-label="Toggle RTL layout">RTL</button>
+                <a href="../pages/signup.html" class="icon-btn" aria-label="Account">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </a>
+                <a href="dashboard.html" class="button hide-on-mobile" aria-label="Dashboard">DASHBOARD</a>
+                <button class="hamburger-btn touch-target" aria-label="Menu" id="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    
+    <div class="nav-drawer" id="mobile-drawer">
+        <button class="drawer-close" id="drawer-close-btn">&times;</button>
+        <nav class="drawer-nav">
+            <a href="../index.html" class="drawer-link">Home 1</a>
+            <a href="home2.html" class="drawer-link">Home 2</a>
+            <a href="about.html" class="drawer-link">About</a>
+            <a href="services.html" class="drawer-link active">Services</a>
+            <a href="blogs.html" class="drawer-link">Blogs</a>
+            <a href="contact.html" class="drawer-link">Contact</a>
+            <a href="signup.html" class="drawer-link">Signup</a>
+            <a href="dashboard.html" class="drawer-link">Dashboard</a>
+        </nav>
+    </div>
+    <div class="drawer-overlay" id="drawer-overlay"></div>
+
+    <main>
+        <section class="services-hero">
+            <div class="services-hero-image">
+                <img src="../images/services1.jpeg" alt="Vintage Atelier">
+                <div class="overlay" style="background: rgba(0,0,0,0.4);"></div>
+            </div>
+            <div class="container services-hero-content-wrapper">
+                <div class="services-hero-content">
+                    <h1 class="services-hero-title">Curated Styling &<br>Bespoke Fashion Services</h1>
+                    <p class="services-hero-desc">Elevating your wardrobe through expert vintage sourcing, personalized
+                        styling, and sustainable luxury management.</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary">Book Styling</button>
+                        <button class="btn btn-secondary">Explore Layaway</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container section-padding">
+            <div class="section-header">
+                <h2 class="section-title">Our Premium Services</h2>
+                <p class="section-desc">Explore our specialized offerings tailored to vintage preservation and styling.
+                </p>
+            </div>
+
+            <div class="services-grid">
+
+                <div class="service-card">
+                    <img src="../images/ab tshirt.jpeg" alt="Vintage T-Shirt Restoration" class="service-image">
+                    <div class="service-card-content">
+                        <h3 class="service-title">Vintage T-Shirt Restoration</h3>
+                        <p class="service-description">Expertly renewing your favorite vintage tees to their original glory with specialized fabric care and stitching.</p>
+                        <div class="service-actions">
+                            <a href="service-details.html?id=1" class="btn btn-service">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="../images/services1.jpeg" alt="Custom Vintage Design" class="service-image">
+                    <div class="service-card-content">
+                        <h3 class="service-title">Custom Vintage Design</h3>
+                        <p class="service-description">Transform classic pieces into modern masterpieces with our bespoke redesign services tailored to your unique style.</p>
+                        <div class="service-actions">
+                            <a href="service-details.html?id=2" class="btn btn-service">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="../images/ser3.jpeg" alt="Denim Repair" class="service-image">
+                    <div class="service-card-content">
+                        <h3 class="service-title">Denim Repair</h3>
+                        <p class="service-description">Professional sashiko and traditional repair techniques to extend the life of your precious vintage denim collections.</p>
+                        <div class="service-actions">
+                            <a href="service-details.html?id=3" class="btn btn-service">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="../images/ser4.webp" alt="Retro Outfit Styling" class="service-image">
+                    <div class="service-card-content">
+                        <h3 class="service-title">Retro Outfit Styling</h3>
+                        <p class="service-description">Personalized styling sessions to help you curate the perfect vintage-inspired look for any special occasion.</p>
+                        <div class="service-actions">
+                            <a href="service-details.html?id=4" class="btn btn-service">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="../images/ser5.jpeg" alt="Vintage Collection Supply" class="service-image">
+                    <div class="service-card-content">
+                        <h3 class="service-title">Vintage Collection Supply</h3>
+                        <p class="service-description">Exclusive access to our curated network of rare vintage garments and accessories sourced from around the globe.</p>
+                        <div class="service-actions">
+                            <a href="service-details.html?id=5" class="btn btn-service">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="../images/ser6.jpeg" alt="Premium Fabric Care" class="service-image">
+                    <div class="service-card-content">
+                        <h3 class="service-title">Premium Fabric Care</h3>
+                        <p class="service-description">Specialized cleaning and preservation services for delicate vintage textiles using museum-grade sustainable methods.</p>
+                        <div class="service-actions">
+                            <a href="service-details.html?id=6" class="btn btn-service">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="container section-padding personal-styling-section">
+            <div class="section-header">
+                <h2 class="section-title">Personal Styling Services</h2>
+                <p class="section-desc">Expert guidance to define and refine your unique vintage aesthetic.</p>
+            </div>
+
+            <div class="styling-tabs">
+                <button class="tab-btn active touch-target">Virtual Styling</button>
+            </div>
+
+            <div class="styling-content-grid">
+                <div class="styling-features">
+                    <h3 class="feature-title">One-on-One Virtual Consultations</h3>
+                    <p class="feature-desc">Connect from anywhere in the world. Our virtual sessions include a
+                        comprehensive wardrobe audit, mood board creation, and a curated digital shopping list of rare
+                        vintage finds tailored to your body type and personal brand.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+                                </path>
+                            </svg>
+                            60-minute video deep dive
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+                                </path>
+                            </svg>
+                            Digital style lookbook
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+                                </path>
+                            </svg>
+                            Direct messaging support for 30 days
+                        </li>
+                    </ul>
+                </div>
+                <div class="styling-quote-card">
+                    <p class="quote-text">"The virtual session transformed how I view my closet. I finally understand
+                        how to mix 70s silhouettes with modern basics."</p>
+                    <p class="quote-author">— Sarah J., London</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container section-padding sourcing-network-section">
+            <div class="section-header">
+                <h2 class="section-title">The Sourcing Network</h2>
+                <p class="section-desc text-italic text-sm">How we find the world's most elusive fashion treasures.</p>
+            </div>
+
+            <div class="sourcing-list">
+                <div class="sourcing-item">
+                    <div class="sourcing-num">01</div>
+                    <div class="sourcing-content">
+                        <h3 class="sourcing-title">Handpicked Global Sourcing</h3>
+                        <p class="sourcing-desc">Our network spans across European flea markets, private estate sales,
+                            and exclusive archive collectors. We don't just buy; we hunt for pieces with soul and
+                            history.</p>
+                    </div>
+                </div>
+
+                <div class="sourcing-item">
+                    <div class="sourcing-num">02</div>
+                    <div class="sourcing-content">
+                        <h3 class="sourcing-title">Provenance & Authenticity Checks</h3>
+                        <p class="sourcing-desc">Every item undergoes a rigorous 12-point inspection. We verify labels,
+                            stitching techniques, and material composition to ensure 100% authenticity and documented
+                            history.</p>
+                    </div>
+                </div>
+
+                <div class="sourcing-item">
+                    <div class="sourcing-num">03</div>
+                    <div class="sourcing-content">
+                        <h3 class="sourcing-title">Condition Grading & Restoration</h3>
+                        <p class="sourcing-desc">Items are graded from 'Museum Quality' to 'Excellent Wearable'. Our
+                            in-house artisans perform museum-grade restoration on delicate textiles when necessary.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container custom-requests-section">
+            <div class="section-header">
+                <h2 class="section-title">Custom Fashion Requests</h2>
+                <p class="section-desc text-italic text-sm">From bespoke alterations to personalized outfit
+                    architecture.</p>
+            </div>
+
+            <div class="grid cards-grid">
+                <div class="process-card">
+                    <div class="process-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <circle cx="6" cy="6" r="3"></circle>
+                            <circle cx="6" cy="18" r="3"></circle>
+                            <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+                        </svg>
+                    </div>
+                    <h3 class="process-title">1. Submit Your Vision</h3>
+                    <p class="process-desc">Upload photos, sketches, or mood boards to our custom request portal.
+                        Specify if you need alterations on an existing piece or a ground-up build.</p>
+                </div>
+
+                <div class="process-card">
+                    <div class="process-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 6v6l4 2"></path>
+                        </svg>
+                    </div>
+                    <h3 class="process-title">2. Consultation & Quote</h3>
+                    <p class="process-desc">Our lead stylist reviews your request within 48 hours. You'll receive a
+                        detailed timeline and a transparent pricing tier (Essential, Premium, or Bespoke).</p>
+                </div>
+
+                <div class="process-card">
+                    <div class="process-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <path d="M16 2v4M8 2v4M3 10h18"></path>
+                        </svg>
+                    </div>
+                    <h3 class="process-title">3. Execution & Delivery</h3>
+                    <p class="process-desc">Lead times vary from 2-6 weeks. You'll receive progress updates and fitting
+                        photos before final delivery of your customized masterpiece.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-section">
+            <div class="gallery-grid">
+                <img src="../images/ser3.jpeg" alt="Fabric Rolls" class="gallery-img vertical">
+                <img src="../images/ser4.webp" alt="Tailor working" class="gallery-img vertical">
+
+                <div class="gallery-img overlay-wrapper">
+                    <img src="../images/ser5.jpeg" alt="Seamstress at work">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-img overlay-text-wrapper">
+                    <img src="../images/ser6.jpeg" alt="Atmospheric vintage room">
+                    <div class="gallery-overlay">
+                        <h2 class="gallery-title">Showcase: The Vault Collection</h2>
+                    </div>
+                </div>
+                <img src="../images/ser7.webp" alt="Mannequin Setup" class="gallery-img">
+                <img src="../images/services2.jpeg" alt="Sewing Machine Detail" class="gallery-img">
+                <img src="../images/about bg.jpeg" alt="Vintage collection" class="gallery-img">
+                <img src="../images/ab tshirt.jpeg" alt="tshirt" class="gallery-img">
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3 class="footer-title">Rust & Relic</h3>
+                    <p class="footer-desc">Curating timeless vintage pieces for the modern soul. Sustainability meets style
+                        in every thread we rescue and relic.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+                                <path d="M6.5 6.5h.01"></path>
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Pinterest">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.951-7.252 4.182 0 7.436 2.981 7.436 6.953 0 4.156-2.617 7.502-6.255 7.502-1.221 0-2.373-.635-2.768-1.385l-.756 2.879c-.274 1.043-1.015 2.345-1.515 3.141 1.196.371 2.457.572 3.766.572 6.627 0 11.989-5.365 11.989-11.986C24 5.367 18.644 0 12.017 0z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h3 class="footer-heading">EXPLORE</h3>
+                    <ul>
+                        <li><a href="home2.html">Shop All</a></li>
+                        <li><a href="home2.html">New Arrivals</a></li>
+                        <li><a href="home2.html">Outfit Bundles</a></li>
+                        <li><a href="home2.html">Rare Pieces</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h3 class="footer-heading">COMPANY</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blogs.html">Blogs</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3 class="footer-heading">SERVICES</h3>
+                    <ul>
+                        <li><a href="services.html">T-Shirts restoration</a></li>
+                        <li><a href="services.html">Vintage Design</a></li>
+                        <li><a href="services.html">Denim Repair</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3 class="footer-heading">Additional Information</h3>
+                    <ul>
+                        <li><a href="pricing.html">Pricing Plans</a></li>
+                        <li><a href="404.html">404 Page</a></li>
+                        <li><a href="coming-soon.html">Coming Soon</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3 class="footer-heading">JOIN THE ARCHIVE</h3>
+                    <p>Get notified about rare drops and private collection releases.</p>
+                    <form class="simple-subscribe">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" aria-label="Subscribe">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Rust & Relic. All Rights Reserved.</p>
+                <div class="footer-badges"> 
+                    <span>ETHICALLY SOURCED</span>
+                    <span>GLOBAL SHIPPING</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
