@@ -33,6 +33,7 @@
                  <a href="../pages/services.html"class="nav-link">Services</a>
                 <a href="blogs.html" class="nav-link">BLOGS</a>
                 <a href="contact.html" class="nav-link">CONTACT</a>
+                <a href="dashboard.html" class="nav-link">DASHBOARD</a>
             </nav>
 
             <div class="header-actions">
@@ -63,7 +64,6 @@
                         <circle cx="12" cy="7" r="4"></circle>
                     </svg>
                 </a>
-                <a href="dashboard.html" class="button" aria-label="Dashboard">DASHBOARD</a>
                 <button class="hamburger-btn touch-target" id="mobile-menu-btn" aria-label="Open Menu">
                     <span></span>
                     <span></span>
@@ -529,129 +529,6 @@
             </div>
         </div>
     </footer>
-
     <script src="../js/main.js"></script>
-    <script>
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const modal = document.getElementById('image-modal');
-            const modalImg = document.getElementById('modal-img');
-            const captionText = document.getElementById('modal-caption');
-            const teamImages = document.querySelectorAll('.team-img-wrapper img');
-            const closeBtn = document.querySelector('.modal-close');
-
-            teamImages.forEach(img => {
-                img.style.cursor = 'zoom-in';
-                img.addEventListener('click', function() {
-                    const modal = document.getElementById('image-modal');
-                    const modalImg = document.getElementById('modal-img');
-                    const captionText = document.getElementById('modal-caption');
-                    
-                    if (modal) modal.style.display = "flex";
-                    if (modalImg) modalImg.src = this.src;
-                    if (captionText) captionText.innerHTML = this.alt;
-                    document.body.style.overflow = 'hidden'; 
-                });
-            });
-
-            const closeModal = function() {
-                const modal = document.getElementById('image-modal');
-                if (modal) modal.style.display = "none";
-                document.body.style.overflow = 'auto';
-            };
-
-            if (closeBtn) closeBtn.onclick = closeModal;
-            if (modal) {
-                modal.onclick = (e) => {
-                    if(e.target === modal) closeModal();
-                };
-            }
-            
-            document.addEventListener('keydown', (e) => {
-                if (e.key === "Escape") {
-                    if (modal && modal.style.display === "flex") closeModal();
-                }
-            });
-
-            // Testimonial Slider logic
-            const scrollContainer = document.querySelector('.testimonials-scroll');
-            const cards = document.querySelectorAll('.testimonial-card');
-            const nextBtn = document.querySelector('.scroll-btn.next');
-            const prevBtn = document.querySelector('.scroll-btn.prev');
-            const dotsContainer = document.querySelector('.testimonial-dots');
-
-            if (scrollContainer && cards.length > 0) {
-                // Create dots
-                cards.forEach((_, i) => {
-                    const dot = document.createElement('div');
-                    dot.classList.add('dot');
-                    if (i === 0) dot.classList.add('active');
-                    
-                    const dotBtn = document.createElement('button');
-                    dotBtn.classList.add('dot-btn');
-                    dotBtn.setAttribute('aria-label', `Go to slide ${i + 1}`);
-                    dotBtn.appendChild(dot);
-                    
-                    dotBtn.addEventListener('click', () => {
-                        const scrollPos = cards[i].offsetLeft - (scrollContainer.clientWidth - cards[i].clientWidth) / 2;
-                        scrollContainer.scrollTo({
-                            left: scrollPos,
-                            behavior: 'smooth'
-                        });
-                    });
-                    
-                    dotsContainer.appendChild(dotBtn);
-                });
-
-                const dots = document.querySelectorAll('.dot');
-
-                // Update active dot and arrows visibility on scroll
-                const updateActiveState = () => {
-                    const scrollLeft = scrollContainer.scrollLeft;
-                    const containerWidth = scrollContainer.clientWidth;
-                    
-                    let activeIndex = 0;
-                    let minDiff = Infinity;
-
-                    cards.forEach((card, i) => {
-                        const cardCenter = card.offsetLeft + card.clientWidth / 2;
-                        const containerCenter = scrollLeft + containerWidth / 2;
-                        const diff = Math.abs(cardCenter - containerCenter);
-                        
-                        if (diff < minDiff) {
-                            minDiff = diff;
-                            activeIndex = i;
-                        }
-                    });
-
-                    dots.forEach((dot, i) => {
-                        dot.classList.toggle('active', i === activeIndex);
-                    });
-
-                    // Update arrows visibility on desktop (optional, but nice)
-                    if (prevBtn) prevBtn.style.opacity = scrollLeft <= 10 ? '0.3' : '1';
-                    if (nextBtn) nextBtn.style.opacity = (scrollLeft + containerWidth) >= (scrollContainer.scrollWidth - 10) ? '0.3' : '1';
-                };
-
-                scrollContainer.addEventListener('scroll', updateActiveState);
-                window.addEventListener('resize', updateActiveState);
-                updateActiveState();
-
-                // Arrow interactions
-                if (nextBtn) {
-                    nextBtn.addEventListener('click', () => {
-                        scrollContainer.scrollBy({ left: scrollContainer.clientWidth, behavior: 'smooth' });
-                    });
-                }
-
-                if (prevBtn) {
-                    prevBtn.addEventListener('click', () => {
-                        scrollContainer.scrollBy({ left: -scrollContainer.clientWidth, behavior: 'smooth' });
-                    });
-                }
-            }
-        });
-    </script>
-</body>
-
+    </body>
 </html>

@@ -36,6 +36,35 @@ document.addEventListener('DOMContentLoaded', () => {
             sphere.style.transform = `translate(${x * factor}px, ${y * factor}px)`;
         });
     });
+
+    const htmlElement = document.documentElement;
+    const themeToggle = document.getElementById('theme-toggle');
+    const moonIcon = document.querySelector('.moon-icon');
+    const sunIcon = document.querySelector('.sun-icon');
+
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    setTheme(savedTheme);
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            setTheme(newTheme);
+        });
+    }
+
+    function setTheme(theme) {
+        htmlElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+
+        if (theme === 'dark') {
+            if (moonIcon) moonIcon.style.display = 'none';
+            if (sunIcon) sunIcon.style.display = 'block';
+        } else {
+            if (moonIcon) moonIcon.style.display = 'block';
+            if (sunIcon) sunIcon.style.display = 'none';
+        }
+    }
 });
 
 if (document.querySelector('.countdown')) {

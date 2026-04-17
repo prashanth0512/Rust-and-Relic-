@@ -2,6 +2,7 @@ body {
     overflow: hidden;
     height: 100vh;
     width: 100vw;
+    padding-top: 0;
 }
 
 .signup-container1 {
@@ -247,9 +248,11 @@ body {
     top: 20px;
     right: 20px;
     z-index: 1001;
+    display: flex;
+    gap: 10px;
 }
 
-.theme-toggle-btn {
+.theme-toggle-btn, .rtl-toggle {
     background: var(--clr-bg-alt);
     border: 1px solid var(--clr-border);
     width: 40px;
@@ -263,10 +266,22 @@ body {
     color: var(--clr-text-main);
     transition: all var(--transition-fast);
     box-shadow: var(--shadow-soft);
+    margin: 0; 
 }
 
-.theme-toggle-btn:hover {
+.theme-toggle-btn:hover, .rtl-toggle:hover {
     background: var(--clr-white);
+    color: var(--clr-primary);
+}
+
+.rtl-toggle {
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+[dir="rtl"] .theme-toggle-wrapper {
+    right: auto;
+    left: 20px;
 }
 
 .brand-overlay {
@@ -299,6 +314,10 @@ body {
     .theme-toggle-wrapper {
         top: 10px;
         right: 10px;
+    }
+    [dir="rtl"] .theme-toggle-wrapper {
+        right: auto;
+        left: 10px;
     }
 }
 

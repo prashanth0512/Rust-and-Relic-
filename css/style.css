@@ -87,6 +87,7 @@ body {
     width: 100%;
     position: relative;
     box-sizing: border-box;
+    padding-top: 80px;
 }
 
 *, *::before, *::after {
@@ -425,8 +426,9 @@ body:has(.contact-hero) .section-padding {
 
 .site-header {
     border-bottom: 1px solid var(--clr-border);
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     height: 80px;
     background-color: var(--clr-bg);
@@ -524,6 +526,12 @@ html[data-theme='dark'] .nav-drawer {
     margin-top: 1.5rem;
 }
 
+[dir="rtl"] .drawer-nav,
+[dir="rtl"] .drawer-section {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
 .drawer-link {
     padding: 0.9rem 0;
     font-size: 1.1rem;
@@ -583,6 +591,10 @@ html[data-theme='dark'] .nav-drawer {
     display: flex;
     gap: 3.5rem;
     justify-content: center;
+}
+
+[dir="rtl"] .desktop-nav {
+    flex-direction: row;
 }
 
 @media (max-width: 1024px) {
@@ -838,6 +850,12 @@ html[data-theme='dark'] .sun-icon {
     color: var(--clr-white);
     margin-bottom: 1.5rem;
     line-height: 1.1;
+}
+
+.hero-section, .services-hero, .about-hero, .contact-hero, .blog-hero {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 
@@ -2359,9 +2377,7 @@ html[data-theme='dark'] .site-footer {
     }
 }
 
-
-/* Nav drawer consolidated styles */
-
+    
 .nav-drawer.open {
     right: 0;
 }
@@ -3995,11 +4011,9 @@ section > .container, .hero-section, .featured-pieces, .collections-section, .la
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
 }
 
-/* Clean UI transitions */
 
 .nav-link:hover::after { transform: scaleX(1); }
 
-/* Basic hover consistency */
 
 @keyframes gradientShift {
     0% { background-position: 0% 50%; }
@@ -4034,7 +4048,7 @@ section > .container, .hero-section, .featured-pieces, .collections-section, .la
 }
 
 [dir="rtl"] .desktop-nav {
-    flex-direction: row-reverse;
+    flex-direction: row;
 }
 
 [dir="rtl"] .header-actions {
@@ -4390,4 +4404,3 @@ html[data-theme='dark'] .social-icon:hover {
     color: #A8C060;
     border-color: rgba(107, 125, 62, 0.5);
 }
-

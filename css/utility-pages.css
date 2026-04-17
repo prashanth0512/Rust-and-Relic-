@@ -10,11 +10,20 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 5rem 1rem 3rem;
+    padding: 2rem 1rem 3rem;
     position: relative;
     overflow-x: hidden;
     width: 100%;
     box-sizing: border-box;
+}
+
+.theme-toggle-wrapper {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    z-index: 1001;
+    display: flex;
+    gap: 1rem;
 }
 
 .pricing-section {
@@ -359,26 +368,39 @@ body.no-scroll {
 }
 
 .btn-primary {
-    background-color: var(--clr-primary);
+    background-color: var(--clr-primary) !important;
     color: var(--clr-white) !important;
-    border: 2px solid var(--clr-primary);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid var(--clr-primary) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
 }
 
 .btn-secondary {
-    background-color: transparent;
-    color: var(--clr-primary);
-    border: 2px solid var(--clr-primary);
-}
-.btn-primary:hover {
-    background-color: var(--clr-bg);
+    background-color: transparent !important;
     color: var(--clr-primary) !important;
-    transform: scale(1.05) translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border: 2px solid var(--clr-primary) !important;
+}
+
+.btn-link {
+    background-color: transparent !important;
+    color: var(--clr-primary) !important;
+    text-decoration: underline !important;
+    font-weight: 600 !important;
+}
+
+.btn-primary:hover {
+    background-color: var(--clr-bg) !important;
+    color: var(--clr-primary) !important;
+    transform: scale(1.05) translateY(-3px) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
 }
 
 .btn-secondary:hover {
-    background-color: var(--clr-primary);
-    color: var(--clr-white);
-    transform: scale(1.05) translateY(-3px);
+    background-color: var(--clr-primary) !important;
+    color: var(--clr-white) !important;
+    transform: scale(1.05) translateY(-3px) !important;
+}
+
+.btn-link:hover {
+    color: var(--clr-primary-hover) !important;
+    opacity: 0.8;
 }
