@@ -305,4 +305,243 @@
 .service-card, .btn-service {
     will-change: transform;
 }
+.premium-services-section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+.personal-styling-section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    border-top: 1px solid var(--clr-border);
+    background-color: var(--clr-bg-alt);
+}
 
+.personal-styling-section > .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+.sourcing-network-section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    border-top: 1px solid var(--clr-border);
+}
+
+.sourcing-network-section > .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+.custom-requests-section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    border-top: 1px solid var(--clr-border);
+    background-color: var(--clr-bg-alt);
+}
+
+.custom-requests-section > .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.gallery-section {
+    padding-top: 5rem;
+    padding-bottom: 0;
+    overflow: hidden;
+}
+
+.sourcing-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 2.5rem 0;
+    border-bottom: 1px solid var(--clr-border);
+}
+
+.sourcing-item:last-child {
+    border-bottom: none;
+}
+
+.sourcing-num {
+    font-family: var(--font-serif);
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--clr-primary);
+    opacity: 0.3;
+    min-width: 80px;
+    line-height: 1;
+}
+
+.sourcing-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+    color: var(--clr-text-main);
+}
+
+.sourcing-desc {
+    color: var(--clr-text-light);
+    line-height: 1.7;
+    max-width: 100%;
+}
+
+.process-card {
+    background: var(--clr-bg-alt);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--border-radius-md);
+    padding: 2rem;
+    transition: box-shadow var(--transition-fast);
+}
+
+.process-card:hover {
+    box-shadow: var(--shadow-hover);
+}
+
+.process-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--clr-primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+}
+
+.process-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+    color: var(--clr-text-main);
+}
+
+.process-desc {
+    color: var(--clr-text-light);
+    line-height: 1.7;
+    font-size: 0.95rem;
+    max-width: 100%;
+}
+
+.styling-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    background: var(--clr-bg-alt);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--border-radius-sm);
+    padding: 0.6rem 1.25rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--clr-text-main);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.tab-btn.active,
+.tab-btn:hover {
+    background: var(--clr-primary);
+    color: white;
+    border-color: var(--clr-primary);
+}
+
+.feature-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--clr-text-main);
+}
+
+.feature-desc {
+    color: var(--clr-text-light);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    max-width: 100%;
+}
+
+.feature-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--clr-text-main);
+    font-weight: 500;
+}
+
+.feature-list svg {
+    color: var(--clr-primary);
+    flex-shrink: 0;
+}
+
+.quote-text {
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--clr-text-light);
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
+    max-width: 100%;
+}
+
+.quote-author {
+    font-weight: 700;
+    color: var(--clr-primary);
+    font-size: 0.9rem;
+}
+
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 250px;
+    gap: 4px;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.vertical {
+    grid-row: span 2;
+}
+
+.overlay-wrapper,
+.overlay-text-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay-wrapper img,
+.overlay-text-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    display: flex;
+    align-items: flex-end;
+    padding: 1.5rem;
+}
+
+.gallery-title {
+    color: white;
+    font-size: 1.4rem;
+    font-family: var(--font-serif);
+    line-height: 1.2;
+}

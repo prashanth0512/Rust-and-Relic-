@@ -73,8 +73,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-
-
     categoryCheckboxes.forEach(checkbox => {
         checkbox.addEventListener('change', () => {
             currentFilters.categories = Array.from(categoryCheckboxes)

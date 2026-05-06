@@ -84,6 +84,14 @@ body {
         height: 100vh;
         overflow: hidden;
     }
+    
+    .auth-brand-name {
+        display: inline-block !important;
+        font-family: var(--font-serif);
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: var(--clr-primary);
+    }
 }
 
 @media (max-width: 360px) {
@@ -165,6 +173,41 @@ body {
 .signup-form-input:focus {
     outline: none;
     border-color: var(--clr-primary);
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-group .fa-eye,
+.form-group .fa-eye-slash {
+    position: absolute;
+    right: 14px;
+    top: 14px;
+    cursor: pointer;
+    color: var(--clr-text-light);
+    font-size: 0.95rem;
+    z-index: 5;
+    transition: color var(--transition-fast);
+}
+
+.form-group .fa-eye:hover,
+.form-group .fa-eye-slash:hover {
+    color: var(--clr-primary);
+}
+
+.auth-brand-name {
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--clr-primary);
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .auth-brand-name {
+        display: inline-block;
+    }
 }
 
 #signupSection {

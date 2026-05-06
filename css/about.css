@@ -94,10 +94,6 @@ html[data-theme='dark'] .about-isolated .nav-drawer {
 .about-isolated .dropdown-menu {
     z-index: 10000 !important;
 }
-
-
-
-
 .about-isolated .about-hero {
     position: relative;
     width: 100%;
@@ -305,13 +301,7 @@ html[data-theme='dark'] .about-isolated .nav-drawer {
         text-align: center;
     }
 }
-
-
-
-
 @media (max-width: 1024px) {
-
-
     .about-isolated .team-grid,
     .about-isolated .curation-grid,
     .about-isolated .archive-masonry {
@@ -334,8 +324,6 @@ html[data-theme='dark'] .about-isolated .nav-drawer {
         height: 350px !important;
     }
 }
-
-
 .about-isolated .team-card {
     border-radius: 12px;
     overflow: hidden;
@@ -356,7 +344,6 @@ html[data-theme='dark'] .about-isolated .nav-drawer {
     object-fit: cover;
 }
 
-
 .about-isolated .team-img-wrapper::after,
 .about-isolated .archive-overlay-text {
     display: none !important;
@@ -373,7 +360,6 @@ html[data-theme='dark'] .about-isolated .nav-drawer {
     }
 }
 
-
 .about-isolated .archive-masonry {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -389,8 +375,6 @@ html[data-theme='dark'] .about-isolated .nav-drawer {
     aspect-ratio: 1;
     border-radius: 8px;
 }
-
-
 * {
     box-sizing: border-box;
 }
@@ -445,7 +429,6 @@ html[data-theme='light'] .about-isolated .mv-title {
     color: #111111 !important;
 }
 
-/* Testimonials Enhanced UX */
 .testimonials-wrapper {
     position: relative;
     padding: 0 50px;
@@ -512,12 +495,10 @@ html[data-theme='light'] .about-isolated .mv-title {
 
 .about-isolated .testimonial-card {
     flex: 0 0 100%;
-    /* Show only one at a time */
     background-color: var(--clr-card-bg);
     padding: 3rem 2rem;
     border-radius: var(--border-radius-md);
     text-align: center;
-    /* Centered text looks better for single view */
     scroll-snap-align: center;
     box-shadow: var(--shadow-soft);
     border: 1px solid var(--clr-border);

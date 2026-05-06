@@ -26,8 +26,9 @@
                 </div>
             </div>
             <div class="right-side">
-                <a href="../index.html" class="logo auth-logo" style="margin-bottom: 1rem; display: flex; justify-content: center;">
+                <a href="../index.html" class="logo auth-logo" style="margin-bottom: 1rem; display: flex; justify-content: center; align-items: center; gap: 8px;">
                     <img src="../images/logo-new.svg" alt="Rust & Relic" class="nav-logo-img" style="height: 35px; width: auto;">
+                    <span class="auth-brand-name">Rust &amp; Relic</span>
                 </a>
                 
                 <h1 class="hero-title">Create Account</h1>
@@ -44,13 +45,15 @@
                         <div class="error-message">Invalid email address</div>
                     </div>
                     
-                    <div class="form-group">
-                        <input type="password" placeholder="Password" required class="signup-form-input">
+                    <div class="form-group" style="position: relative;">
+                        <input type="password" id="signupPassword" placeholder="Password" required class="signup-form-input" style="padding-right: 40px;">
+                        <i class="fas fa-eye" id="toggleSignupPassword" style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); cursor: pointer; color: #888;" onclick="togglePwd('signupPassword', this)"></i>
                         <div class="error-message">Password is too weak</div>
                     </div>
 
-                    <div class="form-group">
-                        <input type="password" placeholder="Confirm Password" required class="signup-form-input">
+                    <div class="form-group" style="position: relative;">
+                        <input type="password" id="confirmPassword" placeholder="Confirm Password" required class="signup-form-input" style="padding-right: 40px;">
+                        <i class="fas fa-eye" id="toggleConfirmPassword" style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); cursor: pointer; color: #888;" onclick="togglePwd('confirmPassword', this)"></i>
                         <div class="error-message">Passwords do not match</div>
                     </div>
                     
@@ -75,6 +78,20 @@
             </div>
         </div>
     </div>
+    <script>
+        function togglePwd(inputId, icon) {
+            const input = document.getElementById(inputId);
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                input.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        }
+    </script>
     <script src="../js/main.js"></script>
 </body>
 </html>

@@ -125,6 +125,24 @@ document.addEventListener('DOMContentLoaded', () => {
         input.classList.remove('invalid');
     };
 
+    document.addEventListener('click', function(e) {
+        const faqBtn = e.target.closest('.faq-question');
+        if (faqBtn) {
+            const item = faqBtn.closest('.faq-item');
+            if (item) {
+                const isOpen = item.classList.contains('open');
+                
+                document.querySelectorAll('.faq-item').forEach(faq => {
+                    faq.classList.remove('open');
+                });
+                
+                if (!isOpen) {
+                    item.classList.add('open');
+                }
+            }
+        }
+    });
+
 
     const savedTheme = localStorage.getItem('theme') || 'light';
     setTheme(savedTheme);
@@ -175,6 +193,33 @@ document.addEventListener('DOMContentLoaded', () => {
             const currentDir = bodyElement.dir || 'ltr';
             const newDir = currentDir === 'rtl' ? 'ltr' : 'rtl';
             setDirection(newDir);
+        });
+    }
+    const drawerThemeToggle = document.getElementById('drawer-theme-toggle');
+    if (drawerThemeToggle) {
+        drawerThemeToggle.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            setTheme(newTheme);
+            const drawerMoon = drawerThemeToggle.querySelector('.moon-icon');
+            const drawerSun = drawerThemeToggle.querySelector('.sun-icon');
+            if (newTheme === 'dark') {
+                if (drawerMoon) drawerMoon.style.display = 'none';
+                if (drawerSun) drawerSun.style.display = 'block';
+            } else {
+                if (drawerMoon) drawerMoon.style.display = 'block';
+                if (drawerSun) drawerSun.style.display = 'none';
+            }
+        });
+    }
+
+    const drawerRtlToggle = document.getElementById('drawer-rtl-toggle');
+    if (drawerRtlToggle) {
+        drawerRtlToggle.addEventListener('click', () => {
+            const currentDir = bodyElement.dir || 'ltr';
+            const newDir = currentDir === 'rtl' ? 'ltr' : 'rtl';
+            setDirection(newDir);
+            drawerRtlToggle.textContent = newDir === 'rtl' ? 'LTR' : 'RTL';
         });
     }
 
@@ -266,8 +311,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
-
+    
     const categoryCheckboxes = document.querySelectorAll('.filter-group input[type="checkbox"]');
     const productCards = document.querySelectorAll('.product-card');
 
@@ -377,8 +421,6 @@ function hardReverseNav(dir) {
         nav.classList.remove('rtl-applied');
     }
 }
-
-
 
   document.addEventListener('DOMContentLoaded', function() {
             const modal = document.getElementById('image-modal');
@@ -491,12 +533,18 @@ function hardReverseNav(dir) {
         });
 
 
-         document.getElementById('signupForm').onsubmit = function(e) {
-            e.preventDefault();
-            window.location.href = "../index.html";
-        }
+         const signupFormEl = document.getElementById('signupForm');
+         if (signupFormEl) {
+             signupFormEl.onsubmit = function(e) {
+                 e.preventDefault();
+                 window.location.href = "../index.html";
+             };
+         }
 
-        document.getElementById('loginForm').onsubmit = function(e) {
-            e.preventDefault();
-            window.location.href = "../index.html";
-        }
+         const loginFormEl = document.getElementById('loginForm');
+         if (loginFormEl) {
+             loginFormEl.onsubmit = function(e) {
+                 e.preventDefault();
+                 window.location.href = "../index.html";
+             };
+         }
