@@ -223,6 +223,31 @@ html[data-theme='dark'] .about-isolated .nav-drawer {
     }
 }
 
+@media (min-width: 1024px) and (max-width: 1600px) {
+    .about-isolated .about-hero {
+        margin-top: 80px !important;
+        min-height: calc(100vh - 80px) !important;
+        height: calc(100vh - 80px) !important;
+    }
+
+    .about-isolated .about-hero-image {
+        width: 38% !important;
+        padding: 24px !important;
+    }
+
+    .about-isolated .about-hero-image img {
+        border-radius: 12px !important;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+
+    .about-isolated .about-hero-content-wrapper {
+        width: 62% !important;
+        padding: 48px 44px !important;
+    }
+}
+
 
 .about-isolated .sub-heading {
     font-size: 0.85rem;
