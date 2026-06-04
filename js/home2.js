@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
         checkbox.addEventListener('change', () => {
             currentFilters.categories = Array.from(categoryCheckboxes)
                 .filter(cb => cb.checked)
-                .map(cb => cb.parentElement.innerText.split('\n')[0].trim().toLowerCase());
+                .map(cb => cb.parentElement.textContent.trim().toLowerCase());
             
             applyFilters();
         });

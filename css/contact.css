@@ -139,6 +139,14 @@ body:has(.contact-hero) .section-padding {
     padding: 3rem 2rem;
     border-radius: 8px;
     border: 1px solid var(--clr-border);
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    will-change: transform;
+}
+
+.contact-review-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
 }
 .direct-channels-grid {
     display: flex !important;

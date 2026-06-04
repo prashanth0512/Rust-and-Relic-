@@ -662,3 +662,112 @@ html[data-theme='dark'] .about-isolated .testimonial-card {
     background-color: #1a1a1a;
     border-color: rgba(255, 255, 255, 0.1);
 }
+
+.about-isolated .mv-card {
+    background-color: var(--clr-card-bg) !important;
+    border: 1px solid var(--clr-border) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04) !important;
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease, border-color 0.3s ease !important;
+}
+
+.about-isolated .mv-card:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.08) !important;
+    border-color: var(--clr-primary) !important;
+}
+
+.about-isolated .curation-card {
+    background-color: var(--clr-card-bg) !important;
+    border: 1px solid var(--clr-border) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04) !important;
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease, border-color 0.3s ease !important;
+}
+
+.about-isolated .curation-card:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.08) !important;
+    border-color: var(--clr-primary) !important;
+}
+
+.about-isolated .testimonial-card {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04) !important;
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease, border-color 0.3s ease !important;
+}
+
+.about-isolated .testimonial-card:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08) !important;
+    border-color: var(--clr-primary) !important;
+}
+
+.about-isolated .team-card {
+    background-color: transparent !important;
+    border: 1px solid var(--clr-border) !important;
+    border-radius: 12px !important;
+    padding: 16px !important;
+    box-shadow: none !important;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.about-isolated .team-card:hover {
+    transform: none !important; 
+    border-color: var(--clr-primary) !important;
+    box-shadow: 0 4px 15px rgba(107, 122, 66, 0.15) !important;
+}
+
+.about-isolated .team-img-wrapper {
+    border-radius: 8px !important;
+}
+
+.about-isolated .team-info {
+    padding: 1.5rem 8px 8px 8px !important;
+}
+
+html[data-theme='dark'] .about-isolated .mv-card,
+html[data-theme='dark'] .about-isolated .curation-card {
+    background-color: #1a1a1a !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+html[data-theme='dark'] .about-isolated .team-card {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+html[data-theme='dark'] .about-isolated .mv-card:hover,
+html[data-theme='dark'] .about-isolated .curation-card:hover,
+html[data-theme='dark'] .about-isolated .testimonial-card:hover {
+    box-shadow: 0 12px 30px rgba(138, 158, 88, 0.2) !important;
+    border-color: #8A9E58 !important;
+}
+
+html[data-theme='dark'] .about-isolated .team-card:hover {
+    border-color: #8A9E58 !important;
+    box-shadow: 0 0 15px rgba(138, 158, 88, 0.2) !important;
+}
+
+.about-isolated .mv-header-icon {
+    vertical-align: middle;
+    margin-left: 10px;
+    color: var(--clr-accent);
+    display: inline-block;
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), color 0.3s ease;
+}
+
+[dir="rtl"] .about-isolated .mv-header-icon {
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+.about-isolated .mv-card:hover .mv-header-icon {
+    transform: scale(1.18) rotate(5deg);
+    color: var(--clr-primary-hover);
+}
+
+html[data-theme='dark'] .about-isolated .mv-header-icon {
+    color: #8A9E58;
+}
+
+html[data-theme='dark'] .about-isolated .mv-card:hover .mv-header-icon {
+    color: #A8C060;
+}

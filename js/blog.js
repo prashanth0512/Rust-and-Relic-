@@ -85,4 +85,56 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    const registryForm = document.querySelector('.registry-form');
+    if (registryForm) {
+        registryForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            showBlogNotification('✓ Notifications are enabled! Welcome to the Relic Registry.');
+            registryForm.reset();
+        });
+    }
+
+    function showBlogNotification(message) {
+        const existing = document.querySelector('.blog-toast');
+        if (existing) existing.remove();
+
+        const toast = document.createElement('div');
+        toast.className = 'blog-toast';
+        toast.textContent = message;
+
+        Object.assign(toast.style, {
+            position: 'fixed',
+            bottom: '32px',
+            left: '50%',
+            transform: 'translateX(-50%) translateY(20px)',
+            background: '#3d3b32',
+            color: '#f9f1e1',
+            padding: '14px 28px',
+            borderRadius: '50px',
+            boxShadow: '0 8px 30px rgba(0,0,0,0.25)',
+            zIndex: '9999',
+            opacity: '0',
+            fontSize: '0.95rem',
+            fontFamily: "'Inter', sans-serif",
+            fontWeight: '500',
+            letterSpacing: '0.02em',
+            borderLeft: '4px solid #6b7a42',
+            transition: 'opacity 0.4s ease, transform 0.4s ease',
+            whiteSpace: 'nowrap'
+        });
+
+        document.body.appendChild(toast);
+
+        requestAnimationFrame(() => {
+            toast.style.opacity = '1';
+            toast.style.transform = 'translateX(-50%) translateY(0)';
+        });
+
+        setTimeout(() => {
+            toast.style.opacity = '0';
+            toast.style.transform = 'translateX(-50%) translateY(20px)';
+            setTimeout(() => toast.remove(), 400);
+        }, 3500);
+    }
 });

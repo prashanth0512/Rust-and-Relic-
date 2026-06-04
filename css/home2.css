@@ -348,3 +348,47 @@ html[data-theme='light'] .home2-isolated .new-arrival-banner span {
     font-weight: 700;
     color: var(--clr-accent);
 }
+
+/* --- Home 2 Specific Button & Interaction Hover Effects --- */
+.home2-isolated .btn {
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+}
+
+.home2-isolated .btn-primary:hover {
+    background-color: var(--clr-primary-hover) !important;
+    color: var(--clr-white) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(107, 125, 62, 0.3);
+}
+
+.home2-isolated .btn-secondary:hover {
+    background-color: var(--clr-primary) !important;
+    border-color: var(--clr-primary) !important;
+    color: var(--clr-white) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(107, 125, 62, 0.3);
+}
+
+html[data-theme='dark'] .home2-isolated .btn-primary:hover {
+    background-color: #8A9E58 !important;
+    box-shadow: 0 0 15px rgba(138, 158, 88, 0.4);
+}
+
+html[data-theme='dark'] .home2-isolated .btn-secondary:hover {
+    background-color: #8A9E58 !important;
+    border-color: #8A9E58 !important;
+    color: #121212 !important;
+    box-shadow: 0 0 15px rgba(138, 158, 88, 0.4);
+}
+
+.home2-isolated .icon-btn:hover {
+    background-color: var(--clr-primary-hover) !important;
+    color: var(--clr-white) !important;
+    transform: scale(1.08);
+}
+
+html[data-theme='dark'] .home2-isolated .icon-btn:hover {
+    background-color: #8A9E58 !important;
+    color: #121212 !important;
+    box-shadow: 0 0 10px rgba(138, 158, 88, 0.4);
+}

@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-
-
+    
     const htmlElement = document.documentElement;
     const bodyElement = document.body;
     const themeToggle = document.getElementById('theme-toggle');
@@ -315,7 +314,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const categoryCheckboxes = document.querySelectorAll('.filter-group input[type="checkbox"]');
     const productCards = document.querySelectorAll('.product-card');
 
-    if (categoryCheckboxes.length > 0 && productCards.length > 0) {
+    if (!document.body.classList.contains('home2-isolated') && categoryCheckboxes.length > 0 && productCards.length > 0) {
         categoryCheckboxes.forEach(checkbox => {
             checkbox.addEventListener('change', () => {
                 const activeCategories = Array.from(categoryCheckboxes)
@@ -533,18 +532,77 @@ function hardReverseNav(dir) {
         });
 
 
-         const signupFormEl = document.getElementById('signupForm');
-         if (signupFormEl) {
-             signupFormEl.onsubmit = function(e) {
-                 e.preventDefault();
-                 window.location.href = "../index.html";
-             };
-         }
+         document.addEventListener('DOMContentLoaded', () => {
+             const signupFormEl = document.getElementById('signupForm');
+             if (signupFormEl) {
+                 signupFormEl.onsubmit = function(e) {
+                     e.preventDefault();
+                     window.location.href = "../index.html";
+                 };
+             }
 
-         const loginFormEl = document.getElementById('loginForm');
-         if (loginFormEl) {
-             loginFormEl.onsubmit = function(e) {
-                 e.preventDefault();
-                 window.location.href = "../index.html";
-             };
-         }
+             const loginFormEl = document.getElementById('loginForm');
+             if (loginFormEl) {
+                 loginFormEl.onsubmit = function(e) {
+                     e.preventDefault();
+                     window.location.href = "../index.html";
+                 };
+             }
+
+             // Stats Count-Up Animation
+             const statsElements = document.querySelectorAll('.stat-number');
+             if (statsElements.length > 0) {
+                 const countUp = (element) => {
+                     if (element.classList.contains('counted')) return;
+                     element.classList.add('counted');
+
+                     const target = parseInt(element.getAttribute('data-target'), 10);
+                     const suffix = element.getAttribute('data-suffix') || '';
+                     const duration = 2000; // 2 seconds animation
+                     const startTime = performance.now();
+
+                     const animate = (currentTime) => {
+                         const elapsed = currentTime - startTime;
+                         const progress = Math.min(elapsed / duration, 1);
+                         
+                         // Easing: easeOutQuad
+                         const easeProgress = progress * (2 - progress);
+                         const currentValue = Math.floor(easeProgress * target);
+                         element.innerText = currentValue.toLocaleString() + suffix;
+
+                         if (progress < 1) {
+                             requestAnimationFrame(animate);
+                         } else {
+                             element.innerText = target.toLocaleString() + suffix;
+                         }
+                     };
+                     requestAnimationFrame(animate);
+                 };
+
+                 const checkStats = () => {
+                     const statsSection = document.querySelector('.stats-section');
+                     if (!statsSection) return;
+
+                     const rect = statsSection.getBoundingClientRect();
+                     const inViewport = (
+                         rect.top >= 0 &&
+                         rect.top <= (window.innerHeight || document.documentElement.clientHeight)
+                     ) || (
+                         rect.bottom >= 0 &&
+                         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+                     ) || (
+                         rect.top < 0 && rect.bottom > (window.innerHeight || document.documentElement.clientHeight)
+                     );
+
+                     if (inViewport) {
+                         statsElements.forEach(el => countUp(el));
+                         window.removeEventListener('scroll', checkStats);
+                         window.removeEventListener('resize', checkStats);
+                     }
+                 };
+
+                 window.addEventListener('scroll', checkStats);
+                 window.addEventListener('resize', checkStats);
+                 setTimeout(checkStats, 200);
+             }
+         });
