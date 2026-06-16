@@ -9,71 +9,90 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/svg+xml" href="../images/logo-new.svg">
 </head>
-<body>
-    <div class="signup-container1">
-        <div class="theme-toggle-wrapper">
-            <button class="rtl-toggle" id="rtl-toggle" aria-label="Toggle RTL layout">RTL</button>
-            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
-                <i class="fas fa-moon moon-icon"></i>
-                <i class="fas fa-sun sun-icon"></i>
-            </button>
-        </div>
-        <div class="auth-wrapper">
-            <div class="left-side">
-                <div class="brand-overlay">
-                    <h1 class="brand-text">RUST & RELIC</h1>
-                    <p class="brand-tagline">Since 1974</p>
-                </div>
-            </div>
-            <div class="right-side">
-                <a href="../index.html" class="mobile-brand" style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 1rem; text-decoration: none; color: inherit;">
-                    <img src="../images/logo-new.svg" alt="Rust & Relic" class="nav-logo-img" style="height: 30px;">
-                    <h2 style="margin: 0;">RUST & RELIC</h2>
-                </a>
-                
-                <h1 class="hero-title">Welcome Back</h1>
-                <p class="subtitle">Enter your details to manage your collection and alerts.</p>
-                
-                <form id="loginForm" class="auth-form">
-                    <div class="form-group">
-                        <input type="email" placeholder="Email Address" required class="signup-form-input">
-                        <div class="error-message">Invalid email address</div>
-                    </div>
-                    
-                    <div class="form-group" style="position: relative;">
-                        <input type="password" id="password" placeholder="Password" required class="signup-form-input" style="padding-right: 40px;">
-                        <i class="fas fa-eye" id="togglePassword" style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); cursor: pointer; color: #888;"></i>
-                        <div class="error-message">Incorrect password</div>
-                    </div>
-                    
-                    <div class="form-options">
-                        <label class="remember-me">
-                            <input type="checkbox"> Remember Me
-                        </label>
-                        <a href="#" class="forgot-password">Forgot Password?</a>
-                    </div>
-                    
-                    <button type="submit" class="btn btn-primary full-width-btn">Sign In</button>
-                </form>
-
-                <div class="social-login">
-                    <p class="divider"><span>Or continue with</span></p>
-                    <div class="social-icons">
-                        <a href="https://accounts.google.com/" class="social-btn google" aria-label="Sign in with Google">
-                            <i class="fab fa-google"></i>
-                        </a>
-                        <a href="https://appleid.apple.com/" class="social-btn apple" aria-label="Sign in with Apple">
-                            <i class="fab fa-apple"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="auth-footer">
-                    <p>New user? <a href="signup.html">Create account</a></p>
-                </div>
-            </div>
-        </div>
+<body class="auth-page login-page">
+    <div class="theme-toggle-wrapper">
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Dark Mode">
+            <svg class="sun-icon" style="display: none;" xmlns="http://www.w3.org/2000/svg" width="20"
+                height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+        </button>
+        <button class="rtl-toggle" id="rtl-toggle" aria-label="Toggle RTL layout">RTL</button>
     </div>
+
+    <div class="signup-container1">
+            <div class="auth-wrapper">
+                <div class="left-side">
+                    <div class="brand-overlay">
+                        <span class="brand-subtitle">CURATED HISTORIES</span>
+                        <h1 class="brand-text">RUST & RELIC</h1>
+                        <p class="brand-tagline">ESTABLISHED 1974 &bull; NEW YORK</p>
+                        <p class="brand-story">Every garment in our collection is a physical record of the past—meticulously sourced, authenticated, and restored for the modern collector. Sign in to access your private curation.</p>
+                    </div>
+                </div>
+                <div class="right-side">
+                    <a href="../index.html" class="mobile-brand" style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 1rem; text-decoration: none; color: inherit;">
+                        <img src="../images/logo-new.svg" alt="Rust & Relic" class="nav-logo-img" style="height: 30px;">
+                        <h2 style="margin: 0;">RUST & RELIC</h2>
+                    </a>
+                    
+                    <h1 class="hero-title">Welcome Back</h1>
+                    <p class="subtitle">Enter your details to manage your collection and alerts.</p>
+                    
+                    <form id="loginForm" class="auth-form">
+                        <div class="form-group">
+                            <input type="email" placeholder="Email Address" required class="signup-form-input">
+                            <div class="error-message">Invalid email address</div>
+                        </div>
+                        
+                        <div class="form-group" style="position: relative;">
+                            <input type="password" id="password" placeholder="Password" required class="signup-form-input" style="padding-right: 40px;">
+                            <i class="fas fa-eye" id="togglePassword" style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); cursor: pointer; color: #888;"></i>
+                            <div class="error-message">Incorrect password</div>
+                        </div>
+                        
+                        <div class="form-options">
+                            <label class="remember-me">
+                                <input type="checkbox"> Remember Me
+                            </label>
+                            <a href="#" class="forgot-password">Forgot Password?</a>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary full-width-btn">Sign In</button>
+                    </form>
+
+                    <div class="social-login">
+                        <p class="divider"><span>Or continue with</span></p>
+                        <div class="social-icons">
+                            <a href="https://accounts.google.com/" class="social-btn google" aria-label="Sign in with Google">
+                                <i class="fab fa-google"></i>
+                            </a>
+                            <a href="https://appleid.apple.com/" class="social-btn apple" aria-label="Sign in with Apple">
+                                <i class="fab fa-apple"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="auth-footer">
+                        <p>New user? <a href="signup.html">Create account</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
     <script>
         const togglePassword = document.querySelector('#togglePassword');
         const password = document.querySelector('#password');

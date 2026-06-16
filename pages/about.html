@@ -24,13 +24,14 @@
             </a>
             <nav class="desktop-nav">
                 <div class="nav-item dropdown">
-                    <a href="../index.html" class="nav-link">HOME <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"></path></svg></a>
+                    <a href="#" class="nav-link">HOME <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"></path></svg></a>
                     <div class="dropdown-menu">
+                        <a href="../index.html" class="dropdown-item">Home 1</a>
                         <a href="home2.html" class="dropdown-item">Home 2</a>
                     </div>
                 </div>
                 <a href="about.html" class="nav-link active">ABOUT US</a>
-                 <a href="../pages/services.html"class="nav-link">Services</a>
+                <a href="services.html" class="nav-link">SERVICES</a>
                 <a href="blogs.html" class="nav-link">BLOGS</a>
                 <a href="contact.html" class="nav-link">CONTACT</a>
                 <a href="dashboard.html" class="nav-link">DASHBOARD</a>
@@ -77,8 +78,7 @@
     <div class="nav-drawer" id="mobile-drawer">
         <button class="drawer-close" id="drawer-close-btn">&times;</button>
         <nav class="drawer-nav">
-            <a href="../index.html" class="drawer-link">Home 1</a>
-            <a href="home2.html" class="drawer-link">Home 2</a>
+            <a href="../index.html" class="drawer-link">Home</a>
             <a href="about.html" class="drawer-link active">About Page</a>
             <a href="services.html" class="drawer-link">Services Page</a>
             <a href="blogs.html" class="drawer-link">Blogs Page</a>
@@ -112,7 +112,10 @@
             <div class="container">
                 <div class="mission-vision-grid" style="align-items: center;">
                     <div class="mv-card">
-                        <h2 class="mv-title">Our Mission <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mv-header-icon"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg></h2>
+                        <div class="mv-icon-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mv-card-icon"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+                        </div>
+                        <h2 class="mv-title">Our Mission</h2>
                         <p class="mv-desc">To rescue and revitalize the world's most exceptional vintage garments,
                             ensuring that the artistry of the past remains a vibrant part of the modern wardrobe.</p>
                         <ul class="mv-list">
@@ -139,7 +142,10 @@
                     </div>
 
                     <div class="mv-card">
-                        <h2 class="mv-title">Our Vision <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mv-header-icon"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg></h2>
+                        <div class="mv-icon-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="mv-card-icon"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                        </div>
+                        <h2 class="mv-title">Our Vision</h2>
                         <p class="mv-desc">We envision a world where fashion is a circular journey, where rarity is
                             celebrated over mass production, and every closet tells a story of preservation.</p>
                         <ul class="mv-list">
@@ -174,6 +180,9 @@
 
                 <div class="curation-grid" style="align-items: center;">
                     <div class="curation-card">
+                        <div class="curation-img-wrapper">
+                            <img src="../images/disrested.webp" alt="Zero-Waste Sourcing" class="curation-img">
+                        </div>
                         <svg class="curation-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round">
@@ -187,6 +196,9 @@
                     </div>
 
                     <div class="curation-card">
+                        <div class="curation-img-wrapper">
+                            <img src="../images/ser3.jpeg" alt="Circularity Initiative" class="curation-img">
+                        </div>
                         <svg class="curation-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round">
@@ -204,6 +216,9 @@
                     </div>
 
                     <div class="curation-card">
+                        <div class="curation-img-wrapper">
+                            <img src="../images/gs2.jpeg" alt="Layaway Impact" class="curation-img">
+                        </div>
                         <svg class="curation-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round">
@@ -216,6 +231,9 @@
                     </div>
 
                     <div class="curation-card">
+                        <div class="curation-img-wrapper">
+                            <img src="../images/mid night silk.jpeg" alt="Materials & Care" class="curation-img">
+                        </div>
                         <svg class="curation-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round">
@@ -227,6 +245,9 @@
                     </div>
 
                     <div class="curation-card">
+                        <div class="curation-img-wrapper">
+                            <img src="../images/store interior.webp" alt="Plastic-Free Shipping" class="curation-img">
+                        </div>
                         <svg class="curation-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round">
@@ -239,6 +260,9 @@
                             every rare find.</p>
                     </div>
                     <div class="curation-card">
+                        <div class="curation-img-wrapper">
+                            <img src="../images/ab 1.jpeg" alt="Measurable Goals" class="curation-img">
+                        </div>
                         <svg class="curation-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round">
@@ -280,6 +304,12 @@
                                         <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                                     </svg>
                                 </a>
+                                <a href="#" aria-label="Facebook">
+                                    <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg>
+                                </a>
+                                <a href="#" aria-label="Twitter">
+                                    <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.738l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -303,6 +333,12 @@
                                         <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                                     </svg>
                                 </a>
+                                <a href="#" aria-label="Facebook">
+                                    <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg>
+                                </a>
+                                <a href="#" aria-label="Twitter">
+                                    <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.738l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -325,6 +361,12 @@
                                         <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                                         <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                                     </svg>
+                                </a>
+                                <a href="#" aria-label="Facebook">
+                                    <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg>
+                                </a>
+                                <a href="#" aria-label="Twitter">
+                                    <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.738l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                                 </a>
                             </div>
                         </div>
@@ -415,104 +457,94 @@
                 <div class="archive-item"><img src="../images/vintage-tee-1.png" alt="Vintage Tee 1"></div>
                 <div class="archive-item"><img src="../images/ser5.jpeg" alt="Ser5 Image"></div>
                 <div class="archive-item"><img src="../images/urban archmist.webp" alt="Urban Archmist"></div>
+                <div class="archive-item"><img src="../images/aviator jacket.jpeg" alt="Aviator Jacket"></div>
+                <div class="archive-item"><img src="../images/services1.jpeg" alt="Vintage Collection"></div>
             </div>
         </section>
 
     </main>
 
     <footer class="site-footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <h3 class="footer-title">Rust & Relic</h3>
-                    <p class="footer-desc">Curating timeless vintage pieces for the modern soul. Sustainability meets
-                        style in every thread we rescue and relic.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-icon" aria-label="Instagram">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                            </svg>
-                        </a>
-                        <a href="#" class="social-icon" aria-label="Pinterest">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <line x1="12" y1="12" x2="12" y2="22"></line>
-                                <path d="M12 12c-2-2-5-2-7 0a5 5 0 0 0 0 7c2 2 5 2 7 0Z"></path>
-                                <path d="M12 12c2-2 5-2 7 0a5 5 0 0 1 0 7c-2 2-5 2-7 0Z"></path>
-                                <path d="M12 12v-5a3 3 0 0 1 3-3h.5"></path>
-                            </svg>
-                        </a>
-                        <a href="#" class="social-icon" aria-label="Facebook">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                            </svg>
-                        </a>
-                    </div>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                    <img src="../images/logo-new.svg" alt="Rust & Relic" style="height: 40px; width: auto;">
+                    <h2 class="footer-title" style="color: #6b7a42; margin-bottom: 0;">Rust & Relic</h2>
                 </div>
-                <div class="footer-links">
-                    <h4 class="footer-heading">EXPLORE</h4>
-                    <ul>
-                        <li><a href="./home2.html" class="touch-target">Shop All</a></li>
-                        <li><a href="./home2.html" class="touch-target">New Arrivals</a></li>
-                        <li><a href="./home2.html" class="touch-target">Outfit Bundles</a></li>
-                        <li><a href="./home2.html" class="touch-target">Rare Pieces</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4 class="footer-heading">COMPANY</h4>
-                    <ul>
-                        <li><a href="../index.html" class="touch-target">Home</a></li>
-                        <li><a href="./about.html" class="touch-target">Our Story</a></li>
-                        <li><a href="./services.html" class="touch-target">Services</a></li>
-                        <li><a href="./blogs.html" class="touch-target">Blogs</a></li>
-                        <li><a href="./contact.html" class="touch-target">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4 class="footer-heading">SERVICES</h4>
-                    <ul>
-                        <li><a href="./services.html" class="touch-target">T-shirt Restoration</a></li>
-                        <li><a href="./services.html" class="touch-target">Vintage design</a></li>
-                        <li><a href="./services.html" class="touch-target">Denim Repair</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4 class="footer-heading">Additional Information</h4>
-                    <ul>
-                        <li><a href="./pricing.html" class="touch-target">Pricing Page</a></li>
-                        <li><a href="./404.html" class="touch-target">404 Page</a></li>
-                        <li><a href="./coming-soon.html" class="touch-target">Coming Soon</a></li>
-                    </ul>
-                </div>
-                <div class="footer-newsletter">
-                    <h4 class="footer-heading">JOIN THE ARCHIVE</h4>
-                    <p>Get notified about rare drops and private collection releases.</p>
-                    <form class="simple-subscribe">
-                        <input type="email" placeholder="Your email address" required>
-                        <button type="submit" aria-label="Subscribe">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                <polyline points="12 5 19 12 12 19"></polyline>
-                            </svg>
-                        </button>
-                    </form>
+                <p class="footer-desc">Curating timeless vintage pieces for the modern soul. Sustainability meets style in every thread we rescue and relic.</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon" aria-label="Instagram">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+                            <path d="M6.5 6.5h.01"></path>
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Pinterest">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.951-7.252 4.182 0 7.436 2.981 7.436 6.953 0 4.156-2.617 7.502-6.255 7.502-1.221 0-2.373-.635-2.768-1.385l-.756 2.879c-.274 1.043-1.015 2.345-1.515 3.141 1.196.371 2.457.572 3.766.572 6.627 0 11.989-5.365 11.989-11.986C24 5.367 18.644 0 12.017 0z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Facebook">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                        </svg>
+                    </a>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Rust & Relic. All Rights Reserved.</p>
-                <div class="footer-badges">
-                    <span>ETHICALLY SOURCED</span>
-                    <span>GLOBAL SHIPPING</span>
+
+            <div class="footer-links">
+                <h3 class="footer-heading">COMPANY</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3 class="footer-heading">SERVICES</h3>
+                <ul>
+                    <li><a href="services.html">T-Shirts restoration</a></li>
+                    <li><a href="services.html">Custom Vintage Design</a></li>
+                    <li><a href="services.html">Denim Repair</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3 class="footer-heading">Additional Information</h3>
+                <ul>
+                    <li><a href="pricing.html">Pricing Plans</a></li>
+                    <li><a href="404.html">404 Page</a></li>
+                    <li><a href="coming-soon.html">Coming Soon</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact-col">
+                <h3 class="footer-heading">VISIT US</h3>
+                <div class="footer-contact-item">
+                    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    <span>123 Vintage Lane, SoHo<br>New York, NY 10012</span>
                 </div>
+                <div class="footer-contact-item">
+                    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    <a href="mailto:rust&relic26@gmail.com">rust&relic26@gmail.com</a>
+                </div>
+                <div class="footer-contact-item">
+                    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.13 12 19.79 19.79 0 0 1 1.06 3.38 2 2 0 0 1 3.04 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    <a href="tel:+919876543210">+91 9876543210</a>
+                </div>
+                <div class="footer-contact-item">
+                    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    <span>Mon–Sat: 10:00 AM – 7:00 PM<br>Sun: Appointment Only</span>
+                </div>
+
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>&copy; 2026 Rust & Relic. All Rights Reserved.</p>
+            <div class="footer-badges">
+                <span>ETHICALLY SOURCED</span>
+                <span>GLOBAL SHIPPING</span>
             </div>
         </div>
     </footer>

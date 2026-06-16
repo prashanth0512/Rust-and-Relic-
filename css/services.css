@@ -269,11 +269,7 @@
 
 
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
+
 
 .section-header {
     text-align: center;
@@ -314,7 +310,16 @@
     flex-direction: column;
     height: 100%;
     overflow: hidden;
-    transition: background-color 0.3s ease;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, background-color 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.service-image-wrapper {
+    overflow: hidden;
 }
 
 .service-image {
@@ -322,6 +327,11 @@
     height: 220px;
     object-fit: cover;
     border-bottom: 1px solid var(--clr-border);
+    transition: transform 0.5s ease;
+}
+
+.service-card:hover .service-image {
+    transform: scale(1.06);
 }
 
 .service-card-content {
@@ -469,22 +479,14 @@
     background-color: var(--clr-bg-alt);
 }
 
-.personal-styling-section > .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
+
 .sourcing-network-section {
     padding-top: 5rem;
     padding-bottom: 5rem;
     border-top: 1px solid var(--clr-border);
 }
 
-.sourcing-network-section > .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
+
 .custom-requests-section {
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -492,11 +494,7 @@
     background-color: var(--clr-bg-alt);
 }
 
-.custom-requests-section > .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
+
 
 .gallery-section {
     padding-top: 5rem;

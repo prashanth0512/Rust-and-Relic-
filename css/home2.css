@@ -349,7 +349,6 @@ html[data-theme='light'] .home2-isolated .new-arrival-banner span {
     color: var(--clr-accent);
 }
 
-/* --- Home 2 Specific Button & Interaction Hover Effects --- */
 .home2-isolated .btn {
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
 }
@@ -392,3 +391,21 @@ html[data-theme='dark'] .home2-isolated .icon-btn:hover {
     color: #121212 !important;
     box-shadow: 0 0 10px rgba(138, 158, 88, 0.4);
 }
+
+.home2-isolated .product-card {
+    transition: transform 0.35s ease, box-shadow 0.35s ease !important;
+}
+
+.home2-isolated .product-card:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.14) !important;
+}
+
+.home2-isolated .card-img {
+    transition: transform 0.5s ease !important;
+}
+
+.home2-isolated .product-card:hover .card-img {
+    transform: scale(1.06) !important;
+}
+

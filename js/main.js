@@ -225,15 +225,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const dropdownLinks = document.querySelectorAll('.nav-item.dropdown > .nav-link');
     dropdownLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            if (window.innerWidth <= 1200) {
-                const parent = this.parentElement;
-                if (!parent.classList.contains('show-dropdown')) {
-                    e.preventDefault();
-                    document.querySelectorAll('.nav-item.dropdown').forEach(item => {
-                        if (item !== parent) item.classList.remove('show-dropdown');
-                    });
-                    parent.classList.add('show-dropdown');
-                }
+            e.preventDefault();
+            e.stopPropagation();
+            const parent = this.parentElement;
+            const isOpen = parent.classList.contains('show-dropdown');
+            
+            document.querySelectorAll('.nav-item.dropdown').forEach(item => {
+                item.classList.remove('show-dropdown');
+            });
+            
+            if (!isOpen) {
+                parent.classList.add('show-dropdown');
             }
         });
     });
@@ -549,8 +551,7 @@ function hardReverseNav(dir) {
                  };
              }
 
-             // Stats Count-Up Animation
-             const statsElements = document.querySelectorAll('.stat-number');
+                const statsElements = document.querySelectorAll('.stat-number');
              if (statsElements.length > 0) {
                  const countUp = (element) => {
                      if (element.classList.contains('counted')) return;
@@ -558,14 +559,13 @@ function hardReverseNav(dir) {
 
                      const target = parseInt(element.getAttribute('data-target'), 10);
                      const suffix = element.getAttribute('data-suffix') || '';
-                     const duration = 2000; // 2 seconds animation
+                     const duration = 2000; 
                      const startTime = performance.now();
 
                      const animate = (currentTime) => {
                          const elapsed = currentTime - startTime;
                          const progress = Math.min(elapsed / duration, 1);
                          
-                         // Easing: easeOutQuad
                          const easeProgress = progress * (2 - progress);
                          const currentValue = Math.floor(easeProgress * target);
                          element.innerText = currentValue.toLocaleString() + suffix;

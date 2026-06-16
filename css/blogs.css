@@ -1,12 +1,28 @@
 .blog-hero {
-    padding-top: 40px; 
-    padding-bottom: 20px;
+    position: relative;
+    padding-top: 140px;
+    padding-bottom: 120px;
     text-align: center;
+    background-image: url('../images/pexels-nor-llorca-1258006-2494607.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.blog-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.75) 100%);
+    z-index: 0;
 }
 
 .blog-hero-inner {
     max-width: 800px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
 .blog-hero + section.section-padding {
@@ -18,15 +34,17 @@
     font-family: var(--font-serif);
     line-height: 1.1;
     margin-bottom: var(--spacing-sm);
-    color: var(--clr-text-main);
+    color: #ffffff;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
 .blog-desc {
     font-size: 1.1rem;
-    color: var(--clr-text-light);
+    color: rgba(255,255,255,0.85);
     margin: 0 auto 1.5rem; 
     font-style: italic;
     font-family: var(--font-serif);
+    max-width: 600px;
 }
 
 .blog-search-wrapper {
@@ -80,7 +98,7 @@
     border-radius: var(--border-radius-md);
     overflow: hidden;
     box-shadow: var(--shadow-soft);
-    transition: background-color var(--transition-fast);
+    transition: transform 0.35s ease, box-shadow 0.35s ease, background-color var(--transition-fast);
     border: 1px solid var(--clr-border);
     display: flex;
     flex-direction: column;
@@ -88,7 +106,8 @@
 }
 
 .blog-card:hover {
-    box-shadow: var(--shadow-hover);
+    transform: translateY(-8px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
 }
 
 .blog-card-image {
@@ -105,7 +124,24 @@
 }
 
 .blog-card:hover .blog-card-image img {
-    transform: none;
+    transform: scale(1.06);
+}
+
+.read-more-link {
+    color: var(--clr-accent);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    letter-spacing: 0.03em;
+}
+
+.read-more-link:hover {
+    color: var(--clr-accent-hover);
+    letter-spacing: 0.06em;
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
 .blog-category-badge {

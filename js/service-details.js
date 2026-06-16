@@ -13,7 +13,8 @@ const servicesData = {
         benefits: [
             "Extends the lifespan of rare items",
             "Maintains the vintage wash and feel",
-            "Increases resale value of collector tees"
+            "Increases resale value of collector tees",
+            "Eco-friendly process reduces textile waste"
         ],
         pricing: [
             { plan: "Basic", desc: "Wash & minor hole repair", price: "$45" },
@@ -45,7 +46,8 @@ const servicesData = {
         benefits: [
             "Own a 1-of-1 unique piece",
             "Sustainable approach to new fashion",
-            "Perfect fit customized to your body"
+            "Perfect fit customized to your body",
+            "Story and provenance of the original garment preserved"
         ],
         pricing: [
             { plan: "Basic", desc: "Simple alterations and modernizing", price: "$95" },
@@ -77,7 +79,8 @@ const servicesData = {
         benefits: [
             "Save your perfectly broken-in jeans",
             "Prevent small tears from expanding",
-            "Add unique character with visible mending"
+            "Add unique character with visible mending",
+            "Dramatically lower cost vs. replacement"
         ],
         pricing: [
             { plan: "Basic", desc: "Small tear darning or simple hem", price: "$35" },
@@ -109,7 +112,8 @@ const servicesData = {
         benefits: [
             "Save time searching through racks",
             "Achieve an authentic, not costume, look",
-            "Discover new silhouettes that flatter you"
+            "Discover new silhouettes that flatter you",
+            "Grow your eye for future vintage shopping"
         ],
         pricing: [
             { plan: "Basic", desc: "1 Look curated online", price: "$50" },
@@ -141,7 +145,8 @@ const servicesData = {
         benefits: [
             "Skip the grueling hand-picking process",
             "Guaranteed authenticity and grade",
-            "Exclusive access to rare untouched collections"
+            "Exclusive access to rare untouched collections",
+            "Flexible order quantities to match your budget"
         ],
         pricing: [
             { plan: "Basic", desc: "Small bundle (20 items)", price: "$500+" },
@@ -173,7 +178,8 @@ const servicesData = {
         benefits: [
             "Prevents deterioration of natural fibers",
             "Safely removes decades-old stains",
-            "Protects high-value investment pieces"
+            "Protects high-value investment pieces",
+            "Prolongs wearable life of museum-quality items"
         ],
         pricing: [
             { plan: "Basic", desc: "Ozone odor removal", price: "$40" },

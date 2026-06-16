@@ -17,10 +17,10 @@
             <button id="sidebar-toggle" class="menu-btn" aria-label="Toggle Sidebar">
                 <i class="fas fa-bars"></i>
             </button>
-            <div class="logo">
+            <a href="../index.html" class="logo">
                 <img src="../images/logo-new.svg" alt="RUST & RELIC" class="nav-logo-img">
                 <span class="brand-name">Rust & Relic</span>
-            </div>
+            </a>
         </div>
         <div class="nav-right">
             <button class="icon-btn theme-toggle" aria-label="Toggle Dark Mode" id="theme-toggle">
@@ -81,6 +81,17 @@
                 <header class="page-header">
                     <h1>Dashboard Overview</h1>
                 </header>
+
+                <div class="quick-actions-card card" style="margin-bottom: 1.5rem;">
+                    <h2 style="font-size: 1.25rem; margin-bottom: 1rem; color: var(--clr-moss);">Quick Actions</h2>
+                    <div class="quick-actions-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem;">
+                        <button class="btn btn-primary" onclick="alert('Quick Action: Add Product')"><i class="fas fa-plus"></i> Add Product</button>
+                        <button class="btn btn-secondary" onclick="alert('Quick Action: View Layaways')"><i class="fas fa-calendar-alt"></i> View Layaways</button>
+                        <button class="btn btn-secondary" onclick="alert('Quick Action: Dispatch Order')"><i class="fas fa-shipping-fast"></i> Dispatch Order</button>
+                        <button class="btn btn-outline" onclick="alert('Quick Action: Export Reports')"><i class="fas fa-download"></i> Export Reports</button>
+                    </div>
+                </div>
+
                 <section class="stats-grid">
                     <div class="stat-card">
                         <div class="stat-icon"><i class="fas fa-box-open"></i></div>
@@ -112,6 +123,22 @@
                             <p class="stat-title">Revenue</p>
                             <h3 class="stat-value">$4200</h3>
                             <p class="stat-desc">+8% from last week</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-calendar-check"></i></div>
+                        <div class="stat-details">
+                            <p class="stat-title">Active Layaways</p>
+                            <h3 class="stat-value">42</h3>
+                            <p class="stat-desc">8 expiring soon</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-heart"></i></div>
+                        <div class="stat-details">
+                            <p class="stat-title">Wishlist Items</p>
+                            <h3 class="stat-value">850</h3>
+                            <p class="stat-desc">+14% weekly interest</p>
                         </div>
                     </div>
                 </section>
@@ -171,24 +198,97 @@
                             </table>
                         </div>
                     </div>
-                    <div class="card gallery-card">
-                        <h2>Featured Vintage Items</h2>
-                        <div class="product-grid">
-                            <div class="product-item">
-                                <img src="../images/ser4.webp" alt="Suit" loading="lazy">
-                                <div class="product-overlay"><span>Suit</span></div>
+                    <div class="card recent-activity-card">
+                        <h2>Recent Activity</h2>
+                        <div class="activity-timeline">
+                            <div class="activity-item">
+                                <div class="activity-badge badge-new-product">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <div class="activity-header-info">
+                                        <span class="activity-time">Just now</span>
+                                        <strong>New Rare Piece Added</strong>
+                                    </div>
+                                    <p class="activity-desc">1970s Leather Biker Jacket has been cataloged in Vault A-12.</p>
+                                </div>
                             </div>
-                            <div class="product-item">
-                                <img src="../images/blog cap.jpeg" alt="cap" loading="lazy">
-                                <div class="product-overlay"><span>cap</span></div>
+                            <div class="activity-item">
+                                <div class="activity-badge badge-order">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <div class="activity-header-info">
+                                        <span class="activity-time">24 mins ago</span>
+                                        <strong>Layaway Plan Confirmed</strong>
+                                    </div>
+                                    <p class="activity-desc">Order #1045 layaway payment received from Sarah K. (Denim Repair)</p>
+                                </div>
                             </div>
-                            <div class="product-item">
-                                <img src="../images/ab tshirt.jpeg" alt="t-shirt" loading="lazy">
-                                <div class="product-overlay"><span>T-Shirt</span></div>
+                            <div class="activity-item">
+                                <div class="activity-badge badge-user">
+                                    <i class="fas fa-user-plus"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <div class="activity-header-info">
+                                        <span class="activity-time">2 hours ago</span>
+                                        <strong>New Archivist Account</strong>
+                                    </div>
+                                    <p class="activity-desc">David M. joined the movement as a verified vintage curator.</p>
+                                </div>
                             </div>
-                            <div class="product-item">
-                                <img src="../images/aviator jacket.jpeg" alt="aviator jacket" loading="lazy">
-                                <div class="product-overlay"><span>Jacket</span></div>
+                            <div class="activity-item">
+                                <div class="activity-badge badge-restoration">
+                                    <i class="fas fa-magic"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <div class="activity-header-info">
+                                        <span class="activity-time">5 hours ago</span>
+                                        <strong>Restoration Completed</strong>
+                                    </div>
+                                    <p class="activity-desc">1992 Nirvana Single-Stitch Tee successfully restored by Workshop B.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card categories-card">
+                        <h2>Top-Selling Categories</h2>
+                        <div class="categories-list" style="display: flex; flex-direction: column; gap: 1.15rem; margin-top: 1rem;">
+                            <div class="category-progress-item">
+                                <div style="display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 0.25rem;">
+                                    <span>Outerwear &amp; Jackets</span>
+                                    <strong>45%</strong>
+                                </div>
+                                <div style="height: 8px; background: var(--clr-bg-alt); border-radius: 4px; overflow: hidden;">
+                                    <div style="height: 100%; width: 45%; background: var(--clr-moss);"></div>
+                                </div>
+                            </div>
+                            <div class="category-progress-item">
+                                <div style="display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 0.25rem;">
+                                    <span>Vintage Denim</span>
+                                    <strong>30%</strong>
+                                </div>
+                                <div style="height: 8px; background: var(--clr-bg-alt); border-radius: 4px; overflow: hidden;">
+                                    <div style="height: 100%; width: 30%; background: var(--clr-rust);"></div>
+                                </div>
+                            </div>
+                            <div class="category-progress-item">
+                                <div style="display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 0.25rem;">
+                                    <span>Graphic Tees &amp; Shirts</span>
+                                    <strong>18%</strong>
+                                </div>
+                                <div style="height: 8px; background: var(--clr-bg-alt); border-radius: 4px; overflow: hidden;">
+                                    <div style="height: 100%; width: 18%; background: var(--clr-accent);"></div>
+                                </div>
+                            </div>
+                            <div class="category-progress-item">
+                                <div style="display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 0.25rem;">
+                                    <span>Accessories</span>
+                                    <strong>7%</strong>
+                                </div>
+                                <div style="height: 8px; background: var(--clr-bg-alt); border-radius: 4px; overflow: hidden;">
+                                    <div style="height: 100%; width: 7%; background: #a09d94;"></div>
+                                </div>
                             </div>
                         </div>
                     </div>

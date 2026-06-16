@@ -409,13 +409,6 @@ body {
     padding: 0;
 }
 
-.about-isolated .container {
-    width: 100% !important;
-    max-width: 1200px !important;
-    margin: 0 auto !important;
-    overflow: visible !important;
-}
-
 
 @media (max-width: 1024px) {
     .about-isolated .mission-vision-grid {
@@ -770,4 +763,149 @@ html[data-theme='dark'] .about-isolated .mv-header-icon {
 
 html[data-theme='dark'] .about-isolated .mv-card:hover .mv-header-icon {
     color: #A8C060;
+}
+
+.about-isolated .mv-card {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 3rem 2rem !important;
+}
+
+.about-isolated .mv-icon-wrapper {
+    margin-bottom: 1.5rem !important;
+    color: var(--clr-accent) !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 64px !important;
+    height: 64px !important;
+    background-color: var(--clr-bg-alt) !important;
+    border-radius: 50% !important;
+    transition: all 0.3s ease !important;
+}
+
+html[data-theme='dark'] .about-isolated .mv-icon-wrapper {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.about-isolated .mv-card:hover .mv-icon-wrapper {
+    transform: scale(1.1) !important;
+    background-color: var(--clr-primary) !important;
+    color: var(--clr-white) !important;
+}
+
+html[data-theme='dark'] .about-isolated .mv-card:hover .mv-icon-wrapper {
+    background-color: #8A9E58 !important;
+    color: #121212 !important;
+}
+
+.about-isolated .mv-title {
+    margin-bottom: 1rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+.about-isolated .mv-list {
+    text-align: left !important;
+    margin-top: 1.5rem !important;
+    width: 100% !important;
+    max-width: 280px !important;
+    margin-inline: auto !important;
+}
+
+.about-isolated .curation-card {
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    overflow: hidden !important;
+}
+
+.about-isolated .curation-img-wrapper {
+    width: 100% !important;
+    height: 180px !important;
+    overflow: hidden !important;
+    position: relative !important;
+    border-bottom: 1px solid var(--clr-border) !important;
+}
+
+.about-isolated .curation-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    transition: transform 0.4s ease !important;
+}
+
+.about-isolated .curation-card:hover .curation-img {
+    transform: scale(1.06) !important;
+}
+
+.about-isolated .curation-card .curation-icon {
+    margin: 1.5rem 1.5rem 1rem !important;
+}
+
+.about-isolated .curation-card .curation-title {
+    margin: 0 1.5rem 0.5rem !important;
+}
+
+.about-isolated .curation-card .curation-desc {
+    margin: 0 1.5rem 2rem !important;
+}
+
+.about-isolated .team-img-wrapper {
+    transition: transform 0.4s ease !important;
+}
+
+.about-isolated .team-card:hover .team-img-wrapper {
+    transform: translateY(-8px) !important;
+}
+
+.about-isolated .archive-item {
+    transition: transform 0.4s ease, box-shadow 0.4s ease !important;
+}
+
+.about-isolated .archive-item:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+.about-isolated .team-social {
+    display: flex !important;
+    gap: 12px !important;
+    align-items: center !important;
+    margin-top: 1rem !important;
+}
+
+.about-isolated .team-social a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 36px !important;
+    height: 36px !important;
+    border: 1px solid var(--clr-border) !important;
+    border-radius: 8px !important;
+    color: var(--clr-text-main) !important;
+    transition: all 0.3s ease !important;
+    background-color: transparent !important;
+}
+
+.about-isolated .team-social a:hover {
+    border-color: var(--clr-primary) !important;
+    background-color: var(--clr-primary) !important;
+    color: var(--clr-white) !important;
+    transform: translateY(-2px) !important;
+}
+
+html[data-theme='dark'] .about-isolated .team-social a {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+html[data-theme='dark'] .about-isolated .team-social a:hover {
+    border-color: #8A9E58 !important;
+    background-color: #8A9E58 !important;
+    color: #ffffff !important;
 }
