@@ -40,21 +40,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const colorTextGray = '#5f5c53'; 
 
     const barColors = [
-        '#6b7a42',
-        '#8b9d5a',
-        '#b05e3f', 
-        '#d4a574',
-        '#5f5c53', 
-        '#3d3b32'  
+        '#8B5E3C',
+        '#C89B6D',
+        '#A0724E', 
+        '#D4A373',
+        '#6E6256', 
+        '#1F1F1F'  
     ];
 
     const barHoverColors = [
-        '#556233',
-        '#76864c',
-        '#8e4a31',
-        '#bf9163', 
-        '#4b4941', 
-        '#2a2822'  
+        '#764f31',
+        '#b78a5b',
+        '#8c603f',
+        '#c39363', 
+        '#5e5348', 
+        '#111111'  
     ];
 
     const salesData = {

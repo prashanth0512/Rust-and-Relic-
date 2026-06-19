@@ -1,26 +1,24 @@
 :root {
-  --primary-color: #3f2b1d;
-  --secondary-color: #f4ecdf;
-  --accent-color: #c98c5a;
-  --text-dark: #333333;
-  --text-light: #666666;
-  --bg-light: #faf9f6;
-  --font-heading: 'Playfair Display', serif;
-  --font-body: 'Inter', sans-serif;
+  --primary-color: #4A3B2A;
+  --secondary-color: #EFE5D2;
+  --accent-color: #B08D57;
+  --text-dark: #2C241B;
+  --text-light: #6E6256;
+  --bg-light: #F7F1E8;
+  --font-heading: 'Playfair Display', 'Lora', serif;
+  --font-body: 'Lora', 'Libre Baskerville', serif;
 }
 
 html[data-theme='dark'] {
-  --primary-color: #8b9d5a;
-  --secondary-color: #1a1a1a;
-  --accent-color: #8b9d5a;
-  --text-dark: #e8e3d9;
-  --text-light: #a3a095;
-  --bg-light: #0f0f0f;
+  --primary-color: #B08D57;
+  --secondary-color: #221D19;
+  --accent-color: #D4A85A;
+  --text-dark: #F7F1E8;
+  --text-light: #B0A090;
+  --bg-light: #181512;
 }
 
-html[data-theme='dark'] .sd-list-item,
 html[data-theme='dark'] .sd-pricing table,
-html[data-theme='dark'] .sd-process-step,
 html[data-theme='dark'] .service-banner-content {
   background-color: #1a1a1a;
   color: #e8e3d9;
@@ -164,22 +162,34 @@ body {
   background: white;
   padding: 24px 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08), 0 1px 4px rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(139, 94, 60, 0.22) !important; 
+  box-shadow: 0 4px 18px rgba(74, 59, 42, 0.04) !important;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease !important;
   will-change: transform;
   cursor: pointer;
 }
 
+html[data-theme='dark'] .sd-list-item {
+  background-color: #1a1a1a !important;
+  border: 1px solid rgba(212, 163, 115, 0.18) !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25) !important;
+}
+
 .sd-list-item:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.13), 0 4px 10px rgba(0, 0, 0, 0.07);
+  transform: translateY(-6px) !important;
+  border-color: var(--clr-primary, #8B5E3C) !important;
+  box-shadow: 0 12px 28px rgba(74, 59, 42, 0.1), 0 0 8px rgba(139, 94, 60, 0.15) !important;
+}
+
+html[data-theme='dark'] .sd-list-item:hover {
+  border-color: var(--clr-accent, #B08D57) !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45), 0 0 8px rgba(212, 163, 115, 0.2) !important;
 }
 
 .sd-list-item-icon {
@@ -241,17 +251,29 @@ body {
   padding: 30px;
   background: var(--bg-light);
   border-radius: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07), 0 1px 4px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(139, 94, 60, 0.22) !important; 
+  box-shadow: 0 4px 18px rgba(74, 59, 42, 0.04) !important;
   position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease !important;
   will-change: transform;
   cursor: pointer;
 }
 
+html[data-theme='dark'] .sd-process-step {
+  background-color: #1a1a1a !important;
+  border: 1px solid rgba(212, 163, 115, 0.18) !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25) !important;
+}
+
 .sd-process-step:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.12), 0 4px 10px rgba(0, 0, 0, 0.06);
+  transform: translateY(-6px) !important;
+  border-color: var(--clr-primary, #8B5E3C) !important;
+  box-shadow: 0 12px 28px rgba(74, 59, 42, 0.1), 0 0 8px rgba(139, 94, 60, 0.15) !important;
+}
+
+html[data-theme='dark'] .sd-process-step:hover {
+  border-color: var(--clr-accent, #B08D57) !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45), 0 0 8px rgba(212, 163, 115, 0.2) !important;
 }
 
 .sd-process-number {
@@ -290,22 +312,32 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 44px;
-  padding: 12px 30px;
-  background-color: var(--primary-color);
-  color: white;
+  min-height: 48px;
+  padding: 0 30px;
+  background-color: #8B5E3C !important;
+  color: #FFFFFF !important;
   text-decoration: none;
-  border-radius: 30px;
+  border-radius: 4px;
   font-weight: 600;
-  transition: all 0.3s ease;
-  border: none;
+  border: 2px solid #8B5E3C !important;
   cursor: pointer;
   font-family: var(--font-body);
+  font-size: 0.825rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              background-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              border-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
 }
 
 .btn-contact:hover {
-  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-  box-shadow: var(--shadow-soft);
+  background-color: #B08D57 !important;
+  border-color: #B08D57 !important;
+  color: #FFFFFF !important;
+  transform: scale(1.03) translateY(-1px) !important;
+  box-shadow: 0 6px 16px rgba(176, 141, 87, 0.3) !important;
 }
 
 .sd-contact-wrapper {

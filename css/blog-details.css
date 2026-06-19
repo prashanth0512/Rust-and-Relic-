@@ -10,19 +10,19 @@
 }
 
 html[data-theme='dark'] {
-    --bd-bg: #0f0f0f;
-    --bd-surface: #1a1a1a;
-    --bd-text-primary: #e8e3d9;
-    --bd-text-secondary: #a3a095;
-    --bd-accent: #8b9d5a;
-    --bd-border: #333333;
+    --bd-bg: #181512;
+    --bd-surface: #221D19;
+    --bd-text-primary: #F7F1E8;
+    --bd-text-secondary: #B0A090;
+    --bd-accent: #B08D57;
+    --bd-border: rgba(176, 141, 87, 0.22);
 }
 
 html[data-theme='dark'] .bd-hero,
 html[data-theme='dark'] .bd-tips-section {
-    background-color: #1a1a1a;
-    color: #e8e3d9;
-    border: 1px solid #333;
+    background-color: var(--bd-surface);
+    color: var(--bd-text-primary);
+    border: 1px solid var(--bd-border);
 }
 
 html[data-theme='dark'] .bd-title,
@@ -32,7 +32,7 @@ html[data-theme='dark'] .bd-bullet-list li {
 }
 
 html[data-theme='dark'] .bd-main-container {
-    background-color: #0f0f0f;
+    background-color: var(--bd-bg);
 }
 
 body {
@@ -167,25 +167,37 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 12px 25px;
-    min-height: 44px;
-    background-color: var(--bd-accent);
-    color: #fff;
+    min-height: 48px;
+    padding: 0 30px;
+    background-color: #8B5E3C !important;
+    color: #FFFFFF !important;
     text-decoration: none;
-    border-radius: 30px;
+    border-radius: 4px;
     font-weight: 600;
-    transition: all 0.3s ease;
-    border: none;
+    border: 2px solid #8B5E3C !important;
     cursor: pointer;
+    font-family: inherit;
+    font-size: 0.825rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+                background-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+                color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+                border-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
 }
 
 .bd-btn:hover {
-    background: linear-gradient(135deg, var(--bd-accent), #3f2b1d);
-    transform: translateY(-2px);
+    background-color: #B08D57 !important;
+    border-color: #B08D57 !important;
+    color: #FFFFFF !important;
+    transform: scale(1.03) translateY(-1px) !important;
+    box-shadow: 0 6px 16px rgba(176, 141, 87, 0.3) !important;
 }
 
 body.dark-mode .bd-btn:hover {
-    background: linear-gradient(135deg, var(--bd-accent), #555);
+    background-color: #B08D57 !important;
+    border-color: #B08D57 !important;
 }
 
 .bd-back-wrapper {

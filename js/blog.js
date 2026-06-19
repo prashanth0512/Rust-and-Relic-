@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
             fontFamily: "'Inter', sans-serif",
             fontWeight: '500',
             letterSpacing: '0.02em',
-            borderLeft: '4px solid #6b7a42',
+            borderLeft: '4px solid var(--clr-accent)',
             transition: 'opacity 0.4s ease, transform 0.4s ease',
             whiteSpace: 'nowrap'
         });

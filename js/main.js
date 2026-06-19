@@ -363,7 +363,7 @@ document.addEventListener('DOMContentLoaded', () => {
             transition: 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
             fontFamily: "'Inter', sans-serif",
             fontSize: '14px',
-            borderLeft: '4px solid #6b7a42'
+            borderLeft: '4px solid var(--clr-accent)'
         });
 
         bodyElement.appendChild(notification);
@@ -579,30 +579,185 @@ function hardReverseNav(dir) {
                      requestAnimationFrame(animate);
                  };
 
-                 const checkStats = () => {
-                     const statsSection = document.querySelector('.stats-section');
-                     if (!statsSection) return;
+                  const checkStats = () => {
+                      const statsSection = document.querySelector('.stats-section, .hero-stats-grid');
+                      if (!statsSection) return;
+ 
+                      const rect = statsSection.getBoundingClientRect();
+                      const inViewport = (
+                          rect.top >= 0 &&
+                          rect.top <= (window.innerHeight || document.documentElement.clientHeight)
+                      ) || (
+                          rect.bottom >= 0 &&
+                          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+                      ) || (
+                          rect.top < 0 && rect.bottom > (window.innerHeight || document.documentElement.clientHeight)
+                      );
+ 
+                      if (inViewport) {
+                          statsElements.forEach(el => countUp(el));
+                          window.removeEventListener('scroll', checkStats);
+                          window.removeEventListener('resize', checkStats);
+                      }
+                  };
+ 
+                  window.addEventListener('scroll', checkStats);
+                  window.addEventListener('resize', checkStats);
+                  setTimeout(checkStats, 200);
+              }
 
-                     const rect = statsSection.getBoundingClientRect();
-                     const inViewport = (
-                         rect.top >= 0 &&
-                         rect.top <= (window.innerHeight || document.documentElement.clientHeight)
-                     ) || (
-                         rect.bottom >= 0 &&
-                         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
-                     ) || (
-                         rect.top < 0 && rect.bottom > (window.innerHeight || document.documentElement.clientHeight)
-                     );
+              
+              const heroSection = document.querySelector('.premium-hero');
+              if (heroSection) {
+                  
+                  setTimeout(() => {
+                      heroSection.classList.add('loaded');
+                  }, 150);
 
-                     if (inViewport) {
-                         statsElements.forEach(el => countUp(el));
-                         window.removeEventListener('scroll', checkStats);
-                         window.removeEventListener('resize', checkStats);
-                     }
-                 };
+                
+                  const shirt = document.getElementById('item-shirt');
+                  const jacket = document.getElementById('item-jacket');
+                  const coat = document.getElementById('item-coat');
+                  
+                  const accWatch = document.getElementById('acc-watch');
+                  const accGlasses = document.getElementById('acc-glasses');
+                  const accBag = document.getElementById('acc-bag');
+                  const accHat = document.getElementById('acc-hat');
 
-                 window.addEventListener('scroll', checkStats);
-                 window.addEventListener('resize', checkStats);
-                 setTimeout(checkStats, 200);
-             }
-         });
+                 
+                  setTimeout(() => {
+                      if (shirt) shirt.classList.add('active');
+                  }, 1200);
+
+                 
+                  setTimeout(() => {
+                      if (jacket) jacket.classList.add('active');
+                  }, 2400);
+
+                  
+                  setTimeout(() => {
+                      if (coat) coat.classList.add('active');
+                  }, 3600);
+
+                 
+                  setTimeout(() => {
+                      if (accWatch) accWatch.classList.add('active');
+                      if (accGlasses) accGlasses.classList.add('active');
+                      if (accBag) accBag.classList.add('active');
+                      if (accHat) accHat.classList.add('active');
+                      
+                     
+                      setTimeout(() => {
+                          if (shirt) shirt.classList.add('sway');
+                          if (jacket) jacket.classList.add('sway');
+                          if (coat) coat.classList.add('sway');
+                      }, 1000);
+                  }, 4500);
+
+                  
+                  const showcaseContainer = document.querySelector('.fashion-showcase-container');
+                  if (showcaseContainer) {
+                      showcaseContainer.addEventListener('mousemove', (e) => {
+                          const rect = showcaseContainer.getBoundingClientRect();
+                          const x = e.clientX - rect.left;
+                          const y = e.clientY - rect.top;
+                          showcaseContainer.style.setProperty('--spot-x', `${x}px`);
+                          showcaseContainer.style.setProperty('--spot-y', `${y}px`);
+                      });
+                      
+                      showcaseContainer.addEventListener('mouseleave', () => {
+                          showcaseContainer.style.setProperty('--spot-x', '50%');
+                          showcaseContainer.style.setProperty('--spot-y', '50%');
+                      });
+                  }
+
+            
+                  const parallaxWrapper = document.getElementById('mannequin-parallax-wrapper');
+                  if (parallaxWrapper && showcaseContainer) {
+                      showcaseContainer.addEventListener('mousemove', (e) => {
+                          const rect = showcaseContainer.getBoundingClientRect();
+                          const x = e.clientX - rect.left;
+                          const y = e.clientY - rect.top;
+                          
+                          const centerX = rect.width / 2;
+                          const centerY = rect.height / 2;
+                          const rotateX = -(y - centerY) / 10; 
+                          const rotateY = (x - centerX) / 10;  
+                          
+                          parallaxWrapper.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(10px)`;
+                      });
+                      
+                      showcaseContainer.addEventListener('mouseleave', () => {
+                          parallaxWrapper.style.transform = 'rotateX(0deg) rotateY(0deg) translateZ(0px)';
+                      });
+                  }
+
+                  const magneticBtns = document.querySelectorAll('.magnetic-btn');
+                  magneticBtns.forEach(btn => {
+                      btn.addEventListener('mousemove', (e) => {
+                          const rect = btn.getBoundingClientRect();
+                          const x = e.clientX - rect.left - rect.width / 2;
+                          const y = e.clientY - rect.top - rect.height / 2;
+                          
+                          btn.style.transform = `translate(${x * 0.35}px, ${y * 0.35}px) scale(1.02)`;
+                      });
+                      
+                      btn.addEventListener('mouseleave', () => {
+                          btn.style.transform = 'translate(0px, 0px) scale(1)';
+                      });
+                  });
+
+                  const dustContainer = document.getElementById('dust-particles');
+                  if (dustContainer) {
+                      const particleCount = 20;
+                      for (let i = 0; i < particleCount; i++) {
+                          const particle = document.createElement('div');
+                          particle.className = 'dust-particle';
+                          
+                          const size = Math.random() * 2.5 + 1.5;
+                          const startX = Math.random() * 100;
+                          const startY = Math.random() * 100;
+                          const duration = Math.random() * 18 + 12;
+                          const delay = Math.random() * -20;
+                          
+                          Object.assign(particle.style, {
+                              width: `${size}px`,
+                              height: `${size}px`,
+                              left: `${startX}%`,
+                              top: `${startY}%`,
+                              position: 'absolute',
+                              backgroundColor: 'var(--clr-accent)',
+                              borderRadius: '50%',
+                              opacity: Math.random() * 0.3 + 0.1,
+                              pointerEvents: 'none',
+                              animation: `float-dust ${duration}s linear infinite`,
+                              animationDelay: `${delay}s`
+                          });
+                          
+                          dustContainer.appendChild(particle);
+                      }
+                  }
+              }
+
+              const timelineItems = document.querySelectorAll('.timeline-item');
+              if (timelineItems.length > 0) {
+                  const observerOptions = {
+                      root: null,
+                      rootMargin: '0px 0px -50px 0px',
+                      threshold: 0.15
+                  };
+
+                  const timelineObserver = new IntersectionObserver((entries, observer) => {
+                      entries.forEach(entry => {
+                          if (entry.isIntersecting) {
+                              entry.target.classList.add('revealed');
+                              observer.unobserve(entry.target);
+                          }
+                      });
+                  }, observerOptions);
+
+                  timelineItems.forEach(item => {
+                      timelineObserver.observe(item);
+                  });
+              }
+          });

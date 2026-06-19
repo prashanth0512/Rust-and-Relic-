@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/home.css">
@@ -16,7 +16,7 @@
 </head>
 
 <body class="home-isolated">
-    <header class="site-header">
+    <header class="site-header animate-header">
         <div class="container header-inner">
             <a href="index.html" class="logo">
                 <img src="images/logo-new.svg" alt="Rust & Relic" class="nav-logo-img">
@@ -25,17 +25,17 @@
 
             <nav class="desktop-nav">
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link active">HOME <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"></path></svg></a>
+                    <a href="#" class="nav-link active">Home <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"></path></svg></a>
                     <div class="dropdown-menu">
                         <a href="index.html" class="dropdown-item">Home 1</a>
                         <a href="./pages/home2.html" class="dropdown-item">Home 2</a>
                     </div>
                 </div>
-                <a href="./pages/about.html" class="nav-link">ABOUT US</a>
-                <a href="./pages/services.html" class="nav-link">SERVICES</a>
-                <a href="./pages/blogs.html" class="nav-link">BLOGS</a>
-                <a href="./pages/contact.html" class="nav-link">CONTACT</a>
-                <a href="./pages/dashboard.html" class="nav-link">DASHBOARD</a>
+                <a href="./pages/about.html" class="nav-link">About</a>
+                <a href="./pages/services.html" class="nav-link">Services</a>
+                <a href="./pages/blogs.html" class="nav-link">Blogs</a>
+                <a href="./pages/contact.html" class="nav-link">Contact</a>
+                <a href="./pages/dashboard.html" class="nav-link">Dashboard</a>
             </nav>
 
             <div class="header-actions">
@@ -115,45 +115,151 @@
     </header>
 
     <main>
-        <section class="hero-section" style="background-image: url('./images/1960s\ floral.jpeg');">
-            <div class="hero-overlay"></div>
-            <div class="container hero-content">
-                    <h1 class="hero-title">Timeless Style<br>Resurrected</h1>
-                <p class="hero-subtitle">Curated vintage and rare fashion pieces for the conscious collector. Discover
-                    the beauty of the past, tailored for your future.</p>
-                <div class="hero-buttons">
-                    <a href="./pages/home2.html" class="btn btn-primary">Shop Now</a>
-                    <a href="./pages/services.html" class="btn btn-secondary">Explore Collection</a>
+        <section class="premium-hero">
+            <div class="hero-bg-fx">
+                <div class="ambient-glow"></div>
+                <div class="light-beam"></div>
+                <div class="film-grain"></div>
+                <div class="dust-particles" id="dust-particles"></div>
+            </div>
+
+            <div class="container hero-container">
+                <div class="hero-left">
+                    <span class="hero-tagline">LUXURY VINTAGE FASHION ARCHIVE</span>
+                    <h1 class="hero-headline">
+                        <span class="word-wrapper"><span class="word word-reveal-1">RARE</span></span>
+                        <span class="word-wrapper"><span class="word word-reveal-2">THREADS.</span></span>
+                        <br>
+                        <span class="word-wrapper"><span class="word word-reveal-3">TIMELESS</span></span>
+                        <span class="word-wrapper"><span class="word word-reveal-4">STORIES.</span></span>
+                    </h1>
+                    <p class="hero-description">
+                        Curated vintage clothing and collectible fashion pieces rescued from history and prepared for the modern wardrobe.
+                    </p>
+                    <div class="hero-actions-new">
+                        <a href="./pages/home2.html" class="btn btn-primary premium-cta-btn magnetic-btn">Explore Collection</a>
+                        <a href="./pages/services.html" class="btn btn-secondary premium-cta-btn magnetic-btn">Discover Archive</a>
+                    </div>
+                    
+                    <div class="hero-stats-grid">
+                        <div class="stat-item-new">
+                            <span class="stat-number" data-target="25" data-suffix="K+">0K+</span>
+                            <span class="stat-label-new">Collectors</span>
+                        </div>
+                        <div class="stat-item-new">
+                            <span class="stat-number" data-target="500" data-suffix="+">0+</span>
+                            <span class="stat-label-new">Rare Pieces</span>
+                        </div>
+                        <div class="stat-item-new">
+                            <span class="stat-number" data-target="60" data-suffix="+">0+</span>
+                            <span class="stat-label-new">Fashion Eras</span>
+                        </div>
+                        <div class="stat-item-new">
+                            <span class="stat-number" data-target="100" data-suffix="%">0%</span>
+                            <span class="stat-label-new">Authenticated</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="featured-drop">
-                    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path
-                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
-                        </path>
-                    </svg>
-                    <span>Featured Rare Drop: 1970s Leather Trench Coat</span>
-                </div>
-                <button class="btn btn-secondary btn-sm mt-1" id="subscribe-alerts-btn"
-                    style="margin-top: 1rem; width: auto; min-width: 160px; height: 48px;">Subscribe for Alerts</button>
-            </div>
-            </div>
-        </section>
-
-        <section class="stats-section section-padding">
-            <div class="container">
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <div class="stat-number" data-target="1500" data-suffix="+">0+</div>
-                        <div class="stat-label">Items Rescued</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number" data-target="98" data-suffix="%">0%</div>
-                        <div class="stat-label">Happy Collectors</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number" data-target="25" data-suffix="+">0+</div>
-                        <div class="stat-label">Years Sourced</div>
+                <div class="hero-right">
+                    <div class="fashion-showcase-container">
+                        <div class="spotlight" id="luxury-spotlight"></div>
+                        
+                        <div class="mannequin-wrapper" id="mannequin-parallax-wrapper">
+                            <div class="mannequin-stand">
+                                <div class="stand-hook"></div>
+                                <div class="stand-pole"></div>
+                                <div class="stand-base"></div>
+                                
+                                <div class="clothing-hanger">
+                                    <div class="hanger-hook"></div>
+                                    <div class="hanger-shoulders"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="clothing-showcase-items">
+                                
+                                <div class="showcase-item shirt-item" id="item-shirt">
+                                    <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M50 20 L62 25 L75 32 L68 40 L60 36 L62 82 L38 82 L40 36 L32 40 L25 32 L38 25 Z" fill="var(--clr-primary)" fill-opacity="0.9"/>
+                                        <path d="M42 21 L50 29 L58 21" fill="none" stroke="var(--clr-accent)" stroke-width="1.8"/>
+                                        <path d="M42 21 L50 31 L58 21 L50 20 Z" fill="var(--clr-bg)" fill-opacity="0.9"/>
+                                        <line x1="50" y1="36" x2="50" y2="78" stroke="var(--clr-accent)" stroke-width="1.2" stroke-dasharray="1 6"/>
+                                        <rect x="54" y="42" width="8" height="10" rx="1" fill="none" stroke="var(--clr-accent)" stroke-width="1"/>
+                                        <path d="M38 78 L62 78" stroke="var(--clr-accent)" stroke-width="1" stroke-dasharray="2 2"/>
+                                    </svg>
+                                </div>
+                                
+                                <div class="showcase-item jacket-item" id="item-jacket">
+                                    <svg viewBox="0 0 110 110" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M55 18 L70 23 L85 32 L78 46 L70 42 L72 85 L38 85 L40 42 L32 46 L25 32 L40 23 Z" fill="var(--clr-accent)" fill-opacity="0.95"/>
+                                        <path d="M40 23 L55 35 L44 45 Z" fill="var(--clr-primary)"/>
+                                        <path d="M70 23 L55 35 L66 45 Z" fill="var(--clr-primary)"/>
+                                        <path d="M49 35 L49 85" stroke="var(--clr-primary)" stroke-width="1.5"/>
+                                        <path d="M61 35 L61 85" stroke="var(--clr-primary)" stroke-width="1.5"/>
+                                        <path d="M32 46 L29 55" stroke="var(--clr-primary)" stroke-width="1.5"/>
+                                        <path d="M78 46 L81 55" stroke="var(--clr-primary)" stroke-width="1.5"/>
+                                        <line x1="43" y1="55" x2="49" y2="52" stroke="var(--clr-primary)" stroke-width="1.2"/>
+                                        <line x1="25" y1="32" x2="29" y2="36" stroke="var(--clr-primary)" stroke-width="1.2"/>
+                                        <line x1="85" y1="32" x2="81" y2="36" stroke="var(--clr-primary)" stroke-width="1.2"/>
+                                    </svg>
+                                </div>
+                                
+                                <div class="showcase-item coat-item" id="item-coat">
+                                    <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M60 15 L78 20 L96 32 L88 52 L78 48 L80 110 L40 110 L42 48 L32 52 L24 32 L42 20 Z" fill="var(--clr-primary)" fill-opacity="0.98"/>
+                                        <path d="M42 20 C42 20, 60 40, 78 20 C78 20, 60 5, 42 20 Z" fill="var(--clr-accent)"/>
+                                        <circle cx="50" cy="50" r="2.2" fill="var(--clr-accent)" stroke="none"/>
+                                        <circle cx="70" cy="50" r="2.2" fill="var(--clr-accent)" stroke="none"/>
+                                        <circle cx="50" cy="65" r="2.2" fill="var(--clr-accent)" stroke="none"/>
+                                        <circle cx="70" cy="65" r="2.2" fill="var(--clr-accent)" stroke="none"/>
+                                        <circle cx="50" cy="80" r="2.2" fill="var(--clr-accent)" stroke="none"/>
+                                        <circle cx="70" cy="80" r="2.2" fill="var(--clr-accent)" stroke="none"/>
+                                        <rect x="42" y="70" width="36" height="6" fill="var(--clr-accent)" stroke="none"/>
+                                        <rect x="56" y="68" width="8" height="10" rx="1" fill="none" stroke="#FFF" stroke-width="1.5"/>
+                                        <rect x="44" y="88" width="10" height="8" rx="1.5" fill="var(--clr-accent)" stroke="none"/>
+                                        <rect x="66" y="88" width="10" height="8" rx="1.5" fill="var(--clr-accent)" stroke="none"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            
+                            <div class="showcase-accessory watch-acc" id="acc-watch">
+                                <svg viewBox="0 0 40 40" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <rect x="18" y="2" width="4" height="36" rx="1.5" fill="var(--clr-primary)"/>
+                                    <circle cx="20" cy="20" r="9" fill="var(--clr-accent)" stroke="var(--clr-accent)"/>
+                                    <circle cx="20" cy="20" r="7" fill="var(--clr-white)"/>
+                                    <line x1="20" y1="20" x2="20" y2="16" stroke="var(--clr-black)" stroke-width="1.2"/>
+                                    <line x1="20" y1="20" x2="24" y2="20" stroke="var(--clr-black)" stroke-width="1.2"/>
+                                </svg>
+                            </div>
+                            
+                            <div class="showcase-accessory glasses-acc" id="acc-glasses">
+                                <svg viewBox="0 0 60 30" width="55" height="28" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="18" cy="15" r="9" fill="rgba(139, 94, 60, 0.35)" stroke="var(--clr-accent)"/>
+                                    <circle cx="42" cy="15" r="9" fill="rgba(139, 94, 60, 0.35)" stroke="var(--clr-accent)"/>
+                                    <path d="M27 15 Q30 11 33 15" stroke="var(--clr-accent)" stroke-width="1.8"/>
+                                    <path d="M9 15 Q5 12 2 15" stroke="var(--clr-accent)"/>
+                                    <path d="M51 15 Q55 12 58 15" stroke="var(--clr-accent)"/>
+                                </svg>
+                            </div>
+                            
+                            <div class="showcase-accessory bag-acc" id="acc-bag">
+                                <svg viewBox="0 0 60 60" width="60" height="60" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M15 22 C15 8, 45 8, 45 22" stroke="var(--clr-primary)" stroke-width="2.5" fill="none"/>
+                                    <path d="M10 22 L50 22 L46 52 C46 54 44 56 42 56 L18 56 C16 56 14 54 14 52 Z" fill="var(--clr-primary)"/>
+                                    <path d="M10 22 L50 22 L44 38 L16 38 Z" fill="var(--clr-accent)"/>
+                                    <rect x="27" y="34" width="6" height="8" rx="1" fill="var(--clr-accent)" stroke="var(--clr-white)" stroke-width="1"/>
+                                </svg>
+                            </div>
+                            
+                            <div class="showcase-accessory hat-acc" id="acc-hat">
+                                <svg viewBox="0 0 70 40" width="70" height="40" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M20 22 C20 6, 50 6, 50 22 Z" fill="var(--clr-primary)"/>
+                                    <rect x="20" y="18" width="30" height="4" fill="var(--clr-accent)"/>
+                                    <ellipse cx="35" cy="23" rx="28" ry="4" fill="var(--clr-primary)" stroke="var(--clr-accent)" stroke-width="1"/>
+                                </svg>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -313,7 +419,7 @@
                         based on your preferences.</p>
 
                     <form class="newsletter-form">
-                        <input type="email" placeholder="Enter your email address" class="form-input full-width"
+                        <input type="email" placeholder="Enter Your Email Address" class="form-input full-width"
                             required>
 
                         <div class="form-row grid-2">
@@ -347,13 +453,70 @@
                 </div>
             </div>
         </section>
+
+        <section class="timeline-section section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Our Journey Through Time</h2>
+                    <p class="section-desc">A legacy of style, preservation, and community curation.</p>
+                </div>
+                <div class="timeline-container">
+                    <div class="timeline-line"></div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-badge">1960s</div>
+                        <div class="timeline-content">
+                            <span class="timeline-year">1960s</span>
+                            <h3 class="timeline-step-title">First Vintage Discoveries</h3>
+                            <p class="timeline-step-desc">Unearthing rare couture and iconic fashion pieces from European ateliers, laying the foundation for our archive.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-badge">1980s</div>
+                        <div class="timeline-content">
+                            <span class="timeline-year">1980s</span>
+                            <h3 class="timeline-step-title">Expanding Collections</h3>
+                            <p class="timeline-step-desc">Opening our first archive space in SoHo, curating street-wear eras and rare designer garments from private estates.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-badge">2000s</div>
+                        <div class="timeline-content">
+                            <span class="timeline-year">2000s</span>
+                            <h3 class="timeline-step-title">Heritage Preservation</h3>
+                            <p class="timeline-step-desc">Establishing a specialized restoration laboratory for delicate archival lace, silks, and historic denim structures.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-badge">2015</div>
+                        <div class="timeline-content">
+                            <span class="timeline-year">2015</span>
+                            <h3 class="timeline-step-title">Digital Archive Launch</h3>
+                            <p class="timeline-step-desc">Opening the vault to digital collectors worldwide, enabling authentication, layaways, and virtual exhibitions.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-badge">Today</div>
+                        <div class="timeline-content">
+                            <span class="timeline-year">Today</span>
+                            <h3 class="timeline-step-title">Global Vintage Community</h3>
+                            <p class="timeline-step-desc">Connecting thousands of preservationists, collectors, and design houses with authentic vintage luxury pieces.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer class="site-footer">
         <div class="container footer-grid">
             <div class="footer-brand">
                 <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
                     <img src="images/logo-new.svg" alt="Rust & Relic" style="height: 40px; width: auto;">
-                    <h2 class="footer-title" style="color: #6b7a42; margin-bottom: 0;">Rust & Relic</h2>
+                    <h2 class="footer-title" style="color: #B08D57; margin-bottom: 0;">Rust & Relic</h2>
                 </div>
                 <p class="footer-desc">Curating timeless vintage pieces for the modern soul. Sustainability meets style
                     in every thread we rescue and relic.</p>

@@ -74,7 +74,7 @@ body:has(.contact-hero) .section-padding {
 .contact-hero-actions {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 2.5rem;
     flex-wrap: wrap;
 }
 
@@ -130,7 +130,7 @@ body:has(.contact-hero) .section-padding {
 
 .contact-reviews-grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: 2.5rem;
     margin-top: 3rem;
 }
 
@@ -172,7 +172,7 @@ body:has(.contact-hero) .section-padding {
 .contact-cards-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+    gap: 2.5rem;
 }
 
 .contact-detail-card {
@@ -250,7 +250,8 @@ body:has(.contact-hero) .section-padding {
 }
 
 .faq-item {
-    border-bottom: 1px solid var(--clr-border);
+    margin-bottom: 1.5rem;
+
 }
 
 .faq-question {
@@ -258,7 +259,7 @@ body:has(.contact-hero) .section-padding {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.25rem 0;
+    padding: 1.5rem 0;
     background: none;
     border: none;
     font-size: 1.1rem;
@@ -285,7 +286,7 @@ body:has(.contact-hero) .section-padding {
 
 .faq-answer {
     display: none;
-    padding-bottom: 1.25rem;
+    padding: 1rem 0 1.5rem 0;
     color: var(--clr-text-light);
     line-height: 1.7;
 }
@@ -295,23 +296,28 @@ body:has(.contact-hero) .section-padding {
 }
 
 .form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 2rem !important;
+    margin-bottom: 1.25rem !important;
+}
+
+.form-group {
+    margin-bottom: 1.75rem !important;
 }
 
 .form-group label {
-    display: block;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    font-size: 0.9rem;
-    color: var(--clr-text-main);
+    display: block !important;
+    font-weight: 600 !important;
+    margin-bottom: 0.75rem !important;
+    font-size: 0.95rem !important;
+    color: var(--clr-text-main) !important;
 }
 
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    padding: 0.75rem 1rem;
+    padding: 0.85rem 1.15rem !important;
     border: 1px solid var(--clr-border);
     border-radius: var(--border-radius-sm);
     font-size: 1rem;
@@ -319,6 +325,10 @@ body:has(.contact-hero) .section-padding {
     color: var(--clr-text-main);
     background: var(--clr-bg-alt);
     transition: border-color var(--transition-fast);
+}
+
+.contact-form textarea {
+    min-height: 150px !important;
 }
 
 .contact-form input:focus,
@@ -360,10 +370,12 @@ body:has(.contact-hero) .section-padding {
 }
 
 .form-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1.5rem;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 2.5rem !important;
+    margin-top: 2.5rem !important;
+    margin-bottom: 1.5rem !important;
     flex-wrap: wrap;
 }
 
