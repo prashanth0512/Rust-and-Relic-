@@ -283,20 +283,21 @@ html[data-theme='dark'] .film-grain {
     width: 100%;
     max-width: 440px;
     height: 520px;
-    background-color: rgba(243, 236, 226, 0.4);
-    border: 1px solid rgba(200, 155, 109, 0.15);
-    border-radius: 20px;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-    box-shadow: inset 0 0 40px rgba(139, 94, 60, 0.02), var(--shadow-soft);
-    transition: background-color 0.4s, border-color 0.4s;
+    overflow: visible;
+    box-shadow: none;
+    transform: scale(1.15);
+    transition: transform 0.4s ease;
 }
 
 html[data-theme='dark'] .fashion-showcase-container {
-    background-color: rgba(26, 26, 26, 0.3);
-    border-color: rgba(230, 199, 163, 0.1);
+    background-color: transparent;
+    border-color: transparent;
 }
 
 .spotlight {
@@ -1003,7 +1004,7 @@ html[data-theme='light'] .home-isolated .drawer-close {
 .home-isolated .drawer-link.active {
     color: var(--clr-accent) !important;
 }
-}
+
 
 html[data-theme='dark'] .home-isolated .drawer-link {
     color: #ffffff !important;

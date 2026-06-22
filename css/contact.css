@@ -97,7 +97,8 @@ body:has(.contact-hero) .section-padding {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    margin-top: 3rem;
+    margin: 3rem auto 0 auto;
+    max-width: 800px;
 }
 
 .contact-form input,
@@ -153,26 +154,28 @@ body:has(.contact-hero) .section-padding {
     padding-bottom: 5rem;
 }
 
-.map-fullwidth-container {
+.map-container-wrapper {
     width: 100%;
-    height: 55vh;
+    height: 60vh;
     border-radius: var(--border-radius-md);
     overflow: hidden;
     border: 1px solid var(--clr-border);
     box-shadow: 0 8px 30px rgba(0,0,0,0.06);
-    margin-bottom: 3rem;
 }
 
-.map-fullwidth-container iframe {
+.map-container-wrapper iframe {
     width: 100%;
     height: 100%;
     display: block;
+    border: 0;
 }
 
 .contact-cards-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2.5rem;
+    align-items: stretch;
+    width: 100%;
 }
 
 .contact-detail-card {
@@ -232,14 +235,19 @@ body:has(.contact-hero) .section-padding {
 @media (max-width: 1024px) {
     .contact-cards-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    .map-container-wrapper {
+        height: 50vh;
     }
 }
 
 @media (max-width: 640px) {
     .contact-cards-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
-    .map-fullwidth-container {
+    .map-container-wrapper {
         height: 40vh;
     }
 }
@@ -250,7 +258,7 @@ body:has(.contact-hero) .section-padding {
 }
 
 .faq-item {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 
 }
 

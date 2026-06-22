@@ -1614,7 +1614,7 @@ html[data-theme='dark'] .site-footer {
 .footer-contact-item svg {
     flex-shrink: 0;
     margin-top: 2px;
-    color: rgba(255,255,255,0.9);
+    color: #B08D57;
 }
 
 .footer-contact-item a {
@@ -4246,7 +4246,7 @@ section > .container, .hero-section, .featured-pieces, .collections-section, .la
 }
 
 
-.nav-link:hover::after { transform: scaleX(1); }
+.nav-link:hover::after { transform: translateX(-50%) scaleX(1); }
 
 
 @keyframes gradientShift {
@@ -4732,4 +4732,186 @@ html[data-theme='dark'] .collection-card:hover {
 }
 .site-header .hamburger-btn span {
     background-color: #F7F1E8 !important;
+}
+
+.brown-accent-section {
+    background-color: #3E3028 !important;
+    color: #F4EFE6 !important;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.brown-accent-section .section-title,
+.brown-accent-section h1,
+.brown-accent-section h2,
+.brown-accent-section h3,
+.brown-accent-section h4 {
+    color: #F4EFE6 !important;
+}
+
+.brown-accent-section .section-desc,
+.brown-accent-section p,
+.brown-accent-section .stat-label-new,
+.brown-accent-section .about-brief-text,
+.brown-accent-section .timeline-step-desc,
+.brown-accent-section .step-desc,
+.brown-accent-section .faq-answer,
+.brown-accent-section .blog-meta,
+.brown-accent-section .review-quote,
+.brown-accent-section .registry-desc,
+.brown-accent-section .checkbox-label,
+.brown-accent-section .bd-bullet-list li,
+.brown-accent-section li {
+    color: #D2C6B8 !important;
+}
+
+.brown-accent-section a:not(.btn) {
+    color: #E6C7A3 !important;
+}
+
+.brown-accent-section a:not(.btn):hover {
+    color: #F0D9C0 !important;
+}
+
+.brown-accent-section .step-card,
+.brown-accent-section .testimonial-card,
+.brown-accent-section .curation-card,
+.brown-accent-section .pricing-example,
+.brown-accent-section .faq-item,
+.brown-accent-section .contact-review-card,
+.brown-accent-section .registry-box,
+.brown-accent-section .bd-tips-section,
+.brown-accent-section .team-card {
+    background-color: #4A3B32 !important;
+    border-color: #5D4D43 !important;
+    color: #F4EFE6 !important;
+}
+
+.brown-accent-section .step-number,
+.brown-accent-section .stars,
+.brown-accent-section .star-rating {
+    color: #E6C7A3 !important;
+}
+
+.brown-accent-section .faq-question {
+    color: #F4EFE6 !important;
+    border-bottom-color: rgba(230, 199, 163, 0.2) !important;
+}
+.brown-accent-section .faq-answer p {
+    color: #D2C6B8 !important;
+}
+
+.brown-accent-section .team-role {
+    color: #E6C7A3 !important;
+}
+
+.brown-accent-section .team-social a {
+    color: #E6C7A3 !important;
+}
+
+.brown-accent-section .team-social a:hover {
+    color: #F0D9C0 !important;
+}
+
+.brown-accent-section .pricing-example span {
+    color: #F4EFE6 !important;
+}
+.brown-accent-section .pricing-example .deposit-amount {
+    color: #E6C7A3 !important;
+}
+
+.brown-accent-section input[type="email"],
+.brown-accent-section input[type="text"],
+.brown-accent-section select,
+.brown-accent-section textarea {
+    background-color: #2C241B !important;
+    color: #F4EFE6 !important;
+    border-color: #5D4D43 !important;
+}
+.brown-accent-section input::placeholder {
+    color: #8A7E72 !important;
+}
+.brown-accent-section .btn-primary {
+    background-color: #B08D57 !important;
+    color: #FFFFFF !important;
+    border-color: #B08D57 !important;
+}
+.brown-accent-section .btn-primary:hover {
+    background-color: #C5A06B !important;
+    border-color: #C5A06B !important;
+}
+
+.brown-accent-section .sourcing-item {
+    background-color: #ffffff !important;
+    border-color: #E2D7C8 !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+html[data-theme='dark'] .brown-accent-section .sourcing-item {
+    background-color: #2D2520 !important;
+    border-color: #4A3B32 !important;
+}
+
+.brown-accent-section .sourcing-item .sourcing-title {
+    color: #1A1A1A !important;
+}
+
+html[data-theme='dark'] .brown-accent-section .sourcing-item .sourcing-title {
+    color: #F4EFE6 !important;
+}
+
+.brown-accent-section .sourcing-item .sourcing-desc {
+    color: #2C241B !important;
+}
+
+html[data-theme='dark'] .brown-accent-section .sourcing-item .sourcing-desc {
+    color: #D2C6B8 !important;
+}
+
+.brown-accent-section .sourcing-item .sourcing-num {
+    color: var(--clr-primary, #8B5E3C) !important;
+    opacity: 0.61 !important;
+}
+
+.brown-accent-section .sd-process-step {
+    background-color: #F7F1E8 !important;
+    border-color: #D6C8B4 !important;
+    color: #1A1A1A !important;
+}
+
+html[data-theme='dark'] .brown-accent-section .sd-process-step {
+    background-color: #2D2520 !important;
+    border-color: #4A3B32 !important;
+    color: #F4EFE6 !important;
+}
+
+.brown-accent-section .sd-process-step h4 {
+    color: #1A1A1A !important;
+}
+
+html[data-theme='dark'] .brown-accent-section .sd-process-step h4 {
+    color: #F4EFE6 !important;
+}
+
+.brown-accent-section .sd-process-step p {
+    color: #2C241B !important;
+}
+
+html[data-theme='dark'] .brown-accent-section .sd-process-step p {
+    color: #D2C6B8 !important;
+}
+
+.brown-accent-section .sd-process-number {
+    background-color: var(--primary-color, #4A3B2A) !important;
+    color: #ffffff !important;
+}
+
+.brown-accent-section .author-name {
+    color: #F4EFE6 !important;
+}
+.brown-accent-section .author-title {
+    color: #E6C7A3 !important;
+}
+
+.brown-accent-section .bd-bullet-list li::before {
+    color: #E6C7A3 !important;
 }

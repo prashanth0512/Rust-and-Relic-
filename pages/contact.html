@@ -138,219 +138,227 @@
             </div>
             <div class="contact-hero-shape"></div>
         </section>
-        <section class="container section-padding form-section contact-inquiry-section">
-            <div class="section-header text-center">
-                <h2 class="section-title">Send Us a Curated Inquiry</h2>
-                <p class="section-desc">Our team typically responds within 24 business hours. Please provide as much
-                    detail as possible regarding rare item requests or order status.</p>
-            </div>
+        <section class="section-padding form-section contact-inquiry-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Send Us a Curated Inquiry</h2>
+                    <p class="section-desc">Our team typically responds within 24 business hours. Please provide as much
+                        detail as possible regarding rare item requests or order status.</p>
+                </div>
 
-            <form class="contact-form">
-                <div class="form-row">
+                <form class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" placeholder="Elias Thorne" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="emailAddr">Email Address</label>
+                            <input type="email" id="emailAddr" placeholder="elias@vintage.com" required>
+                        </div>
+                    </div>
                     <div class="form-group">
-                        <label for="fullName">Full Name</label>
-                        <input type="text" id="fullName" placeholder="Elias Thorne" required>
+                        <label for="subject">Subject</label>
+                        <div class="custom-select-wrapper">
+                            <select id="subject" class="touch-target">
+                                <option value="">Select an inquiry type</option>
+                                <option value="rare_item">Rare Item Request</option>
+                                <option value="order_status">Order Status</option>
+                                <option value="layaway">Layaway Plans</option>
+                                <option value="styling">Personal Styling</option>
+                            </select>
+                            <svg class="select-icon" width="20" height="20" fill="none" stroke="currentColor"
+                                stroke-width="2" viewBox="0 0 24 24">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
                     </div>
                     <div class="form-group">
-                        <label for="emailAddr">Email Address</label>
-                        <input type="email" id="emailAddr" placeholder="elias@vintage.com" required>
+                        <label for="message">Your Message</label>
+                        <textarea id="message" rows="5"
+                            placeholder="Tell us about the piece you're looking for or your specific question..."
+                            required></textarea>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <div class="custom-select-wrapper">
-                        <select id="subject" class="touch-target">
-                            <option value="">Select an inquiry type</option>
-                            <option value="rare_item">Rare Item Request</option>
-                            <option value="order_status">Order Status</option>
-                            <option value="layaway">Layaway Plans</option>
-                            <option value="styling">Personal Styling</option>
-                        </select>
-                        <svg class="select-icon" width="20" height="20" fill="none" stroke="currentColor"
-                            stroke-width="2" viewBox="0 0 24 24">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
+                    <div class="form-footer">
+                        <p class="form-disclosure">By submitting this form, you agree to our privacy policy and terms of
+                            service.</p>
+                        <button type="submit" class="btn contact-dispatch-btn touch-target">Dispatch Message</button>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label for="message">Your Message</label>
-                    <textarea id="message" rows="5"
-                        placeholder="Tell us about the piece you're looking for or your specific question..."
-                        required></textarea>
-                </div>
-                <div class="form-footer">
-                    <p class="form-disclosure">By submitting this form, you agree to our privacy policy and terms of
-                        service.</p>
-                    <button type="submit" class="btn contact-dispatch-btn touch-target">Dispatch Message</button>
-                </div>
-            </form>
-        </section>
-        <section class="container section-padding contact-map-and-details">
-            <div class="map-fullwidth-container">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.9503398796587!2d-73.99891648459418!3d40.72557397933185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2598a7a461f1b%3A0x6b0ada3762b1e0e4!2sSoHo%2C%20New%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1709697600000!5m2!1sen!2sus"
-                    width="100%" height="100%"
-                    style="border:0;"
-                    allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                    title="Rust &amp; Relic Store Location">
-                </iframe>
+                </form>
             </div>
-
-            <div class="contact-cards-grid">
-                <div class="contact-detail-card">
-                    <div class="card-icon">
-                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                            <circle cx="12" cy="10" r="3"></circle>
-                        </svg>
-                    </div>
-                    <h3>STORE LOCATION</h3>
-                    <p>123 Vintage Lane, SoHo<br>New York, NY 10012</p>
+        </section>
+        <section class="section-padding contact-map-and-details">
+            <div class="container">
+                <div class="map-container-wrapper" style="margin-bottom: 4rem;">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.9503398796587!2d-73.99891648459418!3d40.72557397933185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2598a7a461f1b%3A0x6b0ada3762b1e0e4!2sSoHo%2C%20New%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1709697600000!5m2!1sen!2sus"
+                        width="100%" height="100%"
+                        style="border:0;"
+                        allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Rust &amp; Relic Store Location">
+                    </iframe>
                 </div>
 
-                <div class="contact-detail-card">
-                    <div class="card-icon">
-                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                            <polyline points="22,6 12,13 2,6"></polyline>
-                        </svg>
+                <div class="contact-cards-grid">
+                    <div class="contact-detail-card">
+                        <div class="card-icon">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <h3>STORE LOCATION</h3>
+                        <p>123 Vintage Lane, SoHo<br>New York, NY 10012</p>
                     </div>
-                    <h3>CURATOR EMAIL</h3>
-                    <a href="mailto:rust&relic26@gmail.com" class="touch-target">rust&relic26@gmail.com</a>
-                </div>
 
-                <div class="contact-detail-card">
-                    <div class="card-icon">
-                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.13 12 19.79 19.79 0 0 1 1.06 3.38 2 2 0 0 1 3.04 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                        </svg>
+                    <div class="contact-detail-card">
+                        <div class="card-icon">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <h3>CURATOR EMAIL</h3>
+                        <a href="mailto:rust&relic26@gmail.com" class="touch-target">rust&relic26@gmail.com</a>
                     </div>
-                    <h3>STORE PHONE</h3>
-                    <a href="tel:+919876543210" class="touch-target">+91 9876543210</a>
-                </div>
 
-                <div class="contact-detail-card">
-                    <div class="card-icon">
-                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <polyline points="12 6 12 12 16 14"></polyline>
-                        </svg>
+                    <div class="contact-detail-card">
+                        <div class="card-icon">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.13 12 19.79 19.79 0 0 1 1.06 3.38 2 2 0 0 1 3.04 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                        </div>
+                        <h3>STORE PHONE</h3>
+                        <a href="tel:+919876543210" class="touch-target">+91 9876543210</a>
                     </div>
-                    <h3>ARCHIVE HOURS</h3>
-                    <p>Mon–Sat: 10:00 AM – 7:00 PM<br>Sun: Appointment Only</p>
+
+                    <div class="contact-detail-card">
+                        <div class="card-icon">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                        <h3>ARCHIVE HOURS</h3>
+                        <p>Mon–Sat: 10:00 AM – 7:00 PM<br>Sun: Appointment Only</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="container section-padding faq-section">
-            <div class="section-header text-center">
-                <h2 class="section-title">Common Inquiries</h2>
-                <p class="section-desc">Find quick answers to our most frequent questions about the Rust & Relic
-                    experience.</p>
-            </div>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <button class="faq-question touch-target">
-                        <span>How do your layaway plans work?</span>
-                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
-                            viewBox="0 0 24 24">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Our layaway plans allow you to reserve any item for up to 90 days. Simply pay a 20% deposit
-                            upfront, and we'll hold your piece while you complete monthly payments. No interest or
-                            hidden fees — just flexible, collector-friendly terms. Once fully paid, we ship your item
-                            within 2 business days.</p>
-                    </div>
+        <section class="section-padding faq-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Common Inquiries</h2>
+                    <p class="section-desc">Find quick answers to our most frequent questions about the Rust & Relic
+                        experience.</p>
                 </div>
-                <div class="faq-item">
-                    <button class="faq-question touch-target">
-                        <span>Can I request a specific rare piece?</span>
-                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
-                            viewBox="0 0 24 24">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Absolutely! Use our Rare Item Request form or email us directly with details about the piece
-                            you're looking for — brand, era, size, and condition preference. Our sourcing team actively
-                            hunts through estate sales, auctions, and private collections worldwide. We'll notify you as
-                            soon as we find a match.</p>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question touch-target">
+                            <span>How do your layaway plans work?</span>
+                            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Our layaway plans allow you to reserve any item for up to 90 days. Simply pay a 20% deposit
+                                upfront, and we'll hold your piece while you complete monthly payments. No interest or
+                                hidden fees — just flexible, collector-friendly terms. Once fully paid, we ship your item
+                                within 2 business days.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question touch-target">
-                        <span>What is your typical response time?</span>
-                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
-                            viewBox="0 0 24 24">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <p>We typically respond to all inquiries within 24 business hours. For rare item requests and
-                            personal styling consultations, our curators may take up to 48 hours to provide a detailed,
-                            personalized response. Urgent order-related queries are prioritized and usually answered
-                            within a few hours.</p>
+                    <div class="faq-item">
+                        <button class="faq-question touch-target">
+                            <span>Can I request a specific rare piece?</span>
+                            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Absolutely! Use our Rare Item Request form or email us directly with details about the piece
+                                you're looking for — brand, era, size, and condition preference. Our sourcing team actively
+                                hunts through estate sales, auctions, and private collections worldwide. We'll notify you as
+                                soon as we find a match.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question touch-target">
-                        <span>Do you offer international shipping?</span>
-                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
-                            viewBox="0 0 24 24">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Yes, we ship worldwide! Standard international shipping takes 7–14 business days depending on
-                            destination. We offer tracked shipping on all international orders and provide
-                            customs-friendly packaging. Express shipping options are also available at checkout for
-                            select countries.</p>
+                    <div class="faq-item">
+                        <button class="faq-question touch-target">
+                            <span>What is your typical response time?</span>
+                            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We typically respond to all inquiries within 24 business hours. For rare item requests and
+                                personal styling consultations, our curators may take up to 48 hours to provide a detailed,
+                                personalized response. Urgent order-related queries are prioritized and usually answered
+                                within a few hours.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question touch-target">
+                            <span>Do you offer international shipping?</span>
+                            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes, we ship worldwide! Standard international shipping takes 7–14 business days depending on
+                                destination. We offer tracked shipping on all international orders and provide
+                                customs-friendly packaging. Express shipping options are also available at checkout for
+                                select countries.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="container section-padding customer-voices-section">
-            <div class="section-header text-center">
-                <h2 class="section-title">Customer Voices</h2>
-                <p class="section-desc text-italic">Stories of successful sourcing and seamless support from our
-                    community.</p>
-            </div>
+        <section class="section-padding customer-voices-section brown-accent-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Customer Voices</h2>
+                    <p class="section-desc text-italic">Stories of successful sourcing and seamless support from our
+                        community.</p>
+                </div>
 
-            <div class="grid contact-reviews-grid">
-                <div class="contact-review-card">
-                    <div class="star-rating">
-                        ★★★★★
+                <div class="grid contact-reviews-grid">
+                    <div class="contact-review-card">
+                        <div class="star-rating">
+                            ★★★★★
+                        </div>
+                        <p class="review-quote">"The layaway plan was a lifesaver for securing an 80s leather trench I'd
+                            been hunting for years. The team kept me updated every step of the way."</p>
+                        <div class="review-author-info">
+                            <span class="author-name">Sarah Jenkins</span>
+                            <span class="author-title">Verified Collector</span>
+                        </div>
                     </div>
-                    <p class="review-quote">"The layaway plan was a lifesaver for securing an 80s leather trench I'd
-                        been hunting for years. The team kept me updated every step of the way."</p>
-                    <div class="review-author-info">
-                        <span class="author-name">Sarah Jenkins</span>
-                        <span class="author-title">Verified Collector</span>
+                    <div class="contact-review-card">
+                        <div class="star-rating">
+                            ★★★★★
+                        </div>
+                        <p class="review-quote">"Requested a specific vintage watch through their rare item alert. Two
+                            months later, they found it in pristine condition. Incredible service!"</p>
+                        <div class="review-author-info">
+                            <span class="author-name">Marcus Thorne</span>
+                            <span class="author-title">Rare Item Client</span>
+                        </div>
                     </div>
-                </div>
-                <div class="contact-review-card">
-                    <div class="star-rating">
-                        ★★★★★
-                    </div>
-                    <p class="review-quote">"Requested a specific vintage watch through their rare item alert. Two
-                        months later, they found it in pristine condition. Incredible service!"</p>
-                    <div class="review-author-info">
-                        <span class="author-name">Marcus Thorne</span>
-                        <span class="author-title">Rare Item Client</span>
-                    </div>
-                </div>
-                <div class="contact-review-card">
-                    <div class="star-rating">
-                        ★★★★★
-                    </div>
-                    <p class="review-quote">"I had a question about sizing for a 1950s dress. The curator sent me a
-                        video showing exactly how it measured. That's real care."</p>
-                    <div class="review-author-info">
-                        <span class="author-name">Elena Rossi</span>
-                        <span class="author-title">Loyal Customer</span>
+                    <div class="contact-review-card">
+                        <div class="star-rating">
+                            ★★★★★
+                        </div>
+                        <p class="review-quote">"I had a question about sizing for a 1950s dress. The curator sent me a
+                            video showing exactly how it measured. That's real care."</p>
+                        <div class="review-author-info">
+                            <span class="author-name">Elena Rossi</span>
+                            <span class="author-title">Loyal Customer</span>
+                        </div>
                     </div>
                 </div>
             </div>

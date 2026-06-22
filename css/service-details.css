@@ -436,3 +436,79 @@ html[data-theme='dark'] .sd-process-step:hover {
     display: none;
   }
 }
+
+.sd-overview-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    align-items: center !important;
+}
+
+.sd-overview-image img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: var(--border-radius-md, 10px);
+    border: 2px solid var(--clr-primary, #8B5E3C);
+    box-shadow: var(--shadow-hover, 0 10px 32px rgba(44, 36, 27, 0.14));
+}
+
+html[data-theme='dark'] .sd-overview-image img {
+    border-color: var(--clr-accent, #C89B6D);
+}
+
+.sd-overview-content .sd-section-title {
+    text-align: center !important;
+    margin-bottom: 20px;
+}
+
+.sd-overview-content p {
+    text-align: center !important;
+    font-size: 1.1rem;
+    line-height: 1.75;
+    margin-bottom: 15px;
+    color: var(--text-light);
+}
+
+@media (min-width: 1024px) {
+    .sd-overview-grid {
+        grid-template-columns: 1fr 1fr;
+        align-items: flex-start !important;
+    }
+    
+    .sd-overview-content .sd-section-title {
+        text-align: left !important;
+    }
+    
+    .sd-overview-content p {
+        text-align: left !important;
+    }
+    
+    .service-details-container[data-service-id="2"] .sd-overview-grid,
+    .service-details-container[data-service-id="4"] .sd-overview-grid,
+    .service-details-container[data-service-id="6"] .sd-overview-grid,
+    .service-details-wrapper[data-service-id="2"] .sd-overview-grid,
+    .service-details-wrapper[data-service-id="4"] .sd-overview-grid,
+    .service-details-wrapper[data-service-id="6"] .sd-overview-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .service-details-container[data-service-id="2"] .sd-overview-content,
+    .service-details-container[data-service-id="4"] .sd-overview-content,
+    .service-details-container[data-service-id="6"] .sd-overview-content,
+    .service-details-wrapper[data-service-id="2"] .sd-overview-content,
+    .service-details-wrapper[data-service-id="4"] .sd-overview-content,
+    .service-details-wrapper[data-service-id="6"] .sd-overview-content {
+        order: 2;
+    }
+    
+    .service-details-container[data-service-id="2"] .sd-overview-image,
+    .service-details-container[data-service-id="4"] .sd-overview-image,
+    .service-details-container[data-service-id="6"] .sd-overview-image,
+    .service-details-wrapper[data-service-id="2"] .sd-overview-image,
+    .service-details-wrapper[data-service-id="4"] .sd-overview-image,
+    .service-details-wrapper[data-service-id="6"] .sd-overview-image {
+        order: 1;
+    }
+}

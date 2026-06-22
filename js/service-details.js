@@ -3,7 +3,8 @@ const servicesData = {
         title: "Vintage T-Shirt Restoration",
         shortDesc: "Bring your favorite faded tees back to life with our expert restoration.",
         bannerImage: "../images/ab tshirt.jpeg",
-        overview: "Our Vintage T-Shirt Restoration service focuses on preserving the authentic feel and history of well-loved garments while repairing damage, revitalizing colors, and stabilizing the fabric. From repairing micro-holes to gentle stain removal without harsh chemicals, we ensure your favorite tees last another generation.",
+        overviewImage: "../images/restoration.png",
+        overview: "Our Vintage T-Shirt Restoration service focuses on preserving the authentic feel and history of well-loved garments while repairing damage, revitalizing colors, and stabilizing the fabric. From repairing micro-holes to gentle stain removal without harsh chemicals, we ensure your favorite tees last another generation.\n\nWe utilize specialized vintage stitching machines and source period-correct threads to repair seams, reinforce thin spots, and preserve the original cotton texture. Our team is trained in historical textile conservation, meaning we treat every graphic print and single-stitch hem with museum-grade precision.",
         features: [
             "Gentle eco-friendly stain removal",
             "Micro-hole and tear stabilization",
@@ -36,7 +37,8 @@ const servicesData = {
         title: "Custom Vintage Design",
         shortDesc: "Transform existing vintage pieces into unique, modern, custom garments.",
         bannerImage: "../images/services1.jpeg",
-        overview: "Our Custom Vintage Design service takes high-quality vintage textiles or garments and reworks them into entirely new silhouettes. Whether it's turning a 70s dress into a modern two-piece set, or combining multiple fabrics into a patchwork jacket, our tailors create bespoke pieces that no one else has.",
+        overviewImage: "../images/services2.jpeg",
+        overview: "Our Custom Vintage Design service takes high-quality vintage textiles or garments and reworks them into entirely new silhouettes. Whether it's turning a 70s dress into a modern two-piece set, or combining multiple fabrics into a patchwork jacket, our tailors create bespoke pieces that no one else has.\n\nThis process is highly collaborative. We start by analyzing the materials of the source garments, identifying strength points, and drafting a custom pattern. We integrate modern hardware (such as solid brass zippers or reinforced buttons) while keeping the original labels and historical highlights intact.",
         features: [
             "Complete garment reshaping and tailoring",
             "Fabric splicing and patchwork",
@@ -69,7 +71,8 @@ const servicesData = {
         title: "Denim Repair",
         shortDesc: "Expert darning, patching, and reviving of your raw and vintage denim.",
         bannerImage: "../images/ser3.jpeg",
-        overview: "Denim only gets better with age, but blowouts and tears are inevitable. Our Denim Repair service utilizes authentic vintage machinery and traditional Sashiko darning techniques to repair your jeans seamlessly or add visible, artistic mending patches that enhance the character of the denim.",
+        overviewImage: "../images/ser3.jpeg",
+        overview: "Denim only gets better with age, but blowouts and tears are inevitable. Our Denim Repair service utilizes authentic vintage machinery and traditional Sashiko darning techniques to repair your jeans seamlessly or add visible, artistic mending patches that enhance the character of the denim.\n\nWe use a vintage chainstitch hemmer and raw cotton thread matching the indigo wash of your piece. By reinforcing pocket bags, darning the crotch area, and reconstructing frayed buttonholes, we restore structural integrity without sacrificing the natural wear patterns and honeycombs.",
         features: [
             "Invisible crotch blowout repair",
             "Traditional Sashiko hand-mending",
@@ -102,7 +105,8 @@ const servicesData = {
         title: "Retro Outfit Styling",
         shortDesc: "Personalized styling sessions to create the perfect authentic retro look.",
         bannerImage: "../images/ser4.webp",
-        overview: "Struggling to put together a cohesive vintage look? Our Retro Outfit Styling connects you with expert stylists who understand the nuances of 60s, 70s, 80s, and 90s fashion. We curate full outfits from our archive that match your personal taste, body type, and the specific era you want to channel.",
+        overviewImage: "../images/ser4.webp",
+        overview: "Struggling to put together a cohesive vintage look? Our Retro Outfit Styling connects you with expert stylists who understand the nuances of 60s, 70s, 80s, and 90s fashion. We curate full outfits from our archive that match your personal taste, body type, and the specific era you want to channel.\n\nEach styling project begins with a deep dive into your personal brand and preferred fashion eras. We build a comprehensive style board, select archival pieces, and style them with modern footwear or accessories to create a look that feels authentic, high-end, and completely timeless.",
         features: [
             "1-on-1 virtual or in-person consultation",
             "Era-specific wardrobe curation",
@@ -135,7 +139,8 @@ const servicesData = {
         title: "Vintage Collection Supply",
         shortDesc: "Wholesale sourcing of premium vintage lots for retailers and designers.",
         bannerImage: "../images/ser5.jpeg",
-        overview: "For boutique owners and designers, finding high-quality vintage at scale is difficult. Our Vintage Collection Supply leverages our global network of pickers to provide curated wholesale bundles. Whether you need 50 perfect condition band tees or 100 pairs of Grade-A Levi's, we handle the sourcing, grading, and authentication.",
+        overviewImage: "../images/archive-display.png",
+        overview: "For boutique owners and designers, finding high-quality vintage at scale is difficult. Our Vintage Collection Supply leverages our global network of pickers to provide curated wholesale bundles. Whether you need 50 perfect condition band tees or 100 pairs of Grade-A Levi's, we handle the sourcing, grading, and authentication.\n\nWe offer tailored collection supply services for film sets, fashion editorials, and retail boutiques. Every lot is graded, washed, and authenticated. We catalog each item's era, origin, and design details, providing you with a complete provenance document that adds unique value to your inventory.",
         features: [
             "Category-specific bulk sourcing",
             "Rigorous authentication and grading",
@@ -168,7 +173,8 @@ const servicesData = {
         title: "Premium Fabric Care",
         shortDesc: "Specialized cleaning and preservation for delicate and historic textiles.",
         bannerImage: "../images/ser6.jpeg",
-        overview: "Certain garments are too fragile for dry cleaners. Our Premium Fabric Care specializes in the preservation and cleaning of historic textiles, delicate silks, 1920s beadwork, and sensitive dyes. We use museum-grade archival practices to clean, neutralize odors, and safely store your most precious fashion investments.",
+        overviewImage: "../images/ser6.jpeg",
+        overview: "Certain garments are too fragile for dry cleaners. Our Premium Fabric Care specializes in the preservation and cleaning of historic textiles, delicate silks, 1920s beadwork, and sensitive dyes. We use museum-grade archival practices to clean, neutralize odors, and safely store your most precious fashion investments.\n\nOur specialists test dye stability, fiber strength, and material composition before beginning any treatment. Using eco-friendly solvents, natural fiber conditioners, and controlled drying techniques, we extract stubborn stains and remove decades of storage odor without damaging the delicate structure.",
         features: [
             "Archival wet cleaning techniques",
             "Ozone chamber odor removal",
@@ -204,19 +210,33 @@ document.addEventListener('DOMContentLoaded', () => {
     const serviceId = urlParams.get('id');
 
     if (serviceId && servicesData[serviceId]) {
-        renderService(servicesData[serviceId]);
+        renderService(servicesData[serviceId], serviceId);
     } else {
         document.querySelector('main').innerHTML = '<div class="container" style="padding:100px 0;text-align:center;"><h2>Service not found.</h2><a href="services.html" class="btn-contact">Back to Services</a></div>';
     }
 });
 
-function renderService(data) {
+function renderService(data, id) {
+    const wrapper = document.querySelector('.service-details-wrapper');
+    if (wrapper) {
+        wrapper.setAttribute('data-service-id', id);
+    }
+
     document.getElementById('sd-title').innerText = data.title;
     document.getElementById('sd-desc').innerText = data.shortDesc;
     document.getElementById('sd-banner-img').src = data.bannerImage;
     document.getElementById('sd-banner-img').alt = data.title;
 
-    document.getElementById('sd-overview-text').innerText = data.overview;
+    const overviewContainer = document.getElementById('sd-overview-text-container');
+    if (overviewContainer) {
+        overviewContainer.innerHTML = data.overview.split('\n\n').map(pText => `<p>${pText}</p>`).join('');
+    }
+
+    const overviewImg = document.getElementById('sd-overview-img');
+    if (overviewImg) {
+        overviewImg.src = data.overviewImage;
+        overviewImg.alt = data.title;
+    }
 
     const featuresContainer = document.getElementById('sd-features-list');
     featuresContainer.innerHTML = '';

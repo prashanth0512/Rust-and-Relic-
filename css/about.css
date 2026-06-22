@@ -1055,3 +1055,10 @@ html[data-theme='dark'] .about-isolated .team-social a:hover {
     background-color: var(--clr-accent) !important;
     color: var(--clr-white) !important;
 }
+
+html[data-theme='light'] .about-isolated .brown-accent-section .section-title,
+html[data-theme='light'] .about-isolated .brown-accent-section .section-desc,
+.about-isolated .brown-accent-section .section-title,
+.about-isolated .brown-accent-section .section-desc {
+    color: #ffffff !important;
+}

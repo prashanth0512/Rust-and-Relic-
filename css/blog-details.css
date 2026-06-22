@@ -62,6 +62,11 @@ body {
     max-height: 500px;
     object-fit: cover;
     display: block;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bd-hero:hover img {
+    transform: scale(1.05);
 }
 
 .bd-header {
@@ -92,12 +97,16 @@ body {
 }
 
 .bd-content-wrapper {
-    max-width: 800px;
+    max-width: 950px;
     margin: 0 auto;
 }
 
 .bd-section {
     margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .bd-section-heading {
@@ -105,6 +114,7 @@ body {
     font-size: 1.8rem;
     margin-bottom: 20px;
     color: var(--bd-text-primary);
+    text-align: center;
 }
 
 .bd-paragraph {
@@ -112,6 +122,13 @@ body {
     line-height: 1.8;
     color: var(--bd-text-secondary);
     margin-bottom: 20px;
+    text-align: center !important;
+    max-width: 800px;
+    width: 100%;
+}
+.bd-paragraph p {
+    text-align: center !important;
+    margin-bottom: 15px;
 }
 
 .bd-tips-section {
@@ -124,7 +141,10 @@ body {
 .bd-bullet-list {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
+    max-width: 600px;
+    text-align: left;
+    display: inline-block;
 }
 
 .bd-bullet-list li {
