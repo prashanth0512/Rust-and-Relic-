@@ -187,7 +187,7 @@ html[data-theme='light'] .home2-isolated .drawer-link {
     .home2-isolated .shop-hero-content {
         position: relative !important;
         z-index: 3 !important;
-        padding: 4rem 1.5rem !important;
+        padding: calc(4rem + 70px) 1.5rem 4rem !important;
         color: #ffffff !important;
         text-align: center;
         align-items: center;
@@ -207,6 +207,13 @@ html[data-theme='light'] .home2-isolated .drawer-link {
         justify-content: center;
         width: 100%;
         gap: 1rem;
+    }
+
+    .home2-isolated .hero-buttons .btn-secondary,
+    html[data-theme='light'] .home2-isolated .hero-buttons .btn-secondary,
+    html[data-theme='dark'] .home2-isolated .hero-buttons .btn-secondary {
+        color: #ffffff !important;
+        border-color: rgba(255, 255, 255, 0.6) !important;
     }
 }
 
@@ -739,6 +746,22 @@ html[data-theme='dark'] .home2-isolated .outline-input,
     .home2-isolated .container {
         padding-left: 1.25rem !important;
         padding-right: 1.25rem !important;
+    }
+
+    .home2-isolated .inline-alert-form {
+        flex-direction: column !important;
+        gap: 1rem !important;
+        width: 100% !important;
+        max-width: 320px !important;
+        margin-inline: auto !important;
+    }
+
+    .home2-isolated .inline-alert-form .form-input,
+    .home2-isolated .inline-alert-form .form-select,
+    .home2-isolated .inline-alert-form .btn {
+        width: 100% !important;
+        flex: none !important;
+        box-sizing: border-box !important;
     }
 
     .home2-isolated .hero-buttons {

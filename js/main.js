@@ -7,6 +7,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const moonIcon = document.querySelector('.moon-icon');
     const sunIcon = document.querySelector('.sun-icon');
 
+    const sidebarThemeToggle = document.getElementById('sidebar-theme-toggle');
+    const sidebarRtlToggle = document.getElementById('sidebar-rtl-toggle');
+
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileDrawer = document.getElementById('mobile-drawer');
+    const drawerCloseBtn = document.getElementById('drawer-close-btn');
+    const drawerOverlay = document.getElementById('drawer-overlay');
+    const drawerRtlBtn = document.getElementById('drawer-rtl-btn');
+    const drawerThemeToggle = document.getElementById('drawer-theme-toggle');
+    const drawerRtlToggle = document.getElementById('drawer-rtl-toggle');
 
     const headerInner = document.querySelector('.header-inner');
     const logo = document.querySelector('.logo');
@@ -36,12 +46,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    if (sidebarRtlToggle) {
+        sidebarRtlToggle.addEventListener('click', () => {
+            const currentDir = bodyElement.dir || 'ltr';
+            const newDir = currentDir === 'rtl' ? 'ltr' : 'rtl';
+            setDirection(newDir);
+        });
+    }
+
     function setDirection(dir) {
         bodyElement.dir = dir;
         localStorage.setItem('dir', dir);
         if (rtlToggle) rtlToggle.innerText = dir === 'rtl' ? 'LTR' : 'RTL';
         const drawerRtlBtn = document.getElementById('drawer-rtl-btn');
         if (drawerRtlBtn) drawerRtlBtn.innerText = dir === 'rtl' ? 'Switch to LTR' : 'Switch to RTL';
+        if (sidebarRtlToggle) {
+            const span = sidebarRtlToggle.querySelector('span');
+            if (span) span.innerText = dir === 'rtl' ? 'LTR' : 'RTL';
+        }
 
         if (dir === 'rtl') {
             document.body.style.direction = "rtl";
@@ -154,34 +176,37 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    if (sidebarThemeToggle) {
+        sidebarThemeToggle.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            setTheme(newTheme);
+        });
+    }
+
     function setTheme(theme) {
         htmlElement.setAttribute('data-theme', theme);
         localStorage.setItem('theme', theme);
 
-        if (theme === 'dark') {
-            if (moonIcon) moonIcon.style.display = 'none';
-            if (sunIcon) sunIcon.style.display = 'block';
-        } else {
-            if (moonIcon) moonIcon.style.display = 'block';
-            if (sunIcon) sunIcon.style.display = 'none';
-        }
+        document.querySelectorAll('.moon-icon').forEach(icon => {
+            icon.style.display = theme === 'dark' ? 'none' : 'block';
+        });
+        document.querySelectorAll('.sun-icon').forEach(icon => {
+            icon.style.display = theme === 'dark' ? 'block' : 'none';
+        });
     }
 
-
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileDrawer = document.getElementById('mobile-drawer');
-    const drawerCloseBtn = document.getElementById('drawer-close-btn');
-    const drawerOverlay = document.getElementById('drawer-overlay');
-    const drawerRtlBtn = document.getElementById('drawer-rtl-btn');
 
     if (mobileMenuBtn && mobileDrawer) {
         mobileMenuBtn.addEventListener('click', () => {
             mobileDrawer.classList.add('open');
+            if (drawerOverlay) drawerOverlay.classList.add('active');
         });
     }
 
     const closeDrawer = () => {
         if (mobileDrawer) mobileDrawer.classList.remove('open');
+        if (drawerOverlay) drawerOverlay.classList.remove('active');
     };
 
     if (drawerCloseBtn) drawerCloseBtn.addEventListener('click', closeDrawer);
@@ -194,7 +219,6 @@ document.addEventListener('DOMContentLoaded', () => {
             setDirection(newDir);
         });
     }
-    const drawerThemeToggle = document.getElementById('drawer-theme-toggle');
     if (drawerThemeToggle) {
         drawerThemeToggle.addEventListener('click', () => {
             const currentTheme = htmlElement.getAttribute('data-theme');
@@ -212,7 +236,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    const drawerRtlToggle = document.getElementById('drawer-rtl-toggle');
     if (drawerRtlToggle) {
         drawerRtlToggle.addEventListener('click', () => {
             const currentDir = bodyElement.dir || 'ltr';

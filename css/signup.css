@@ -83,8 +83,8 @@ body {
 
     .auth-wrapper {
         flex-direction: column;
-        width: 90%;
-        max-width: 480px;
+        width: 88%;
+        max-width: 400px;
         max-height: none !important;
         border-radius: 8px;
         border: 1px solid var(--clr-border);
@@ -107,7 +107,7 @@ body {
         height: auto !important;
         min-height: 100vh;
         overflow: auto !important;
-        padding: 40px 0 !important;
+        padding: 90px 0 40px 0 !important;
     }
     
     .auth-brand-name {

@@ -391,24 +391,28 @@ html[data-theme='dark'] .sd-process-step:hover {
     font-size: 2rem;
   }
 
-  .sd-pricing table {
-    display: block;
-    width: 100%;
+  .sd-pricing table,
+  .sd-pricing tbody,
+  .sd-pricing tbody tr {
+    display: block !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   .sd-pricing thead {
-    display: none;
+    display: none !important;
   }
 
   .sd-pricing tbody tr {
-    display: block;
     border-bottom: 2px solid #eaeaea;
     padding: 15px 0;
   }
 
   .sd-pricing tbody td {
-    display: block;
-    text-align: left; 
+    display: block !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    text-align: inherit; 
     padding: 12px 20px;
     border: none;
     position: relative;

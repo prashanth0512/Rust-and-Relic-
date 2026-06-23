@@ -2256,7 +2256,7 @@ html[data-theme='dark'] .site-footer {
     .banner-icon-bg {
         flex: 0 0 150px;
         width: 100%;
-        background-color: var(--clr-accent-hover);
+        background-color: rgba(0, 0, 0, 0.2) !important;
     }
 
     .bell-icon-wrapper {
@@ -2543,6 +2543,20 @@ html[data-theme='dark'] .site-footer {
         padding-inline: 1.5rem;
     }
 
+    .footer-grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 2.5rem !important;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1 !important;
+    }
+
+    .footer-newsletter {
+        grid-column: 1 / -1 !important;
+        max-width: 100% !important;
+    }
+
     .newsletter-inner {
         grid-template-columns: 1fr;
         gap: 0;
@@ -2694,6 +2708,85 @@ html[data-theme='dark'] .drawer-link {
     
     .hamburger-btn {
         display: flex;
+    }
+}
+
+@media (max-width: 600px) {
+    .site-footer {
+        padding-top: 3.5rem !important;
+        padding-bottom: 2rem !important;
+        text-align: center !important;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2.25rem !important;
+        margin-bottom: 3rem !important;
+        text-align: center !important;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        padding-right: 0 !important;
+        text-align: center !important;
+    }
+
+    .footer-brand div {
+        justify-content: center !important;
+    }
+
+    .footer-brand .logo {
+        justify-content: center !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .social-links {
+        justify-content: center !important;
+    }
+
+    .footer-links {
+        text-align: center !important;
+    }
+
+    .footer-links ul {
+        padding: 0 !important;
+    }
+
+    .footer-contact-col {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    .footer-contact-item {
+        justify-content: center !important;
+        text-align: center !important;
+    }
+
+    .footer-bottom {
+        flex-direction: column-reverse !important;
+        align-items: center !important;
+        gap: 1rem !important;
+        text-align: center !important;
+    }
+
+    .footer-badges {
+        justify-content: center !important;
+    }
+
+    .footer-newsletter {
+        grid-column: 1 / -1 !important;
+        max-width: 100% !important;
+        text-align: center !important;
+        margin-inline: auto !important;
+    }
+
+    .footer-newsletter .newsletter-form {
+        margin-inline: auto !important;
     }
 }
 

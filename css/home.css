@@ -548,7 +548,7 @@ html[data-theme='dark'] .showcase-accessory {
 
 @media (max-width: 1024px) {
     .premium-hero {
-        padding: 50px 0;
+        padding: 120px 0 50px;
     }
     .hero-container {
         grid-template-columns: 1fr;
@@ -1481,7 +1481,7 @@ html[data-theme='light'] .home-isolated .drawer-link {
     }
 
     .premium-hero {
-        padding: 40px 0 50px !important;
+        padding: 110px 0 50px !important;
         min-height: auto !important;
     }
     
@@ -1595,8 +1595,21 @@ html[data-theme='light'] .home-isolated .drawer-link {
     
     .mannequin-wrapper {
         transform: scale(0.72) !important;
-        height: 340px !important;
-        width: 100% !important;
+        width: 320px !important;
+        height: 440px !important;
+        margin: 0 auto !important;
+    }
+    
+    @media (max-width: 480px) {
+        .mannequin-wrapper {
+            transform: scale(0.64) !important;
+        }
+    }
+    
+    @media (max-width: 375px) {
+        .mannequin-wrapper {
+            transform: scale(0.56) !important;
+        }
     }
     
     .home-isolated .cards-grid,
