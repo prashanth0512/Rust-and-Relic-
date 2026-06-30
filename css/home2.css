@@ -325,7 +325,7 @@ html[data-theme='light'] .home2-isolated .new-arrival-banner {
     border: 1px solid #e0e0d5 !important;
 }
 
-html[data-theme='light'] .home2-isolated .new-arrival-banner span {
+html[data-theme='light'] .home2-isolated .new-arrival-banner span:not(.badge) {
     color: #000000 !important;
     font-weight: 600 !important;
 }

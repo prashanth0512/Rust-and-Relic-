@@ -252,9 +252,15 @@ body:has(.contact-hero) .section-padding {
     }
 }
 
+.faq-section {
+    max-width: 100% !important;
+}
+
 .faq-list {
     max-width: 800px;
     margin: 0 auto;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 .faq-item {
@@ -481,6 +487,11 @@ body:has(.contact-hero) .section-padding {
     .faq-question {
         font-size: 1.1rem;
         padding: 1rem 1.2rem;
+    }
+
+    .faq-list {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
     }
 
     .contact-reviews-grid {
